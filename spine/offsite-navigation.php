@@ -1,10 +1,10 @@
 <?php
 	
-	if ( defined( 'WSU_LOCAL_CONFIG') && 'WSU_LOCAL_CONFIG' ) {
-		global $blog_id; switch_to_blog( 16 );
-	} else {
-		global $blog_id; switch_to_blog( 267 );
-	}
+if ( defined( 'WSU_LOCAL_CONFIG') && 'WSU_LOCAL_CONFIG' ) {
+	switch_to_blog( 16 );
+} else {
+	switch_to_blog( 267 );
+}
 
 ?>
 
@@ -26,4 +26,4 @@
 	?>
 </nav>
 
-<?php restore_current_blog(); ?>
+<?php restore_current_blog();
