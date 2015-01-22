@@ -1,6 +1,6 @@
 <?php
 	
-if ( defined( 'WSU_LOCAL_CONFIG') && 'WSU_LOCAL_CONFIG' ) {
+if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 	switch_to_blog( 16 );
 } else {
 	switch_to_blog( 267 );
