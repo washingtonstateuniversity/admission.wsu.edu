@@ -1,16 +1,25 @@
 <?php
-/**
- * Custom functionality required by your child theme can go here. Use this
- * to override any defaults provided by the Spine parent theme through
- * the provided actions and filters.
- */
 
-// Uncomment this line and replace the spine_child prefix with one of your own.
-//add_action( 'wp_enqueue_scripts', 'spine_child_enqueue_scripts', 11 );
-/**
- * Hooking into wp_enqueue_scripts allows you to add custom Javascript to every front
- * end page view. Using available APIs in WordPress, you can restrict this to
- * limited page views as well.
- *
- * As with the action above, change the prefix of this function from spine_child
- */
+add_filter( 'body_class', 'post_freshness_class' );
+add_filter( 'post_class', 'post_freshness_class' );
+
+function post_freshness_class( $classes ) {
+	
+	$interval = ( current_time( 'Ymd', $gmt = -8 ) - get_the_date('Ymd') );
+	$interval_month = ( current_time( 'Ym', $gmt = -8 ) - get_the_date('Ym') );
+		
+	if ( !is_page() ) {
+		
+		if ( $interval <= 1 ) { $classes[] = 'past-day'; }
+		if ( $interval <= 7 ) { $classes[] = 'past-week'; }
+		if ( $interval_month < 1 ) { $classes[] = 'past-month'; }
+		if ( $interval_month <= 3 ) { $classes[] = 'past-quarter'; }
+		if ( $interval_month <= 6 ) { $classes[] = 'past-half'; }
+		if ( $interval <= 365 ) { $classes[] = 'past-year'; }
+		else { $classes[] = 'before-past-year'; }
+	
+	}
+
+	return $classes;
+
+}
