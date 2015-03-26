@@ -5,7 +5,7 @@ add_filter( 'post_class', 'post_freshness_class' );
 
 function post_freshness_class( $classes ) {
 	
-	$interval = ( current_time( 'Ymd', $gmt = -8 ) - get_the_date('Ymd') );
+	$interval = ( current_time( 'Ymd', $gmt = 0 ) - get_the_date('Ymd') );
 	$interval_month = ( current_time( 'Ym', $gmt = -8 ) - get_the_date('Ym') );
 		
 	if ( !is_page() ) {
