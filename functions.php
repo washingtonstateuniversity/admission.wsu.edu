@@ -23,3 +23,11 @@ function post_freshness_class( $classes ) {
 	return $classes;
 
 }
+
+function admissions_setup() {
+
+//add_theme_support( 'html5', array(
+//		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+//	) );
+}
+add_action( 'after_setup_theme', 'admissions_setup' );

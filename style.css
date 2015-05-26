@@ -7,3 +7,15 @@
  Template:       spine
  Version:        0.0.1
 */
+
+.comment-list {
+	padding-left: 0;	
+}
+.comment-list li {
+	background: white;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 1rem;
+	list-style: none;
+}
+.comment-list article footer
