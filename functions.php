@@ -1,7 +1,6 @@
 <?php
 
 add_filter( 'body_class', 'post_freshness_class' );
-add_filter( 'post_class', 'post_freshness_class' );
 
 function post_freshness_class( $classes ) {
 	
@@ -31,3 +30,11 @@ function admissions_setup() {
 //	) );
 }
 add_action( 'after_setup_theme', 'admissions_setup' );
+
+add_filter('single_template', create_function(
+	'$the_template',
+	'foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists(TEMPLATEPATH . "/templates/single-{$cat->slug}.php") )
+		return TEMPLATEPATH . "/templates/single-{$cat->slug}.php"; }
+	return $the_template;' )
+);
