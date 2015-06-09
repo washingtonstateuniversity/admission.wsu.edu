@@ -1,11 +1,15 @@
 <?php
 
+$menu = "site";
+
 if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_blog_id() == 340 || get_current_blog_id() == 646  ) {
 
 	if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 		switch_to_blog( 16 );
+		$menu = "network-temp";
 	} else {
 		switch_to_blog( 267 );
+		$menu = "network-temp";
 	}
 	
 }
@@ -16,7 +20,7 @@ if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_
 	<?php
 	$spine_site_args = array(
 		'theme_location'  => 'site',
-		'menu'            => 'site',
+		'menu'            => $menu,
 		'container'       => false,
 		'container_class' => false,
 		'container_id'    => false,
