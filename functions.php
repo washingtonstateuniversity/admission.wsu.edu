@@ -1,8 +1,18 @@
 <?php
+	
+add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
+/**
+ * Enqueue child theme Scripts and Styles
+ */
+function admissions_scripts_styles() {
+	wp_enqueue_script( 'admissions-scripts', get_stylesheet_directory_uri() . '/scripts/scripts.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'textillate', get_stylesheet_directory_uri() . '/scripts/textillate/jquery.textillate.js', array( 'jquery' ) );
+	
+}
 
-add_filter( 'body_class', 'post_freshness_class' );
+add_filter( 'body_class', 'admissions_timing_class' );
 
-function post_freshness_class( $classes ) {
+function admissions_timing_class( $classes ) {
 	
 	$interval = ( current_time( 'Ymd', $gmt = 0 ) - get_the_date('Ymd') );
 	$interval_month = ( current_time( 'Ym', $gmt = -8 ) - get_the_date('Ym') );
@@ -18,6 +28,11 @@ function post_freshness_class( $classes ) {
 		else { $classes[] = 'before-past-year'; }
 	
 	}
+	
+	$pst = get_the_date('H') - 7;
+	
+	if ( $pst > 6 && $pst < 18 ) { $classes[] = 'day-time'; }
+	else { $classes[] = 'night-time'; }
 
 	return $classes;
 
