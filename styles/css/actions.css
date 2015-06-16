@@ -1,0 +1,58 @@
+.actions {
+  position: relative;
+  min-height: 100px; }
+
+.actions .column {
+  min-height: 10px; }
+
+dl.actions-list {
+  width: 100%;
+  height: 100px;
+  margin-top: -100px;
+  background: #981e32;
+  padding: 0;
+  display: block; }
+
+dl.action-item {
+  height: 100px;
+  background: #981e32;
+  padding: 0;
+  display: block;
+  width: 25%;
+  float: left; }
+
+.actions .column.two dl dt {
+  width: 100%;
+  list-style: none;
+  font-weight: 300;
+  padding: 0;
+  height: 100px;
+  display: table; }
+
+dl.actions-list dt,
+dl.actions-list dd {
+  display: block; }
+
+.actions .column.two dl dt a,
+.actions .column.two dl dt button {
+  text-align: center;
+  color: white;
+  height: 100px;
+  display: block;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  font-family: "Open Sans"; }
+
+.actions .column.two dl dl:nth-of-type(even) dt {
+  background: linear-gradient(to bottom, #981e32 0%, #6b1523 100%);
+  /* W3C */ }
+
+.actions .column.two dl dt a:hover,
+.actions .column.two dl dt button:hover {
+  background-color: #c60c30; }

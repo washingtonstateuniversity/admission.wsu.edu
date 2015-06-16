@@ -1,0 +1,213 @@
+/*
+ Theme Name:     WSU Admissions
+ Theme URI:      http://web.wsu.edu
+ Description:    A child theme for Washington State University's admission.wsu.edu
+ Author:         WSU University Communications, Nate Jacobson
+ Author URI:     http://ucomm.wsu.edu
+ Template:       spine
+ Version:        0.0.1
+*/
+
+@import 'global/vars';
+@import 'global/colors';
+@import 'global/utilities';
+
+@import 'overlays';
+@import 'actions';
+
+.comment-list {
+	padding-left: 0;	
+}
+.comment-list li {
+	background: white;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 1rem;
+	list-style: none;
+}
+
+.inspired {
+	height: 100vh;
+	background-color: gray;
+	background-position: center center;
+	background-size: cover;
+}
+
+.size-lt-medium .inspired {
+	height: calc( 100vh - 50px );
+}
+
+.inspired .column.one {
+	position: relative;
+	text-align: right;
+}
+
+ul.inspirings {
+	width: 500px;
+	margin-bottom: -2px;
+	padding: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	//height: 200px;
+	margin-right: 15px;
+}
+
+ul.inspirings ul {
+	padding: 0;
+}
+
+@-webkit-keyframes on {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.inspirings li {
+	@include open;
+	list-style: none;
+	font-weight: 800;
+	color: white;
+	text-transform: uppercase;
+	font-size: 54px;
+	line-height: 48px;
+	display: block;
+	padding: 0;
+	bottom: 0;
+	text-align: right;
+}
+
+.inspirings b {
+	margin-bottom: 48px;
+	display: block;
+	font-weight: 800;
+}
+
+.inspirings ul {
+	padding: 0;
+}
+
+.inspirings ul li {
+	opacity: 0;
+	//display: none;
+	position: absolute;
+	right: 0;
+}
+
+.inspirings ul li:first-child {
+	//display: block;
+}
+
+$inspiration: 1;
+$delay: 0;
+$duration: 2;
+
+@while $inspiration < 17 {
+
+	.inspirings ul li:nth-of-type(#{$inspiration}) {
+		-webkit-animation-name: on;
+		-webkit-animation-duration: #{$duration}s;
+		-webkit-animation-delay: #{$delay}s;
+		 
+		//-webkit-animation-iteration-count: 3;
+		//-webkit-animation-direction: alternate;
+	}
+	$inspiration: $inspiration + 1;
+	@if $inspiration < 9 {
+		$duration: $duration - ($inspiration * .05);
+	}
+	$delay: $delay + $duration;
+
+}
+
+.inspirings ul li:nth-of-type(16) {
+	-webkit-animation-duration: 10000s;
+}
+
+.inspired del,
+.inspired s {
+	background-color: $crimson;
+	text-decoration: none;
+}
+
+.page-inspiring-you .inspired {
+	background-image: url('/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg');
+	background-position: right center;
+	//background-attachment: fixed;
+}
+
+.page-inspiring-you.day-time .inspired .column.two {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-inspiring-you.night-time .inspired {
+	background-image: url('/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg');
+	//background-attachment: fixed;
+}
+
+.page-inspiring-you .main-header {
+	display: none;
+}
+
+.page-inspiring-you .inspired .column.one {
+	width: 65%;
+	border-right: 40px $crimson solid;
+	text-align: right;
+	height: 200px;
+	position: relative;
+}
+
+.page-inspiring-you .inspired .column.two {
+	min-height: 200px;
+	position: relative;
+	overflow: hidden;
+	font-size: 18px;
+	@include antialiased;
+}
+
+
+.page-inspiring-you .size-gt-small .inspired .column.two {
+	margin-top: 200px;
+}
+
+.column[class*="step-"] p big {
+	height: 0;
+	display: block;
+	top: 50%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 6em;
+	font-weight: 800;
+}
+
+.column[class*="step-"] p {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: white;
+	background: $gray-light;
+	padding-bottom: 100%;
+}
+
+.step.side-right .column.one {
+	text-align: right;
+}
+.step.side-right .column.one li {
+	direction: rtl;
+}
+
+.step{
+	//background-color: $gray-lightest;
+	margin-bottom: 1rem;
+}
+

@@ -1,0 +1,183 @@
+@import 'global/vars';
+@import 'global/colors';
+@import 'global/utilities';
+
+.actions {
+	position: relative;
+	height: 100px;
+	margin-top: -100px;
+}
+
+.actions .column {
+	min-height: 10px;
+}
+
+dl.actions-list {
+	width: 100%;
+	height: 100px;
+	background: $crimson;
+	padding: 0;
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-webkit-flex-flow: row nowrap;
+	justify-content: space-around;
+	background: $crimson;
+ }
+ 
+ dl.action-item {
+	height: 100px;
+	width: 25%;
+	padding: 0;
+	margin: auto;
+	//display: block;
+	//flex: 1;
+	-webkit-flex-grow: 1;
+	
+ }
+
+.actions .column.two dl dt {
+	width: 100%;
+	list-style: none;
+	font-weight: 300;
+	padding: 0;
+	height: 100px;
+	
+}
+
+.action-item dt {
+	
+/*
+	justify-content: center;
+  flex-direction: column;
+  -webkit-align-items: center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+*/
+display: table;
+}
+
+.action-item dt a,
+.action-item dt button {
+	text-align: center;
+	color: white;
+	height: 100%;
+	display: block;
+	vertical-align: middle;
+	//@include vertical-align;
+	display: table-cell;
+	//display: block;
+	border-radius: 0;
+	border-width: 0;
+	background-color: transparent;
+	font-size: 24px;
+	padding: 0;
+	@include antialiased;
+	font-weight: 300;
+	font-family: "Open Sans";
+	
+	text-align: center;
+	width: 100%;
+	}
+
+.actions .column.two dl dl:nth-of-type(even) dt {
+		//background-color: $crimson-dark;
+		background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
+}
+
+.actions .column.two dl dt a:hover,
+.actions .column.two dl dt button:hover,
+.action-item.opened dt {
+	background-color: $crimson-er;	
+}
+
+
+.action-item dd {
+	display: none;
+}
+
+.action-item.opened dd {
+	display: block;
+}
+
+.action-item dd {
+	height: 400px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	background-color: white;
+	background-color: $crimson-er;
+	position: absolute;
+	bottom: 100px;
+	padding: 1rem;
+	box-sizing: border-box;
+	color: white;
+	border-top: 10px $crimson-er solid;
+}
+
+.action-item dd form {
+	position: relative;
+}
+
+.action-item dt {
+	
+}
+
+.action-item.opened dt::before {
+	content: "";
+	height: 40px;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	bottom: 460px;
+	left: 0;
+	right: 0;
+	background: -moz-linear-gradient(top,  rgba(198,12,48,1) 0%, rgba(198,12,48,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(198,12,48,1)), color-stop(100%,rgba(198,12,48,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#00c60c30',GradientType=0 ); /* IE6-9 */
+}
+
+.xaction-item.opened dt::after {
+	content: "";
+	height: 40px;
+	display: block;
+	position: absolute;
+	z-index: 100;
+	bottom: 100px;
+	left: 0;
+	right: 0;
+	background: -moz-linear-gradient(top,  rgba(198,12,48,0) 0%, rgba(198,12,48,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(198,12,48,0)), color-stop(100%,rgba(198,12,48,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c60c30', endColorstr='#c60c30',GradientType=0 ); /* IE6-9 */
+
+}
+
+.action-item form input[type="text"] {
+	margin-bottom: 5px;
+}
+
+.action-item form input[type="text"] {
+	width: 100%;
+	background-color: $crimson;
+	border: none;
+	color: $gray-lightly;
+}
+
+.action-item form input.required[type="text"] {
+	background-color: $crimson-dark;
+}
+
+.action-item form input[type="text"]:focus {
+	background-color: black;
+}
+
+.action-item form .itemLabel { display: none;}
+

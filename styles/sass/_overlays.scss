@@ -1,0 +1,29 @@
+.darken-50 {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.darken-35 {
+	background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+[class*="darken-"] {
+	color: white;
+}
+
+.blur::before {
+	-webkit-filter: blur(50px);
+	content: "";
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	
+	display: block;
+	border: 1px pink solid;
+	z-index: 0;
+	//background: white;
+	left: 0;
+	top: 0;
+}
