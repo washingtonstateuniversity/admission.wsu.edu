@@ -1,0 +1,174 @@
+<dl id="actions" class="actions-list">
+	<dl id="info" class="action-item">
+		<dt><button>info</button></dt>
+		<dd>
+
+<p>Tell us a bit about ou
+
+<form action="/Info" id="InfoRequestForm" method="post">    <div class="group three-columns">
+	       
+<fieldset>
+   	
+   	<legend>Name</legend>
+	
+	<div class="itemGroup">
+	    <div class="itemLabel">Legal First Name *</div>
+	    <div class="itemValue"><input class="required" id="FirstName" name="FirstName" type="text" value="" placeholder="Legal First Name (Required)"></div>
+	</div>
+	
+	<div class="itemGroup">
+	    <div class="itemLabel">Middle Name</div>
+	    <div class="itemValue"><input id="MiddleName" name="MiddleName" type="text" value="" placeholder="Middle Name"></div>
+	</div>
+	
+	<div class="itemGroup">
+	    <div class="itemLabel">Last Name *</div>
+	    <div class="itemValue"><input class="required" id="LastName" name="LastName" type="text" value="" placeholder="Last Name"></div>
+	</div>
+	
+</fieldset>
+	    
+	    
+<fieldset>
+	
+	<legend>Contact</legend>
+
+    <div class="itemGroup">
+        <div class="itemLabel">Email *</div>
+        <div class="itemValue"><input class="required" id="Email" name="Email" type="text" value="" placeholder="Email"></div>
+    </div>
+
+    <div class="itemGroup">
+        <div class="itemLabel">Mailing Address Line 1 *</div>
+        <div class="itemValue"><input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Address (Line 1)"></div>
+    </div>
+    
+    <div class="itemGroup">
+        <div class="itemLabel">Mailing Address Line 2</div>
+        <div class="itemValue"><input id="Address2" name="Address2" type="text" value="" placeholder="Address (Line 2)"></div>
+    </div>
+
+    <div class="itemGroup">
+        <div class="itemLabel">City *</div>
+        <div class="itemValue"><input class="required" id="City" name="City" type="text" value="" placeholder="City"></div>
+    </div>
+    
+    <div class="itemGroup">
+        <div class="itemLabel">State *</div>
+        <div class="itemValue">
+            <select class="required" id="State" name="State">
+	            <option value="WA">WA - Washington</option>
+				<option value="AL">AL - Alabama</option>
+				<option value="AK">AK - Alaska</option>
+			</select>
+    	</div>
+	</div>
+
+	<div class="itemGroup">
+		<div class="itemLabel">Country</div>
+		<div class="itemValue">
+			<select id="Country" name="Country">
+				<option value="USA">United States of America</option>
+				<option value="AFG">Afghanistan</option>
+				<option value="ALA">Aland Islands</option>
+				<option value="ALB">Albania</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="itemGroup">
+        <div class="itemLabel">ZIP Code *</div>
+        <div class="itemValue"><input class="required" id="ZipCode" maxlength="10" name="ZipCode" type="text" value="" placeholder="Zip Code"></div>
+	</div>
+
+    <div class="itemGroup">
+        <div class="itemLabel">Phone * (10-digit phone number with area code)</div>
+        <div class="itemValue"><input class="required" id="Phone" name="Phone" type="text" value="" placeholder="Phone"></div>
+    </div>
+
+    <div class="itemGroup">
+        <div class="itemLabel">Phone Type *</div>
+        <div class="itemValue">
+            <select class="SelectMobilePhone required" id="PhoneType" name="PhoneType" onchange="updatePhoneType();"><option value=""></option>
+				<option value="Mobile">Mobile</option>
+				<option value="Home">Home</option>
+				<option value="Other">Other</option>
+			</select>
+        </div>
+    </div>
+
+<div class="group two-columns MobilePhoneService" style="display: none;">
+    <div class="itemGroup">
+        <div class="itemLabel">Mobile Phone Service *</div>
+        <div class="itemValue"><select id="MobileProvider" name="MobileProvider"><option value=""></option>
+<option value="Airtel">Airtel</option>
+<option value="CBeyond">C Beyond</option>
+</select></div>
+    </div>
+    <div class="itemGroup">
+        <div class="itemLabel">Okay to text important deadline reminders? *</div>
+        <div class="itemValue">
+            <select id="OkayToText" name="OkayToText"><option value=""></option>
+<option value="YES">Yes</option>
+<option value="NO">No</option>
+</select>
+        </div>
+    </div>
+</div>
+</fieldset>
+	    
+<!-- ABOUT YOU -->
+<fieldset>
+       <legend>About You</legend>
+<div class="group two-columns">
+    <div class="itemGroup">
+        <div class="itemLabel">Date of Birth *</div>
+        <div class="itemValue">
+            <table style="width:100% !important; border-collapse:collapse; padding:0;">
+                <tbody><tr>
+                    <td style="width:40%; padding:0;"><select class="required" id="DateOfBirthMonth" name="DateOfBirthMonth"><option value=""></option>
+<option value="1">January</option>
+<option value="2">February</option>
+
+</select></td>
+                    <td style="width:20%; padding:0 5px;"><select class="required" id="DateOfBirthDay" name="DateOfBirthDay"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+
+</select></td>
+                </tr>
+            </tbody></table>
+            
+            
+            
+        </div>
+    </div>
+</fieldset>
+	    
+	    
+	    
+	    <input type="button" name="showInfo" id="showInfo" value="Continue to Provide Additional Information" onclick="ShowAdditionalInfo();">
+	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
+	    
+	    
+	    <input type="submit" value="Submit">
+	<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
+	
+
+</form>
+		
+		</dd>
+	</dl>
+	<dl id="visit" class="action-item">
+		<dt><a href="/visit/">visit</a></dt>
+		<dd></dd>
+	</dl>
+	<dl id="apply" class="action-item">
+		<dt><a href="/apply/">apply</a></dt>
+		<dd></dd>
+	</dl>
+	<dl id="chat" class="action-item">
+		<dt><button>chat</buton></dt>
+		<dd></dd>
+	</dl>
+</dl>
