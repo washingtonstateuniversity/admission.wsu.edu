@@ -199,7 +199,7 @@ dl.action-item {
   padding: 1rem;
   list-style: none; }
 
-.inspired {
+section.inspiring {
   height: 100vh;
   background-color: gray;
   background-position: center center;
@@ -208,7 +208,7 @@ dl.action-item {
 .size-lt-medium .inspired {
   height: calc( 100vh - 50px ); }
 
-.inspired .column.one {
+section.inspiring .column.one {
   position: relative;
   text-align: right; }
 
@@ -345,34 +345,35 @@ ul.inspirings ul {
   background-color: #981e32;
   text-decoration: none; }
 
-.page-inspiring-you .inspired {
+section.inspiring-you {
   background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
   background-position: right center; }
 
-.page-inspiring-you.day-time .inspired .column.two {
+.day-time section.inspiring .column.two {
   background-color: rgba(0, 0, 0, 0.5); }
 
-.page-inspiring-you.night-time .inspired {
+.night-time section.inspiring-you {
   background-image: url("/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg"); }
 
-.page-inspiring-you .main-header {
+.home .main-header,
+.page-you .main-header {
   display: none; }
 
-.page-inspiring-you .inspired .column.one {
+section.inspiring .column.one {
   width: 65%;
   border-right: 40px #981e32 solid;
   text-align: right;
   height: 200px;
   position: relative; }
 
-.page-inspiring-you .inspired .column.two {
+section.inspiring .column.two {
   min-height: 200px;
   position: relative;
   overflow: hidden;
   font-size: 18px;
   -webkit-font-smoothing: antialiased; }
 
-.page-inspiring-you .size-gt-small .inspired .column.two {
+.size-gt-small section.inspiring .column.two {
   margin-top: 200px; }
 
 .column[class*="step-"] p big {
