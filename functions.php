@@ -38,6 +38,8 @@ function admissions_timing_class( $classes ) {
 
 }
 
+add_theme_support( 'bu-navigation-primary' );
+
 function admissions_setup() {
 
 //add_theme_support( 'html5', array(
