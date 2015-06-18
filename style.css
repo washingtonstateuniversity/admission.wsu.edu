@@ -7,6 +7,218 @@
  Template:       spine
  Version:        0.0.1
 */
+.inspiring {
+  height: 100vh;
+  background-size: cover; }
+
+.size-lt-medium .inspired {
+  height: calc( 100vh - 50px ); }
+
+.inspiring .column.one {
+  position: relative; }
+
+ul.inspirings {
+  width: 500px;
+  margin-bottom: -2px;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 15px; }
+
+ul.inspirings ul {
+  padding: 0; }
+
+@-webkit-keyframes on {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.inspiring header {
+  position: relative;
+  min-height: 100px; }
+
+.inspiring header h2 {
+  position: absolute;
+  bottom: -14px;
+  padding-left: 10px; }
+
+.inspiring-message {
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased; }
+
+.inspiring header h2,
+.inspirings li {
+  font-family: "Open Sans", "Lucida Grande", sans-serif;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 48px; }
+
+.inspirings li {
+  text-align: right;
+  display: block;
+  padding: 0;
+  bottom: 0;
+  list-style: none; }
+
+.inspirings b {
+  margin-bottom: 48px;
+  display: block;
+  font-weight: 800; }
+
+.inspirings ul {
+  padding: 0; }
+
+.inspirings ul li {
+  opacity: 0;
+  position: absolute;
+  right: 0; }
+
+.inspirings ul li:nth-of-type(1) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s; }
+
+.inspirings ul li:nth-of-type(2) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 1.9s;
+  -webkit-animation-delay: 1.9s; }
+
+.inspirings ul li:nth-of-type(3) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 1.75s;
+  -webkit-animation-delay: 3.65s; }
+
+.inspirings ul li:nth-of-type(4) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 1.55s;
+  -webkit-animation-delay: 5.2s; }
+
+.inspirings ul li:nth-of-type(5) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 1.3s;
+  -webkit-animation-delay: 6.5s; }
+
+.inspirings ul li:nth-of-type(6) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 7.5s; }
+
+.inspirings ul li:nth-of-type(7) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.65s;
+  -webkit-animation-delay: 8.15s; }
+
+.inspirings ul li:nth-of-type(8) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 8.4s; }
+
+.inspirings ul li:nth-of-type(9) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 8.65s; }
+
+.inspirings ul li:nth-of-type(10) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 8.9s; }
+
+.inspirings ul li:nth-of-type(11) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 9.15s; }
+
+.inspirings ul li:nth-of-type(12) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 9.4s; }
+
+.inspirings ul li:nth-of-type(13) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 9.65s; }
+
+.inspirings ul li:nth-of-type(14) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 9.9s; }
+
+.inspirings ul li:nth-of-type(15) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 10.15s; }
+
+.inspirings ul li:nth-of-type(16) {
+  -webkit-animation-name: on;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-delay: 10.4s; }
+
+.inspirings ul li:nth-of-type(16) {
+  -webkit-animation-duration: 10000s; }
+
+.inspiring del,
+.inspiring s,
+.inspiring u {
+  background-color: #981e32;
+  text-decoration: none; }
+
+.inspiring-you {
+  background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
+  background-position: right center; }
+
+.day-time .inspiring .column.two {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.night-time .inspiring-you {
+  background-image: url("/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg"); }
+
+.home .main-header,
+.page-you .main-header,
+.page-visits .main-header {
+  display: none; }
+
+.inspiring-you .column.one {
+  width: 65%;
+  border-right: 40px #981e32 solid;
+  text-align: right;
+  height: 200px;
+  position: relative; }
+
+.inspiring-you .column.two {
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased; }
+
+.crimson-column-right {
+  border-right: 40px #981e32 solid;
+  text-align: right; }
+
+.crimson-column-left {
+  border-left: 40px #981e32 solid;
+  text-align: left; }
+
+.size-gt-small .inspiring-you .column.two {
+  margin-top: 200px; }
+
+/* Homepage */
+/* Homesickness */
+.inspiring-homesickness {
+  padding-left: 50%; }
+
+.inspiring-homesickness header {
+  height: 200px; }
+
+.inspiring-homesickness .column.two {
+  clear: left;
+  margin-left: 40px; }
+
 .darken-50 {
   background-color: rgba(0, 0, 0, 0.5); }
 
@@ -198,183 +410,6 @@ dl.action-item {
   margin-bottom: 10px;
   padding: 1rem;
   list-style: none; }
-
-section.inspiring {
-  height: 100vh;
-  background-color: gray;
-  background-position: center center;
-  background-size: cover; }
-
-.size-lt-medium .inspired {
-  height: calc( 100vh - 50px ); }
-
-section.inspiring .column.one {
-  position: relative;
-  text-align: right; }
-
-ul.inspirings {
-  width: 500px;
-  margin-bottom: -2px;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: 15px; }
-
-ul.inspirings ul {
-  padding: 0; }
-
-@-webkit-keyframes on {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-.inspirings li {
-  font-family: "Open Sans", "Lucida Grande", sans-serif;
-  list-style: none;
-  font-weight: 800;
-  color: white;
-  text-transform: uppercase;
-  font-size: 54px;
-  line-height: 48px;
-  display: block;
-  padding: 0;
-  bottom: 0;
-  text-align: right; }
-
-.inspirings b {
-  margin-bottom: 48px;
-  display: block;
-  font-weight: 800; }
-
-.inspirings ul {
-  padding: 0; }
-
-.inspirings ul li {
-  opacity: 0;
-  position: absolute;
-  right: 0; }
-
-.inspirings ul li:nth-of-type(1) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 0s; }
-
-.inspirings ul li:nth-of-type(2) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 1.9s;
-  -webkit-animation-delay: 1.9s; }
-
-.inspirings ul li:nth-of-type(3) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 1.75s;
-  -webkit-animation-delay: 3.65s; }
-
-.inspirings ul li:nth-of-type(4) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 1.55s;
-  -webkit-animation-delay: 5.2s; }
-
-.inspirings ul li:nth-of-type(5) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 1.3s;
-  -webkit-animation-delay: 6.5s; }
-
-.inspirings ul li:nth-of-type(6) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-delay: 7.5s; }
-
-.inspirings ul li:nth-of-type(7) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.65s;
-  -webkit-animation-delay: 8.15s; }
-
-.inspirings ul li:nth-of-type(8) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 8.4s; }
-
-.inspirings ul li:nth-of-type(9) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 8.65s; }
-
-.inspirings ul li:nth-of-type(10) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 8.9s; }
-
-.inspirings ul li:nth-of-type(11) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 9.15s; }
-
-.inspirings ul li:nth-of-type(12) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 9.4s; }
-
-.inspirings ul li:nth-of-type(13) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 9.65s; }
-
-.inspirings ul li:nth-of-type(14) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 9.9s; }
-
-.inspirings ul li:nth-of-type(15) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 10.15s; }
-
-.inspirings ul li:nth-of-type(16) {
-  -webkit-animation-name: on;
-  -webkit-animation-duration: 0.25s;
-  -webkit-animation-delay: 10.4s; }
-
-.inspirings ul li:nth-of-type(16) {
-  -webkit-animation-duration: 10000s; }
-
-.inspired del,
-.inspired s {
-  background-color: #981e32;
-  text-decoration: none; }
-
-section.inspiring-you {
-  background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
-  background-position: right center; }
-
-.day-time section.inspiring .column.two {
-  background-color: rgba(0, 0, 0, 0.5); }
-
-.night-time section.inspiring-you {
-  background-image: url("/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg"); }
-
-.home .main-header,
-.page-you .main-header {
-  display: none; }
-
-section.inspiring .column.one {
-  width: 65%;
-  border-right: 40px #981e32 solid;
-  text-align: right;
-  height: 200px;
-  position: relative; }
-
-section.inspiring .column.two {
-  min-height: 200px;
-  position: relative;
-  overflow: hidden;
-  font-size: 18px;
-  -webkit-font-smoothing: antialiased; }
-
-.size-gt-small section.inspiring .column.two {
-  margin-top: 200px; }
 
 .column[class*="step-"] p big {
   height: 0;
