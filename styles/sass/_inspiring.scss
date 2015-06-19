@@ -65,6 +65,10 @@ ul.inspirings ul {
 	line-height: 48px;
 }
 
+.subhead header h2 {
+	font-weight: 300;
+}
+
 .inspirings li {
 	text-align: right;
 	display: block;
@@ -120,8 +124,6 @@ $duration: 2;
 	-webkit-animation-duration: 10000s;
 }
 
-.inspiring del,
-.inspiring s,
 .inspiring u {
 	background-color: $crimson;
 	text-decoration: none;
@@ -185,15 +187,15 @@ $duration: 2;
 
 /* Homesickness */
 
-.inspiring-homesickness {
-	padding-left: 50%;
+.size-gt-small .inspiring-homesickness {
+	padding-left: 40px;
 }
 
-.inspiring-homesickness header {
+.inspiring-homesickness [class*="crimson-column"] header {
 	height: 200px;
 }
 
-.inspiring-homesickness .column.two {
+.inspiring-homesickness .column ~ .column {
 	clear: left;
 	margin-left: 40px;
 }

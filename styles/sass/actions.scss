@@ -64,9 +64,7 @@ display: table;
 	height: 100%;
 	display: block;
 	vertical-align: middle;
-	//@include vertical-align;
 	display: table-cell;
-	//display: block;
 	border-radius: 0;
 	border-width: 0;
 	background-color: transparent;
@@ -179,5 +177,7 @@ display: table;
 	background-color: black;
 }
 
-.action-item form .itemLabel { display: none;}
+.action-item form .itemLabel {
+	display: none;
+}
 

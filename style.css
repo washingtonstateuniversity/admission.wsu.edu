@@ -58,6 +58,9 @@ ul.inspirings ul {
   font-size: 54px;
   line-height: 48px; }
 
+.subhead header h2 {
+  font-weight: 300; }
+
 .inspirings li {
   text-align: right;
   display: block;
@@ -161,8 +164,6 @@ ul.inspirings ul {
 .inspirings ul li:nth-of-type(16) {
   -webkit-animation-duration: 10000s; }
 
-.inspiring del,
-.inspiring s,
 .inspiring u {
   background-color: #981e32;
   text-decoration: none; }
@@ -209,13 +210,13 @@ ul.inspirings ul {
 
 /* Homepage */
 /* Homesickness */
-.inspiring-homesickness {
-  padding-left: 50%; }
+.size-gt-small .inspiring-homesickness {
+  padding-left: 40px; }
 
-.inspiring-homesickness header {
+.inspiring-homesickness [class*="crimson-column"] header {
   height: 200px; }
 
-.inspiring-homesickness .column.two {
+.inspiring-homesickness .column ~ .column {
   clear: left;
   margin-left: 40px; }
 
@@ -401,6 +402,27 @@ dl.action-item {
 .action-item form .itemLabel {
   display: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: none; }
+
+h3 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: none; }
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1rem; }
+
 .comment-list {
   padding-left: 0; }
 
@@ -440,3 +462,6 @@ dl.action-item {
 
 .step {
   margin-bottom: 1rem; }
+
+.padded p:last-of-type {
+  padding-bottom: 0; }

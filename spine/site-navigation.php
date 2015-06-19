@@ -1,9 +1,3 @@
-<?php
-
-
-
-?>
-
 <nav id="spine-sitenav" class="spine-sitenav">
 	<?php
 		
@@ -18,12 +12,10 @@
 			switch_to_blog( 267 );
 			$menu = "network-temp";
 		}
-		
-		$menu_source = "network";
-		
+				
 	}	
 	
-	if ( function_exists( 'bu_navigation_display_primary' ) && $menu_source !== "menu" ) {
+	if ( function_exists( 'bu_navigation_display_primary' ) && $menu !== "network-temp" ) {
 		$bu_nav_args = array(
 			'post_types'      => array( 'page' ), // post types to display
 			'include_links'   => true, // whether or not to include BU Navigation links with pages
