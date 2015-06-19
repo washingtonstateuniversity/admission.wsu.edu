@@ -44,6 +44,21 @@ h4 {
 
 body.has-featured-image .main-header {
 	background-color: transparent;
+	position: relative;
+}
+
+body.has-featured-image .main-header {
+	position: relative;
+	height: 0;
+	overflow: visible;
+	z-index: 100;
+	height: 400px;
+	float: left;
+}
+
+body.has-featured-image .main-header .header-group {
+	
+	
 	position: absolute;
 }
 
