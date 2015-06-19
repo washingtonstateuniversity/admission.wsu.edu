@@ -29,6 +29,7 @@ h2 {
 	font-weight: 300;
 	font-size: 2rem;
 	text-transform: none;
+	font-color: $gray-darker;
 }
 
 h3 {
@@ -39,6 +40,11 @@ h3 {
 h4 {
 	text-transform: uppercase;
 	font-size: 1rem;
+}
+
+body.has-featured-image .main-header {
+	background-color: transparent;
+	position: absolute;
 }
 
 .comment-list {

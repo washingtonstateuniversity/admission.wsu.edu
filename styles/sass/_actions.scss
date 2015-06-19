@@ -6,10 +6,52 @@
 	position: relative;
 	height: 100px;
 	margin-top: -100px;
+	z-index: 99164;
 }
 
 .actions .column {
 	min-height: 10px;
+}
+
+.actions.affixed-top {
+	position: fixed;
+	top: 0;
+	//left: calc( 50% - 297px ); /* 990/2 = 495 + 198 = 297 */
+	//width: calc(50% + 297px);
+	right: 0;
+	width: 396px;
+	max-width: 100%;
+}
+
+.actions.affixed-top .action-item dd {
+	position: fixed;
+	overflow-y: scroll;
+	height: auto;
+	top: 50px;
+	bottom: 0;
+}
+
+.admin-bar .actions.affixed-top {
+	top: 32px;
+}
+
+.admin-bar .actions.affixed-top .action-item dd {
+	top: 82px;
+}
+
+.actions.affixed-top dl.action-item dt {
+	text-align: center;
+	width: 100%;
+}
+
+.actions.affixed-top dl.actions-list,
+.actions.affixed-top dl.action-item,
+.actions.affixed-top dl.action-item dt {
+	height: 50px;
+}
+
+.actions.affixed-top {
+	margin-top: 0;
 }
 
 dl.actions-list {
@@ -78,9 +120,9 @@ display: table;
 	width: 100%;
 	}
 
-.actions .column.two dl dl:nth-of-type(even) dt {
-		//background-color: $crimson-dark;
-		background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
+.actions dl.action-item:nth-of-type(even) dt {
+	//background-color: $crimson-dark;
+	background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
 }
 
 .actions .column.two dl dt a:hover,
@@ -99,7 +141,7 @@ display: table;
 }
 
 .action-item dd {
-	height: 400px;
+	//height: 400px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: 100%;
@@ -112,6 +154,8 @@ display: table;
 	color: white;
 	border-top: 10px $crimson-er solid;
 }
+
+
 
 .action-item dd form {
 	position: relative;

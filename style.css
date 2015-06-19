@@ -244,10 +244,43 @@ ul.inspirings ul {
 .actions {
   position: relative;
   height: 100px;
-  margin-top: -100px; }
+  margin-top: -100px;
+  z-index: 99164; }
 
 .actions .column {
   min-height: 10px; }
+
+.actions.affixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 396px;
+  max-width: 100%; }
+
+.actions.affixed-top .action-item dd {
+  position: fixed;
+  overflow-y: scroll;
+  height: auto;
+  top: 50px;
+  bottom: 0; }
+
+.admin-bar .actions.affixed-top {
+  top: 32px; }
+
+.admin-bar .actions.affixed-top .action-item dd {
+  top: 82px; }
+
+.actions.affixed-top dl.action-item dt {
+  text-align: center;
+  width: 100%; }
+
+.actions.affixed-top dl.actions-list,
+.actions.affixed-top dl.action-item,
+.actions.affixed-top dl.action-item dt {
+  height: 50px; }
+
+.actions.affixed-top {
+  margin-top: 0; }
 
 dl.actions-list {
   width: 100%;
@@ -304,7 +337,7 @@ dl.action-item {
   text-align: center;
   width: 100%; }
 
-.actions .column.two dl dl:nth-of-type(even) dt {
+.actions dl.action-item:nth-of-type(even) dt {
   background: linear-gradient(to bottom, #981e32 0%, #6b1523 100%);
   /* W3C */ }
 
@@ -320,7 +353,6 @@ dl.action-item {
   display: block; }
 
 .action-item dd {
-  height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
@@ -412,7 +444,8 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: 2rem;
-  text-transform: none; }
+  text-transform: none;
+  font-color: #2a3033; }
 
 h3 {
   font-weight: 300;
@@ -422,6 +455,10 @@ h3 {
 h4 {
   text-transform: uppercase;
   font-size: 1rem; }
+
+body.has-featured-image .main-header {
+  background-color: transparent;
+  position: absolute; }
 
 .comment-list {
   padding-left: 0; }
