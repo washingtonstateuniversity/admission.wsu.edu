@@ -291,7 +291,9 @@ dl.actions-list {
   -webkit-flex-direction: row;
   -webkit-flex-wrap: nowrap;
   -webkit-flex-flow: row nowrap;
-  justify-content: space-around;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   background: #981e32; }
 
 dl.action-item {
@@ -338,6 +340,7 @@ dl.action-item {
   width: 100%; }
 
 .actions dl.action-item:nth-of-type(even) dt {
+  background: -webkit-linear-gradient(top, #981e32 0%, #6b1523 100%);
   background: linear-gradient(to bottom, #981e32 0%, #6b1523 100%);
   /* W3C */ }
 
@@ -377,15 +380,12 @@ dl.action-item {
   bottom: 460px;
   left: 0;
   right: 0;
-  background: -moz-linear-gradient(top, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c60c30), color-stop(100%, rgba(198, 12, 48, 0)));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
   /* W3C */
@@ -401,15 +401,12 @@ dl.action-item {
   bottom: 100px;
   left: 0;
   right: 0;
-  background: -moz-linear-gradient(top, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(198, 12, 48, 0)), color-stop(100%, #c60c30));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
   /* W3C */
@@ -456,20 +453,33 @@ h4 {
   text-transform: uppercase;
   font-size: 1rem; }
 
-body.has-featured-image .main-header {
+.has-featured-image .main-header {
   background-color: transparent;
   position: relative; }
 
-body.has-featured-image .main-header {
-  position: relative;
+.has-featured-image .main-header {
+  position: absolute;
   height: 0;
   overflow: visible;
   z-index: 100;
   height: 400px;
   float: left; }
 
-body.has-featured-image .main-header .header-group {
-  position: absolute; }
+.has-featured-image .header-group {
+  min-height: 50px;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%); }
+
+.has-featured-image .header-group sup {
+  display: none; }
+
+.has-featured-image .header-group sub {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1rem; }
 
 .comment-list {
   padding-left: 0; }
