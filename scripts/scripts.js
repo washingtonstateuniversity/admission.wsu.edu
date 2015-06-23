@@ -19,8 +19,8 @@ function inspire() {
 		
 		process_section_backgrounds();
 
-		$("#info dt").on("click", function() {
-			$(this).parents("#info").toggleClass("opened");
+		$(".action-item dt").on("click", function() {
+			$(this).parents(".action-item").toggleClass("opened").siblings(".opened").removeClass("opened");
 		});
 			
 	});
