@@ -491,7 +491,7 @@ h4 {
 .column header h2 {
   padding-top: 0; }
 
-.has-featured-image .main-header {
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .main-header {
   background-color: transparent;
   position: relative;
   width: 100%;
@@ -502,7 +502,7 @@ h4 {
   float: left;
   bottom: 0; }
 
-.has-featured-image .header-group {
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group {
   min-height: 50px;
   position: absolute;
   max-width: 100%;
@@ -511,10 +511,10 @@ h4 {
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
   box-sizing: border-box; }
 
-.has-featured-image .header-group sup {
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sup {
   display: none; }
 
-.has-featured-image .header-group sub {
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub {
   position: absolute;
   bottom: 0;
   padding-bottom: 1rem;
@@ -522,7 +522,7 @@ h4 {
   font-size: 3rem;
   font-weight: 300; }
 
-.has-featured-image .header-group sub span {
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub span {
   white-space: normal; }
 
 .comment-list {
