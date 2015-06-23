@@ -26,26 +26,31 @@
   font-size: 18px;
   -webkit-font-smoothing: antialiased; }
 
+.crimson-column-left header,
+.crimson-column-right header {
+  position: relative;
+  min-height: 100px; }
+
+.inspiring .crimson-column-right header h2,
+.inspiring .crimson-column-left header h2 {
+  position: absolute;
+  bottom: -14px; }
+
+.inspiring-message {
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased; }
+
 .crimson-column-right {
   border-right: 40px #981e32 solid;
-  text-align: right; }
+  text-align: right;
+  padding-right: 15px; }
 
 .crimson-column-left {
   border-left: 40px #981e32 solid;
-  text-align: left; }
+  text-align: left;
+  padding-left: 15px; }
 
 /* Homepage */
-/* Homesickness */
-.size-gt-small .inspiring-homesickness {
-  padding-left: 40px; }
-
-.inspiring-homesickness [class*="crimson-column"] header {
-  height: 200px; }
-
-.inspiring-homesickness .column ~ .column {
-  clear: left;
-  margin-left: 40px; }
-
 .darken-50 {
   background-color: rgba(0, 0, 0, 0.5); }
 
@@ -117,10 +122,10 @@ dl.actions-list {
   background: #981e32; }
 
 dl.action-item {
-  height: 100px;
   width: 25%;
   padding: 0;
-  margin: auto; }
+  margin: auto;
+  float: left; }
 
 .actions.affixed-top .action-item dd {
   position: fixed;
@@ -135,12 +140,19 @@ dl.action-item {
 .actions.affixed-top {
   margin-top: 0; }
 
-.actions .column.two dl dt {
+.action-item dt {
   width: 100%;
   list-style: none;
   font-weight: 300;
-  padding: 0;
+  padding: 0; }
+
+.action-item,
+.action-item dt {
   height: 100px; }
+
+.affixed-top .action-item,
+.affixed-top .action-item dt {
+  height: 50px; }
 
 .action-item dt {
   /*
@@ -150,7 +162,8 @@ dl.action-item {
   	display: -webkit-flex;
   	-webkit-justify-content: center;
   */
-  display: table; }
+  display: table;
+  background-color: #981e32; }
 
 .action-item dt a,
 .action-item dt button {
@@ -171,15 +184,16 @@ dl.action-item {
   text-align: center;
   width: 100%; }
 
-.actions dl.action-item:nth-of-type(even) dt {
+.action-item:nth-of-type(even) dt a,
+.action-item:nth-of-type(even) dt button {
   background: -webkit-linear-gradient(top, #981e32 0%, #6b1523 100%);
   background: linear-gradient(to bottom, #981e32 0%, #6b1523 100%);
   /* W3C */ }
 
-.actions .column.two dl dt a:hover,
-.actions .column.two dl dt button:hover,
+.action-item:nth-of-type(n+1) dt a:hover,
+.action-item:nth-of-type(n+1) dt button:hover,
 .action-item.opened dt {
-  background-color: #c60c30; }
+  background: #c60c30; }
 
 .action-item dd {
   display: none; }
@@ -268,6 +282,9 @@ dl.action-item {
   height: 100vh;
   background-size: cover; }
 
+.admin-bar .size-gt-medium:not(.size-lt-990) .inspiring {
+  height: calc(100vh - 32px); }
+
 .size-lt-medium .inspired {
   height: calc( 100vh - 50px ); }
 
@@ -293,19 +310,6 @@ ul.inspirings ul {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.inspiring header {
-  position: relative;
-  min-height: 100px; }
-
-.inspiring header h2 {
-  position: absolute;
-  bottom: -14px;
-  padding-left: 10px; }
-
-.inspiring-message {
-  font-size: 1.2rem;
-  -webkit-font-smoothing: antialiased; }
-
 .inspiring header h2,
 .inspirings li {
   font-family: "Open Sans", "Lucida Grande", sans-serif;
@@ -438,6 +442,30 @@ ul.inspirings ul {
 .size-gt-small .inspiring-you .column.two {
   margin-top: 200px; }
 
+/* Inspiring Homesickness */
+.size-gt-small .inspiring-homesickness {
+  padding-left: 40px; }
+
+.inspiring-homesickness [class*="crimson-column"] header {
+  height: 200px; }
+
+.inspiring-homesickness .column ~ .column {
+  clear: left;
+  margin-left: 40px; }
+
+.inspiring-homesickness .column.two,
+.inspiring-homesickness .column.three {
+  min-width: 396px; }
+
+.size-lt-medium .inspiring-homesickness .row .column.two,
+.size-lt-medium .inspiring-homesickness .row .column.three {
+  width: calc( 100% - 40px ); }
+
+.kilroy {
+  background-color: white;
+  background-color: #981e32;
+  color: #b5babe; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased; }
@@ -459,6 +487,9 @@ h3 {
 h4 {
   text-transform: uppercase;
   font-size: 1rem; }
+
+.column header h2 {
+  padding-top: 0; }
 
 .has-featured-image .main-header {
   background-color: transparent;

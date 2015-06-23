@@ -59,10 +59,10 @@ dl.actions-list {
  }
  
  dl.action-item {
-	height: 100px;
 	width: 25%;
 	padding: 0;
 	margin: auto;
+	float: left;
 }
 
 .actions.affixed-top .action-item dd {
@@ -81,15 +81,21 @@ dl.actions-list {
 	margin-top: 0;
 }
 
-
-
-.actions .column.two dl dt {
+.action-item dt {
 	width: 100%;
 	list-style: none;
 	font-weight: 300;
-	padding: 0;
+	padding: 0;	
+}
+
+.action-item,
+.action-item dt {
 	height: 100px;
-	
+}
+
+.affixed-top .action-item,
+.affixed-top .action-item dt {
+	height: 50px;
 }
 
 .action-item dt {
@@ -101,7 +107,8 @@ dl.actions-list {
 	display: -webkit-flex;
 	-webkit-justify-content: center;
 */
-display: table;
+	display: table;
+	background-color: $crimson;
 }
 
 .action-item dt a,
@@ -120,20 +127,19 @@ display: table;
 	@include antialiased;
 	font-weight: 300;
 	font-family: "Open Sans";
-	
 	text-align: center;
 	width: 100%;
 	}
 
-.actions dl.action-item:nth-of-type(even) dt {
-	//background-color: $crimson-dark;
+.action-item:nth-of-type(even) dt a,
+.action-item:nth-of-type(even) dt button {
 	background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
 }
 
-.actions .column.two dl dt a:hover,
-.actions .column.two dl dt button:hover,
+.action-item:nth-of-type(n+1) dt a:hover,
+.action-item:nth-of-type(n+1) dt button:hover,
 .action-item.opened dt {
-	background-color: $crimson-er;	
+	background: $crimson-er;	
 }
 
 
@@ -146,7 +152,6 @@ display: table;
 }
 
 .action-item dd {
-	//height: 400px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: 100%;
@@ -160,14 +165,8 @@ display: table;
 	border-top: 10px $crimson-er solid;
 }
 
-
-
 .action-item dd form {
 	position: relative;
-}
-
-.action-item dt {
-	
 }
 
 .action-item.opened dt::before {

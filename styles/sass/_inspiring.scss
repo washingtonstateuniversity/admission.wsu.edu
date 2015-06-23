@@ -22,14 +22,33 @@
 	@include antialiased;
 }
 
+.crimson-column-left header,
+.crimson-column-right header {
+	position: relative;
+	min-height: 100px;
+}
+
+.inspiring .crimson-column-right header h2,
+.inspiring .crimson-column-left header h2 {
+	position: absolute;
+	bottom: -14px;
+}
+
+.inspiring-message {
+	font-size: 1.2rem;
+	@include antialiased;
+}
+
 .crimson-column-right {
 	border-right: 40px $crimson solid;
 	text-align: right;
+	padding-right: 15px;
 }
 
 .crimson-column-left {
 	border-left: 40px $crimson solid;
 	text-align: left;
+	padding-left: 15px;
 }
 
 
@@ -37,17 +56,3 @@
 /* Homepage */
 
 
-/* Homesickness */
-
-.size-gt-small .inspiring-homesickness {
-	padding-left: 40px;
-}
-
-.inspiring-homesickness [class*="crimson-column"] header {
-	height: 200px;
-}
-
-.inspiring-homesickness .column ~ .column {
-	clear: left;
-	margin-left: 40px;
-}

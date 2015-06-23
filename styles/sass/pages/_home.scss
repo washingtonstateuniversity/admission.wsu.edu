@@ -1,7 +1,10 @@
 .inspiring {
 	height: 100vh;
-	//background-position: center center;
 	background-size: cover;
+}
+
+.admin-bar .size-gt-medium:not(.size-lt-990) .inspiring {
+	height: calc(100vh - 32px);
 }
 
 .size-lt-medium .inspired {
@@ -39,21 +42,6 @@ ul.inspirings ul {
 	}
 }
 
-.inspiring header {
-	position: relative;
-	min-height: 100px;
-}
-
-.inspiring header h2 {
-	position: absolute;
-	bottom: -14px;
-	padding-left: 10px;
-}
-
-.inspiring-message {
-	font-size: 1.2rem;
-	@include antialiased;
-}
 
 .inspiring header h2,
 .inspirings li {

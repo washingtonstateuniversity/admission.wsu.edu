@@ -18,6 +18,7 @@
 
 /* Pages */
 @import 'pages/home';
+@import 'pages/visits';
 
 
 h1,h2,h3,h4,h5,h6 {
@@ -45,6 +46,10 @@ h3 {
 h4 {
 	text-transform: uppercase;
 	font-size: 1rem;
+}
+
+.column header h2 {
+	padding-top: 0;
 }
 
 .has-featured-image .main-header {
