@@ -40,6 +40,17 @@ function admissions_timing_class( $classes ) {
 
 add_theme_support( 'bu-navigation-primary' );
 
+function prune_page_templates( $templates ) {
+    unset( $templates['templates/halves.php'] );
+    unset( $templates['templates/margin-left.php'] );
+    unset( $templates['templates/margin-right.php'] );
+    unset( $templates['templates/side-left.php'] );
+    unset( $templates['templates/side-right.php'] );
+    unset( $templates['templates/single.php'] );
+    return $templates;
+}
+add_filter( 'theme_page_templates', 'prune_page_templates' );
+
 function admissions_setup() {
 
 //add_theme_support( 'html5', array(
