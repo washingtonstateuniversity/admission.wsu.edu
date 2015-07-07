@@ -2,14 +2,34 @@
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-
-.darken-35 {
-	background-color: rgba(0, 0, 0, 0.35);
+.column[class*="lightened-"],
+.column[class*="lighten-"] {
+	color: $gray-darker !important;
 }
 
+.column.slide[class*="lighten-"] header {
+	color: $gray-dark;
+	//color: white;
+	border-bottom-color: $gray-dark;
+	//background-color: $gray-dark;
+}
 
-[class*="darken-"] {
+.darkened-35 { background-color: rgba(0, 0, 0, 0.35); }
+.darkened-40 { background-color: rgba(0, 0, 0, 0.4); }
+.darkened-50 { background-color: rgba(0, 0, 0, 0.5); }
+.darkened-60 { background-color: rgba(0, 0, 0, 0.6); }
+.darkened-70 { background-color: rgba(0, 0, 0, 0.7); }
+.darkened-80 { background-color: rgba(0, 0, 0, 0.8); }
+
+.lightened-50, .lighten-50 .wrap { background-color: rgba(255, 255, 255, .5); }
+.lightened-60, .lighten-60 .wrap { background-color: rgba(255, 255, 255, .6); }
+.lightened-70, .lighten-70 .wrap { background-color: rgba(255, 255, 255, .7); }
+.lightened-80, .lighten-80 .wrap { background-color: rgba(255, 255, 255, .8); }
+.lightened-90, .lighten-90 .wrap { background-color: rgba(255, 255, 255, .9); }
+.lightened-95, .lighten-95 .wrap { background-color: rgba(255, 255, 255, .95); }
+
+[class*="darken-"],
+[class*="darkened-"] {
 	color: white;
 }
 
