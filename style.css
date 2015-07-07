@@ -9,8 +9,21 @@
 */
 .home .main-header,
 .page-you .main-header,
-.page-visits .main-header {
+.page-visits .main-header,
+.inspiring-lead .main-header {
   display: none; }
+
+.inspiring header h2 {
+  font-family: "Open Sans", "Lucida Grande", sans-serif;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 48px;
+  letter-spacing: -2px; }
+
+.inspiring-line.text-shadow header h2 {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
 .inspiring-you .column.one {
   width: 65%;
@@ -26,15 +39,38 @@
   font-size: 18px;
   -webkit-font-smoothing: antialiased; }
 
-.crimson-column-left header,
-.crimson-column-right header {
-  position: relative;
+.inspiring u,
+.inspiring .underline {
+  color: white;
+  background-color: #981e32;
+  text-decoration: none; }
+
+.inspiring-line span {
+  white-space: nowrap; }
+
+.min-height-100 {
   min-height: 100px; }
 
-.inspiring .crimson-column-right header h2,
-.inspiring .crimson-column-left header h2 {
-  position: absolute;
-  bottom: -14px; }
+.min-height-200 {
+  min-height: 200px; }
+
+.min-height-300 {
+  min-height: 300px; }
+
+.min-height-400 {
+  min-height: 400px; }
+
+.top-offset-100 {
+  margin-top: 100px; }
+
+.top-offset-200 {
+  margin-top: 200px; }
+
+.top-offset-300 {
+  margin-top: 300px; }
+
+.top-offset-400 {
+  margin-top: 400px; }
 
 .inspiring-message {
   font-size: 1.2rem;
@@ -43,21 +79,74 @@
 .crimson-column-right {
   border-right: 40px #981e32 solid;
   text-align: right;
-  padding-right: 15px; }
+  position: relative; }
 
 .crimson-column-left {
   border-left: 40px #981e32 solid;
   text-align: left;
   padding-left: 15px; }
 
-/* Homepage */
+.crimson-column-left header,
+.crimson-column-right header {
+  min-height: 100px;
+  position: absolute;
+  bottom: -14px; }
+
+.crimson-column-right header {
+  right: 10px; }
+
+.crimson-column-left header {
+  left: 10px; }
+
 .darken-50 {
   background-color: rgba(0, 0, 0, 0.5); }
 
-.darken-35 {
+.column[class*="lightened-"],
+.column[class*="lighten-"] {
+  color: #2a3033 !important; }
+
+.column.slide[class*="lighten-"] header {
+  color: #464e54;
+  border-bottom-color: #464e54; }
+
+.darkened-35 {
   background-color: rgba(0, 0, 0, 0.35); }
 
-[class*="darken-"] {
+.darkened-40 {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.darkened-50 {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.darkened-60 {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.darkened-70 {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.darkened-80 {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.lightened-50, .lighten-50 .wrap {
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.lightened-60, .lighten-60 .wrap {
+  background-color: rgba(255, 255, 255, 0.6); }
+
+.lightened-70, .lighten-70 .wrap {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.lightened-80, .lighten-80 .wrap {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.lightened-90, .lighten-90 .wrap {
+  background-color: rgba(255, 255, 255, 0.9); }
+
+.lightened-95, .lighten-95 .wrap {
+  background-color: rgba(255, 255, 255, 0.95); }
+
+[class*="darken-"],
+[class*="darkened-"] {
   color: white; }
 
 .blur::before {
@@ -72,31 +161,51 @@
   left: 0;
   top: 0; }
 
-.actions {
-  position: relative;
-  height: 50px;
-  margin-top: -100px;
-  z-index: 99164; }
+.page-visits .main-footer {
+  display: none; }
+
+.main-footer {
+  position: fixed;
+  min-height: 50px;
+  z-index: 99164;
+  width: 100%;
+  top: 0;
+  right: 0;
+  box-sizing: border-box; }
+
+.main-footer .action-items {
+  width: 33.3334%;
+  max-width: 100%;
+  float: right; }
+
+.action-items {
+  background-color: #981e32;
+  overflow: hidden; }
+
+.actions-third {
+  width: 33.33334%; }
 
 .actions .column {
   min-height: 10px; }
+
+.actions.affixed-bottom {
+  margin-top: -100px; }
 
 .actions.affixed-top {
   position: fixed;
   top: 0;
   right: 0;
-  width: 396px;
   max-width: 100%; }
 
-.admin-bar .size-gt-medium:not(.size-lt-990) .actions.affixed-top {
+x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
   top: 32px; }
 
-.size-lt-large .actions.affixed-top,
-.admin-bar .size-lt-large .actions.affixed-top {
+.size-lt-large .main-footer,
+x.admin-bar .size-lt-large .actions.affixed-top {
   top: 50px; }
 
-.admin-bar .actions.affixed-top .action-item dd {
-  top: 82px; }
+.admin-bar .main-footer dd {
+  top: 50px; }
 
 .actions.affixed-top dl.action-item dt {
   text-align: center;
@@ -109,7 +218,7 @@
 
 dl.actions-list {
   width: 100%;
-  height: 100px;
+  height: 50px;
   background: #981e32;
   padding: 0;
   display: -webkit-flex;
@@ -134,7 +243,7 @@ dl.action-item {
   top: 50px;
   bottom: 0; }
 
-.size-lt-large .actions.affixed-top .action-item dd {
+.size-lt-large .main-footer .action-item dd {
   top: 100px; }
 
 .actions.affixed-top {
@@ -148,11 +257,19 @@ dl.action-item {
 
 .action-item,
 .action-item dt {
-  height: 100px; }
-
-.affixed-top .action-item,
-.affixed-top .action-item dt {
   height: 50px; }
+
+.action-item,
+.action-item dt {
+  height: 50px; }
+
+.inspiring-lead .main-footer {
+  top: calc(100vh - 100px); }
+  .inspiring-lead .main-footer .action-items {
+    margin-right: 33.3334%; }
+  .inspiring-lead .main-footer .action-item,
+  .inspiring-lead .main-footer .action-item dt {
+    height: 100px; }
 
 .action-item dt {
   /*
@@ -182,7 +299,8 @@ dl.action-item {
   font-weight: 300;
   font-family: "Open Sans";
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  outline: none; }
 
 .action-item:nth-of-type(even) dt a,
 .action-item:nth-of-type(even) dt button {
@@ -192,7 +310,8 @@ dl.action-item {
 
 .action-item:nth-of-type(n+1) dt a:hover,
 .action-item:nth-of-type(n+1) dt button:hover,
-.action-item.opened dt {
+.action-item.opened dt,
+.action-item.opened dt button {
   background: #c60c30; }
 
 .action-item dd {
@@ -204,63 +323,23 @@ dl.action-item {
 .action-item dd {
   overflow-x: hidden;
   overflow-y: scroll;
-  width: 100%;
+  width: 33.3334%;
   background-color: white;
   background-color: #c60c30;
   position: absolute;
-  bottom: 100px;
-  padding: 1rem;
+  right: 0;
+  padding: 2rem;
   box-sizing: border-box;
   color: white;
-  border-top: 10px #c60c30 solid; }
+  border-top: 10px #c60c30 solid;
+  height: calc( 100vh - 50px );
+  z-index: 999164; }
 
 .action-item dd form {
   position: relative; }
 
-.action-item.opened dt::before {
-  content: "";
-  height: 40px;
-  display: block;
-  position: absolute;
-  z-index: 100;
-  bottom: 460px;
-  left: 0;
-  right: 0;
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c60c30), color-stop(100%, rgba(198, 12, 48, 0)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to bottom, #c60c30 0%, rgba(198, 12, 48, 0) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#00c60c30',GradientType=0 );
-  /* IE6-9 */ }
-
-.xaction-item.opened dt::after {
-  content: "";
-  height: 40px;
-  display: block;
-  position: absolute;
-  z-index: 100;
-  bottom: 100px;
-  left: 0;
-  right: 0;
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(198, 12, 48, 0)), color-stop(100%, #c60c30));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(198, 12, 48, 0) 0%, #c60c30 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c60c30', endColorstr='#c60c30',GradientType=0 );
-  /* IE6-9 */ }
-
 .action-item form input[type="text"] {
-  margin-bottom: 5px; }
+  margin-bottom: 0px; }
 
 .action-item form input[type="text"] {
   width: 100%;
@@ -276,6 +355,20 @@ dl.action-item {
 
 .action-item form .itemLabel {
   display: none; }
+
+.action-item h2 {
+  padding-top: 0; }
+
+.action-item ul {
+  padding: 0; }
+
+.action-item li {
+  list-style: none;
+  padding-bottom: 1rem; }
+
+.action-item li a {
+  font-weight: bold;
+  color: white; }
 
 /* Pages */
 .inspiring {
@@ -310,7 +403,6 @@ ul.inspirings ul {
     opacity: 1; }
   100% {
     opacity: 0; } }
-.inspiring header h2,
 .inspirings li {
   font-family: "Open Sans", "Lucida Grande", sans-serif;
   font-weight: 800;
@@ -425,15 +517,11 @@ ul.inspirings ul {
 .inspirings ul li:nth-of-type(16) {
   -webkit-animation-duration: 10000s; }
 
-.inspiring u {
-  background-color: #981e32;
-  text-decoration: none; }
-
 .inspiring-you {
   background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
   background-position: right center; }
 
-.day-time .inspiring .column.two {
+.day-time .inspiring-you .column.two {
   background-color: rgba(0, 0, 0, 0.5); }
 
 .night-time .inspiring-you {
@@ -442,12 +530,44 @@ ul.inspirings ul {
 .size-gt-small .inspiring-you .column.two {
   margin-top: 200px; }
 
+.slide-cub .wrap {
+  background: #20598a;
+  color: white !important; }
+
+.slide-college-hill .wrap {
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.slide.slide-cub .wrap header h2,
+.slide .wrap p:last-of-type {
+  padding-bottom: 0; }
+
+.slide.slide-cub .wrap header,
+.slide.slide-cub .wrap header h2 {
+  color: white !important; }
+
+.inspiring-found .inspiring-line {
+  margin-left: 100px; }
+
+.slide-cub .white-list li a {
+  background-color: white;
+  color: #20598a; }
+
+.slide-family-room .wrap {
+  background: rgba(176, 36, 17, 0.7);
+  color: white; }
+
+.section-timeoflife .column.three {
+  background: rgba(30, 189, 113, 0.8); }
+
+.section-timeoflife .white-list li a {
+  color: #1ebd71; }
+
+.id-crew .wrap {
+  background-color: rgba(0, 0, 0, 0.5); }
+
 /* Inspiring Homesickness */
 .size-gt-small .inspiring-homesickness {
   padding-left: 40px; }
-
-.inspiring-homesickness [class*="crimson-column"] header {
-  height: 200px; }
 
 .inspiring-homesickness .column ~ .column {
   clear: left;
@@ -461,10 +581,74 @@ ul.inspirings ul {
 .size-lt-medium .inspiring-homesickness .row .column.three {
   width: calc( 100% - 40px ); }
 
-.kilroy {
+x.kilroy {
   background-color: white;
   background-color: #981e32;
   color: #b5babe; }
+
+/* Slides */
+.slide .wrap {
+  display: block; }
+
+.slide .wrap {
+  max-width: 50%;
+  width: 33%;
+  padding: 2rem; }
+
+.flow-north {
+  bottom: 0;
+  top: auto; }
+
+.slide-college-hill .wrap {
+  width: 33.333334%;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.slide-pullman .wrap {
+  width: 33.333334%;
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+ul.white-list {
+  padding: 0; }
+
+.white-list li a {
+  background-color: white;
+  color: #981e32;
+  padding: .1rem .3rem;
+  line-height: 1.4rem; }
+
+.white-list li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  -webkit-transition: background-color .05     s;
+          transition: background-color .05     s; }
+
+p:last-of-type ~ ul {
+  margin-top: .5rem; }
+
+.inline-block-list li {
+  display: inline-block; }
+
+.column.placed-southeast,
+.fp-section .place-southeast .wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  top: auto; }
+
+.column:not(.inspiring-line) header {
+  margin-bottom: .5rem; }
+
+.column:not(.inspiring-line) header h2 {
+  font-size: 3rem;
+  line-height: 2.6rem; }
+
+.white-back:not(.x):not(.y) header {
+  color: #2a3033; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", "Lucida Grande", sans-serif;
@@ -488,8 +672,72 @@ h4 {
   text-transform: uppercase;
   font-size: 1rem; }
 
+ul.list-style-none {
+  list-style: none;
+  padding: 0; }
+
 .column header h2 {
   padding-top: 0; }
+
+.folded dt,
+.folded dd {
+  display: block; }
+.folded dt {
+  font-size: 1.2rem;
+  padding: .5rem 0;
+  font-weight: 300; }
+.folded dt:nth-of-type(odd)
+dt:nth-of-type(odd) + dd {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,ffffff+100&amp;0+0,1+50,0+100 */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */ }
+.folded dt:not(.unfolded):nth-of-type(even),
+.folded dt:not(.unfolded):nth-of-type(even) + dd {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,eaeaea+50,ffffff+100&amp;0+0,1+50,0+100 */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #eaeaea), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #eaeaea 50%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #eaeaea 50%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */ }
+.folded dt {
+  border-top: 1px transparent solid; }
+.folded dd {
+  display: none; }
+.folded dt.unfolded,
+.folded dd.unfolded {
+  color: black; }
+.folded dt.unfolded {
+  border-top: 1px #5E6A71 solid;
+  padding-top: 1rem;
+  padding-bottom: .25rem; }
+.folded dt.unfolded + dd {
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }
+.folded dd {
+  opacity: .5;
+  -webkit-transition: opacity .5s ease-in;
+          transition: opacity .5s ease-in; }
+.folded dd.unfolded {
+  display: block;
+  padding-bottom: 1rem;
+  opacity: 1; }
+.folded dt:hover {
+  cursor: pointer;
+  color: black; }
 
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .main-header {
   background-color: transparent;
@@ -534,6 +782,21 @@ h4 {
   margin-bottom: 10px;
   padding: 1rem;
   list-style: none; }
+
+.fp-section {
+  background-size: cover;
+  background-position: center center; }
+
+.fp-section section {
+  height: 100%; }
+
+.slide {
+  background-position: center center;
+  background-size: cover;
+  background-clip: border-box; }
+
+.fp-tableCell {
+  display: block; }
 
 .column[class*="step-"] p big {
   height: 0;
