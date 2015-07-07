@@ -2,42 +2,75 @@
 @import 'global/colors';
 @import 'global/utilities';
 
-.actions {
-	position: relative;
-	height: 50px;
-	margin-top: -100px;
-	z-index: 99164;
+.page-visits .main-footer {
+	display: none;
 }
+
+.main-footer {
+	position: fixed;
+	min-height: 50px;
+	z-index: 99164;
+	width: 100%;
+	top: 0;
+	right: 0;
+	box-sizing: border-box;
+}
+
+.main-footer .action-items {
+	width: 33.3334%;
+	max-width: 100%;
+	float: right;	
+}
+
+.action-items {
+	background-color: $crimson;
+	overflow: hidden;
+	//position: relative;
+	//height: 50px;
+	//z-index: 99164;
+	//width: 100%;
+}
+
+.actions-third {
+	width: 33.33334%;
+}
+
 
 .actions .column {
 	min-height: 10px;
+}
+
+.actions.affixed-bottom {
+	margin-top: -100px;
 }
 
 .actions.affixed-top {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 396px;
 	max-width: 100%;
 }
 
-.admin-bar .size-gt-medium:not(.size-lt-990) .actions.affixed-top {
+x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
 	top: 32px;
 }
 
-.size-lt-large .actions.affixed-top,
-.admin-bar .size-lt-large .actions.affixed-top {
+.size-lt-large .main-footer,
+x.admin-bar .size-lt-large .actions.affixed-top {
 	top: 50px;
 }
 
-.admin-bar .actions.affixed-top .action-item dd {
-	top: 82px;
+.admin-bar .main-footer dd {
+	top: 50px;
 }
 
 .actions.affixed-top dl.action-item dt {
 	text-align: center;
 	width: 100%;
 }
+
+
+
 
 .actions.affixed-top dl.actions-list,
 .actions.affixed-top dl.action-item,
@@ -47,7 +80,7 @@
 
 dl.actions-list {
 	width: 100%;
-	height: 100px;
+	height: 50px;
 	background: $crimson;
 	padding: 0;
 	display: -webkit-flex;
@@ -63,6 +96,7 @@ dl.actions-list {
 	padding: 0;
 	margin: auto;
 	float: left;
+	//position: relative;
 }
 
 .actions.affixed-top .action-item dd {
@@ -73,7 +107,7 @@ dl.actions-list {
 	bottom: 0;
 }
 
-.size-lt-large .actions.affixed-top .action-item dd {
+.size-lt-large .main-footer .action-item dd {
 	top: 100px;
 }
 
@@ -90,13 +124,30 @@ dl.actions-list {
 
 .action-item,
 .action-item dt {
-	height: 100px;
-}
-
-.affixed-top .action-item,
-.affixed-top .action-item dt {
 	height: 50px;
 }
+
+.action-item,
+.action-item dt {
+	height: 50px;
+}
+
+.inspiring-lead .main-footer {
+	
+	top: calc(100vh - 100px);
+	
+	.action-items {
+		margin-right: 33.3334%;
+	}
+	
+	.action-item,
+	.action-item dt {
+		height: 100px;
+	}
+	
+}
+
+
 
 .action-item dt {
 	
@@ -129,6 +180,7 @@ dl.actions-list {
 	font-family: "Open Sans";
 	text-align: center;
 	width: 100%;
+	outline: none;
 	}
 
 .action-item:nth-of-type(even) dt a,
@@ -138,7 +190,8 @@ dl.actions-list {
 
 .action-item:nth-of-type(n+1) dt a:hover,
 .action-item:nth-of-type(n+1) dt button:hover,
-.action-item.opened dt {
+.action-item.opened dt,
+.action-item.opened dt button {
 	background: $crimson-er;	
 }
 
@@ -154,60 +207,25 @@ dl.actions-list {
 .action-item dd {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	width: 100%;
+	width: 33.3334%;
 	background-color: white;
 	background-color: $crimson-er;
 	position: absolute;
-	bottom: 100px;
-	padding: 1rem;
+	right: 0;
+	padding: 2rem;
 	box-sizing: border-box;
 	color: white;
 	border-top: 10px $crimson-er solid;
+	height: calc( 100vh - 50px );
+	z-index: 999164;
 }
 
 .action-item dd form {
 	position: relative;
 }
 
-.action-item.opened dt::before {
-	content: "";
-	height: 40px;
-	display: block;
-	position: absolute;
-	z-index: 100;
-	bottom: 460px;
-	left: 0;
-	right: 0;
-	background: -moz-linear-gradient(top,  rgba(198,12,48,1) 0%, rgba(198,12,48,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(198,12,48,1)), color-stop(100%,rgba(198,12,48,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(198,12,48,1) 0%,rgba(198,12,48,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c60c30', endColorstr='#00c60c30',GradientType=0 ); /* IE6-9 */
-}
-
-.xaction-item.opened dt::after {
-	content: "";
-	height: 40px;
-	display: block;
-	position: absolute;
-	z-index: 100;
-	bottom: 100px;
-	left: 0;
-	right: 0;
-	background: -moz-linear-gradient(top,  rgba(198,12,48,0) 0%, rgba(198,12,48,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(198,12,48,0)), color-stop(100%,rgba(198,12,48,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(198,12,48,0) 0%,rgba(198,12,48,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c60c30', endColorstr='#c60c30',GradientType=0 ); /* IE6-9 */
-
-}
-
 .action-item form input[type="text"] {
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 .action-item form input[type="text"] {
@@ -229,3 +247,20 @@ dl.actions-list {
 	display: none;
 }
 
+.action-item h2 {
+	padding-top: 0;
+}
+
+.action-item ul {
+	padding: 0;
+}
+
+.action-item li {
+	list-style: none;
+	padding-bottom: 1rem;
+}
+
+.action-item li a {
+	font-weight: bold;
+	color: white;
+}
