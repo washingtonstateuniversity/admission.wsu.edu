@@ -1,14 +1,18 @@
 <?php
 	
-if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_blog_id() == 340 || get_current_blog_id() == 646  ) {
-
-	if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
-		switch_to_blog( 16 );
-	} else {
-		switch_to_blog( 267 );
-	}
+	$menu = "offsite";
+		
+	if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_blog_id() == 340 || get_current_blog_id() == 646  ) {
 	
-}
+		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
+			switch_to_blog( 16 );
+			$menu = "offsite-temp";
+		} else {
+			switch_to_blog( 267 );
+			$menu = "offsite-temp";
+		}
+		
+	}
 
 ?>
 
@@ -16,7 +20,7 @@ if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_
 	<?php
 	$spine_offsite_args = array(
 		'theme_location'  => 'offsite',
-		'menu'            => 'offsite',
+		'menu'            => $menu,
 		'container'       => false,
 		'container_class' => false,
 		'container_id'    => false,
