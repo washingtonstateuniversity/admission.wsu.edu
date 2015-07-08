@@ -2,11 +2,19 @@
 	
 	$menu = "offsite";
 		
-	if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_blog_id() == 340 || get_current_blog_id() == 646  ) {
+	if (
+		get_current_blog_id() == 15 ||
+		get_current_blog_id() == 339 ||
+		get_current_blog_id() == 340 ||
+		get_current_blog_id() == 646 ||
+		get_current_blog_id() == 903 ) {
 	
 		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 			switch_to_blog( 16 );
 			$menu = "offsite-temp";
+		if ( get_current_blog_id() == 903 ) {
+			switch_to_blog( 267 );
+			$menu = "offsite";
 		} else {
 			switch_to_blog( 267 );
 			$menu = "offsite-temp";
