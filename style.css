@@ -646,7 +646,7 @@ p:last-of-type ~ ul {
 .column:not(.inspiring-line) header {
   margin-bottom: .5rem; }
 
-.column:not(.inspiring-line) header h2 {
+.page .column:not(.inspiring-line) header h2 {
   font-size: 3rem;
   line-height: 2.6rem; }
 
