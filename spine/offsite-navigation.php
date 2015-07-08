@@ -12,7 +12,7 @@
 		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 			switch_to_blog( 16 );
 			$menu = "offsite-temp";
-		if ( get_current_blog_id() == 903 ) {
+		} elseif ( get_current_blog_id() == 903 ) {
 			switch_to_blog( 267 );
 			$menu = "offsite";
 		} else {
