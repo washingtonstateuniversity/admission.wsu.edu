@@ -3,14 +3,21 @@
 		
 	$menu = "site";
 
-	if ( get_current_blog_id() == 15 || get_current_blog_id() == 339 || get_current_blog_id() == 340 || get_current_blog_id() == 646  ) {
+	if (
+		get_current_blog_id() == 15 ||
+		get_current_blog_id() == 339 ||
+		get_current_blog_id() == 340 ||
+		get_current_blog_id() == 646 ||
+		get_current_blog_id() == 903 ) {
 	
 		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 			switch_to_blog( 16 );
 			$menu = "network-temp";
 		} else {
 			switch_to_blog( 267 );
-			$menu = "network-temp";
+			if ( get_current_blog_id() != 903 ) {
+				$menu = "network-temp";
+			}
 		}
 				
 	}	
