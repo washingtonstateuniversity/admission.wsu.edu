@@ -53,7 +53,7 @@ class WSUWP_Web_Template {
 		return esc_html( $this->html_title . ' | Washington State University' );
 	}
 	/**
-	 * Look for and handle any requests made to the `/web-template/` URL so that a JSON object containing
+	 * Look for and handle any requests made to the `/template/` URL so that a JSON object containing
 	 * the two parts of the template can be returned. We force the resonse to 200 OK and die as soon as
 	 * the JSON is output.
 	 */
