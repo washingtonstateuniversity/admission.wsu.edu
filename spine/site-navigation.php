@@ -13,13 +13,12 @@
 		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 			switch_to_blog( 16 );
 			$menu = "network-temp";
+		} elseif ( get_current_blog_id() == 903 ) {
+			switch_to_blog( 267 );
+			$menu = "network";
 		} else {
 			switch_to_blog( 267 );
-			if ( get_current_blog_id() == 903 ) {
-				$menu = "network";
-			} else {
-				$menu = "network-temp";
-			}
+			$menu = "network-temp";
 		}
 				
 	}	
