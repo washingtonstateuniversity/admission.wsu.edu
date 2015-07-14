@@ -15,9 +15,9 @@
 		} else {
 			switch_to_blog( 267 );
 			if ( get_current_blog_id() == 903 ) {
-				$menu = "network";
+				$menu = "offsite";
 			} else {
-				$menu = "network-temp";
+				$menu = "offsite-temp";
 			}
 		}
 		

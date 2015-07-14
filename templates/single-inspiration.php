@@ -9,7 +9,7 @@ if ( spine_has_background_image() ) {
 }
 ?>
 
-<main>hello
+<main>
 
 <?php
 
