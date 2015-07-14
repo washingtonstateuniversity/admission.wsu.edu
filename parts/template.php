@@ -39,7 +39,7 @@ class WSUWP_Web_Template {
 	 * @return bool
 	 */
 	public function is_template_request() {
-		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/web-template/' ) ) {
+		if ( isset( $_SERVER['REQUEST_URI'] ) && 0 === strpos( $_SERVER['REQUEST_URI'], '/template/' ) ) {
 			return true;
 		}
 		return false;
