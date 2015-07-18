@@ -25,20 +25,6 @@
 .inspiring-line.text-shadow header h2 {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
-.inspiring-you .column.one {
-  width: 65%;
-  border-right: 40px #981e32 solid;
-  text-align: right;
-  height: 200px;
-  position: relative; }
-
-.inspiring-you .column.two {
-  min-height: 200px;
-  position: relative;
-  overflow: hidden;
-  font-size: 18px;
-  -webkit-font-smoothing: antialiased; }
-
 .inspiring u,
 .inspiring .underline {
   color: white;
@@ -387,14 +373,26 @@ body[class*="domain-blogs"] .main-footer {
 .inspiring .column.one {
   position: relative; }
 
+.inspiring-you .column.one {
+  border-left: 40px #981e32 solid;
+  height: 200px;
+  position: relative; }
+
+.inspiring-you .column.two {
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased; }
+
 ul.inspirings {
   width: 500px;
   margin-bottom: -2px;
   padding: 0;
   position: absolute;
   bottom: 0;
-  right: 0;
-  margin-right: 15px; }
+  left: 0;
+  margin-left: 15px; }
 
 ul.inspirings ul {
   padding: 0; }
@@ -418,7 +416,6 @@ ul.inspirings ul {
   font-weight: 300; }
 
 .inspirings li {
-  text-align: right;
   display: block;
   padding: 0;
   bottom: 0;
@@ -435,7 +432,7 @@ ul.inspirings ul {
 .inspirings ul li {
   opacity: 0;
   position: absolute;
-  right: 0; }
+  left: 0; }
 
 .inspirings ul li:nth-of-type(1) {
   -webkit-animation-name: on;
@@ -523,9 +520,6 @@ ul.inspirings ul {
 .inspiring-you {
   background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
   background-position: right center; }
-
-.day-time .inspiring-you .column.two {
-  background-color: rgba(0, 0, 0, 0.5); }
 
 .night-time .inspiring-you {
   background-image: url("/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg"); }
@@ -726,7 +720,6 @@ dt:nth-of-type(odd) + dd {
   color: black; }
 .folded dt.unfolded {
   border-top: 1px #5E6A71 solid;
-  padding-top: 1rem;
   padding-bottom: .25rem; }
 .folded dt.unfolded + dd {
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }

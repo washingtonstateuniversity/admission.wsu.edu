@@ -21,22 +21,6 @@
 	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.inspiring-you .column.one {
-	width: 65%;
-	border-right: 40px $crimson solid;
-	text-align: right;
-	height: 200px;
-	position: relative;
-}
-
-.inspiring-you .column.two {
-	min-height: 200px;
-	position: relative;
-	overflow: hidden;
-	font-size: 18px;
-	@include antialiased;
-}
-
 .inspiring u,
 .inspiring .underline {
 	color: white;
