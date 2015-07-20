@@ -4,8 +4,5 @@
 
 </main>
 
-<?php wp_safe_redirect( home_url() ); ?>
-
-
 <?php get_footer(); ?>
 
