@@ -3,6 +3,16 @@
 // Provide support for the /web-template/ JSON endpoint.
 include_once( 'includes/web-template.php' );
 
+add_action( 'after_setup_theme', 'admission_theme_setup' );
+/**
+ * Setup functionality used by the theme.
+ */
+function admission_theme_setup() {
+	// Add support for the BU Navigation plugin.
+	add_theme_support( 'bu-navigation-primary' );
+	remove_theme_support( 'bu-navigation-widget' );
+}
+
 add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
 /**
  * Enqueue child theme Scripts and Styles
@@ -41,8 +51,6 @@ function admissions_timing_class( $classes ) {
 	return $classes;
 
 }
-
-add_theme_support( 'bu-navigation-primary' );
 
 function prune_page_templates( $templates ) {
     unset( $templates['templates/halves.php'] );
