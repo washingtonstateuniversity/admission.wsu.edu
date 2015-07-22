@@ -63,14 +63,6 @@ function prune_page_templates( $templates ) {
 }
 add_filter( 'theme_page_templates', 'prune_page_templates' );
 
-function admissions_setup() {
-
-//add_theme_support( 'html5', array(
-//		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-//	) );
-}
-add_action( 'after_setup_theme', 'admissions_setup' );
-
 add_filter('single_template', create_function(
 	'$the_template',
 	'foreach( (array) get_the_category() as $cat ) {
