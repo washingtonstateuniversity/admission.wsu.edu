@@ -63,10 +63,20 @@ function prune_page_templates( $templates ) {
 }
 add_filter( 'theme_page_templates', 'prune_page_templates' );
 
-add_filter('single_template', create_function(
-	'$the_template',
-	'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(TEMPLATEPATH . "/templates/single-{$cat->slug}.php") )
-		return TEMPLATEPATH . "/templates/single-{$cat->slug}.php"; }
-	return $the_template;' )
-);
+add_filter( 'single_template', 'admission_single_template' );
+/**
+ * Provide a specific single template for some categories.
+ *
+ * @param string $the_template The current template being loaded.
+ *
+ * @return string The modified template location.
+ */
+function admission_single_template( $the_template ) {
+	foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists( TEMPLATEPATH . "/templates/single-{$cat->slug}.php" ) ) {
+			return TEMPLATEPATH . "/templates/single-{$cat->slug}.php";
+		}
+	}
+
+	return $the_template;
+}
