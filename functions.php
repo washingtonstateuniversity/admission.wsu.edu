@@ -3,6 +3,16 @@
 // Provide support for the /web-template/ JSON endpoint.
 include_once( 'includes/web-template.php' );
 
+add_action( 'after_setup_theme', 'admission_theme_setup' );
+/**
+ * Setup functionality used by the theme.
+ */
+function admission_theme_setup() {
+	// Add support for the BU Navigation plugin.
+	add_theme_support( 'bu-navigation-primary' );
+	remove_theme_support( 'bu-navigation-widget' );
+}
+
 add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
 /**
  * Enqueue child theme Scripts and Styles
@@ -42,8 +52,6 @@ function admissions_timing_class( $classes ) {
 
 }
 
-add_theme_support( 'bu-navigation-primary' );
-
 function prune_page_templates( $templates ) {
     unset( $templates['templates/halves.php'] );
     unset( $templates['templates/margin-left.php'] );
@@ -55,18 +63,20 @@ function prune_page_templates( $templates ) {
 }
 add_filter( 'theme_page_templates', 'prune_page_templates' );
 
-function admissions_setup() {
+add_filter( 'single_template', 'admission_single_template' );
+/**
+ * Provide a specific single template for some categories.
+ *
+ * @param string $the_template The current template being loaded.
+ *
+ * @return string The modified template location.
+ */
+function admission_single_template( $the_template ) {
+	foreach( (array) get_the_category() as $cat ) {
+		if ( file_exists( TEMPLATEPATH . "/templates/single-{$cat->slug}.php" ) ) {
+			return TEMPLATEPATH . "/templates/single-{$cat->slug}.php";
+		}
+	}
 
-//add_theme_support( 'html5', array(
-//		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-//	) );
+	return $the_template;
 }
-add_action( 'after_setup_theme', 'admissions_setup' );
-
-add_filter('single_template', create_function(
-	'$the_template',
-	'foreach( (array) get_the_category() as $cat ) {
-		if ( file_exists(TEMPLATEPATH . "/templates/single-{$cat->slug}.php") )
-		return TEMPLATEPATH . "/templates/single-{$cat->slug}.php"; }
-	return $the_template;' )
-);
