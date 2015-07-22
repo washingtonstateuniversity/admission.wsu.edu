@@ -1,14 +1,7 @@
 .inspiring {
-	height: 100vh;
+	//height: 100vh;
+	height: 500px;
 	background-size: cover;
-}
-
-.admin-bar .size-gt-medium:not(.size-lt-990) .inspiring {
-	height: calc(100vh - 32px);
-}
-
-.size-lt-medium .inspired {
-	height: calc( 100vh - 50px );
 }
 
 .inspiring .column.one {
