@@ -361,14 +361,8 @@ body[class*="domain-blogs"] .main-footer {
 
 /* Pages */
 .inspiring {
-  height: 100vh;
+  height: 500px;
   background-size: cover; }
-
-.admin-bar .size-gt-medium:not(.size-lt-990) .inspiring {
-  height: calc(100vh - 32px); }
-
-.size-lt-medium .inspired {
-  height: calc( 100vh - 50px ); }
 
 .inspiring .column.one {
   position: relative; }
@@ -735,6 +729,9 @@ dt:nth-of-type(odd) + dd {
   cursor: pointer;
   color: black; }
 
+.featured-image {
+  height: 500px; }
+
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .main-header {
   background-color: transparent;
   position: relative;
@@ -742,17 +739,17 @@ dt:nth-of-type(odd) + dd {
   height: 0;
   overflow: visible;
   z-index: 100;
-  height: 400px;
+  height: 500px;
   float: left;
   bottom: 0; }
 
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group {
-  min-height: 50px;
+  min-height: 75px;
   position: absolute;
   max-width: 100%;
   width: 100%;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   box-sizing: border-box; }
 
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sup {
@@ -826,3 +823,98 @@ dt:nth-of-type(odd) + dd {
 
 .padded p:last-of-type {
   padding-bottom: 0; }
+
+/* Layout Adjustments */
+@media screen and (min-width: 1188px) {
+  #binder:not(.fluid).max-1188 .row,
+  #binder:not(.fluid).max-1386 .row {
+    width: 1188px;
+    max-width: 1188px; }
+
+  .max-1188 .row.single .column,
+  .max-1386 .row.single .column {
+    width: 990px; }
+  .max-1188 .column.singled,
+  .max-1386 .column.singled {
+    width: 990px !important; }
+  .max-1188 .row.halves .column,
+  .max-1386 .row.halves .column {
+    width: 495px; }
+  .max-1188 .column.half,
+  .max-1386 .column.half {
+    width: 495px !important; }
+  .max-1188 .row.thirds .column,
+  .max-1386 .row.thirds .column {
+    width: 330px; }
+  .max-1188 .column.third,
+  .max-1386 .column.third {
+    width: 330px !important; }
+  .max-1188 .row.quarters .column,
+  .max-1386 .row.quarters .column {
+    width: 25%; }
+  .max-1188 .column.quarter,
+  .max-1386 .column.quarter {
+    width: 25% !important; }
+  .max-1188 .row.triptych .column,
+  .max-1386 .row.triptych .column {
+    width: 297px; }
+  .max-1188 .row.triptych .column.two,
+  .max-1386 .row.triptych .column.two {
+    width: 594px; }
+  .max-1188 .row.margin-right .column.one,
+  .max-1188 .row.margin-left .column.two,
+  .max-1386 .row.margin-right .column.one,
+  .max-1386 .row.margin-left .column.two {
+    width: 891px; }
+  .max-1188 .row.margin-right .column.two,
+  .max-1188 .row.margin-left .column.one,
+  .max-1386 .row.margin-right .column.two,
+  .max-1386 .row.margin-left .column.one {
+    width: 297px; }
+  .max-1188 .row.side-right .column.one,
+  .max-1188 .row.side-left .column.two,
+  .max-1386 .row.side-right .column.one,
+  .max-1386 .row.side-left .column.two {
+    width: 792px; }
+  .max-1188 .row.side-right .column.two,
+  .max-1188 .row.side-left .column.one,
+  .max-1386 .row.side-right .column.two,
+  .max-1386 .row.side-left .column.one {
+    width: 396px; } }
+@media screen and (min-width: 1386px) {
+  #binder:not(.fluid).max-1386 .row {
+    width: 1188px;
+    max-width: 1188px; }
+
+  .max-1386 .row.single .column {
+    width: 1188px; }
+  .max-1386 .column.singled {
+    width: 1188px !important; }
+  .max-1386 .row.halves .column {
+    width: 594px; }
+  .max-1386 .column.half {
+    width: 594px !important; }
+  .max-1386 .row.thirds .column {
+    width: 396px; }
+  .max-1386 .column.third {
+    width: 396px !important; }
+  .max-1386 .row.quarters .column {
+    width: 297px; }
+  .max-1386 .column.quarter {
+    width: 297px !important; }
+  .max-1386 .row.triptych .column {
+    width: 297px; }
+  .max-1386 .row.triptych .column.two {
+    width: 594px; }
+  .max-1386 .row.margin-right .column.one,
+  .max-1386 .row.margin-left .column.two {
+    width: 891px; }
+  .max-1386 .row.margin-right .column.two,
+  .max-1386 .row.margin-left .column.one {
+    width: 297px; }
+  .max-1386 .row.side-right .column.one,
+  .max-1386 .row.side-left .column.two {
+    width: 792px; }
+  .max-1386 .row.side-right .column.two,
+  .max-1386 .row.side-left .column.one {
+    width: 396px; } }
