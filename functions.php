@@ -1,5 +1,8 @@
 <?php
-	
+
+// Provide support for the /web-template/ JSON endpoint.
+include_once( 'includes/web-template.php' );
+
 add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
 /**
  * Enqueue child theme Scripts and Styles
