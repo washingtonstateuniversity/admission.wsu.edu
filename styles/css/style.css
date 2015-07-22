@@ -46,9 +46,6 @@
 .min-height-400 {
   min-height: 400px; }
 
-.min-height-500 {
-  min-height: 500px; }
-
 .top-offset-100 {
   margin-top: 100px; }
 
@@ -363,39 +360,6 @@ body[class*="domain-blogs"] .main-footer {
   display: none; }
 
 /* Pages */
-/* Social Wall */
-.socialize .gallery {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  height: 600px; }
-  .socialize .gallery img {
-    border: none;
-    width: 100%; }
-  .socialize .gallery a {
-    display: block; }
-  .socialize .gallery .gallery-item {
-    margin: 0; }
-  .socialize .gallery .gallery-icon {
-    line-height: 0;
-    width: 100%; }
-  .socialize .gallery figcaption {
-    display: none; }
-
-/* Inspiring Ticker */
 .inspiring {
   height: 500px;
   background-size: cover; }
@@ -869,6 +833,7 @@ dt:nth-of-type(odd) + dd {
 @media screen and (min-width: 1188px) {
   #binder:not(.fluid).max-1188 .row,
   #binder:not(.fluid).max-1386 .row {
+    width: 1188px;
     max-width: 1188px; }
 
   .max-1188 .row.single .column,
@@ -905,26 +870,26 @@ dt:nth-of-type(odd) + dd {
   .max-1188 .row.margin-left .column.two,
   .max-1386 .row.margin-right .column.one,
   .max-1386 .row.margin-left .column.two {
-    width: 75%; }
+    width: 891px; }
   .max-1188 .row.margin-right .column.two,
   .max-1188 .row.margin-left .column.one,
   .max-1386 .row.margin-right .column.two,
   .max-1386 .row.margin-left .column.one {
-    width: 25%; }
+    width: 297px; }
   .max-1188 .row.side-right .column.one,
   .max-1188 .row.side-left .column.two,
   .max-1386 .row.side-right .column.one,
   .max-1386 .row.side-left .column.two {
-    width: 660px; }
+    width: 792px; }
   .max-1188 .row.side-right .column.two,
   .max-1188 .row.side-left .column.one,
   .max-1386 .row.side-right .column.two,
   .max-1386 .row.side-left .column.one {
-    width: 330px; } }
+    width: 396px; } }
 @media screen and (min-width: 1386px) {
   #binder:not(.fluid).max-1386 .row {
-    width: 1386px;
-    max-width: 1386px; }
+    width: 1188px;
+    max-width: 1188px; }
 
   .max-1386 .row.single .column {
     width: 1188px; }

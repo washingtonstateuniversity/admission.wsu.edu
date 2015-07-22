@@ -1,3 +1,40 @@
+/* Social Wall */
+	
+.socialize .gallery {
+	
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	flex-flow: column wrap;
+	flex-wrap: wrap;
+	height: 600px;
+	
+	img {
+		border: none;
+		width: 100%;
+	}
+	
+	a {
+		display: block;
+	}
+	
+	.gallery-item {
+		margin: 0;
+	}
+	
+	.gallery-icon {
+		line-height: 0;
+		width: 100%;
+	}
+	
+	figcaption {
+		display: none;	
+	}
+	
+}
+
+/* Inspiring Ticker */
+
 .inspiring {
 	//height: 100vh;
 	height: 500px;
