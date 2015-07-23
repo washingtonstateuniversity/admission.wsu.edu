@@ -940,6 +940,15 @@ dt:nth-of-type(odd) + dd {
   background-color: #981e32;
   padding: 5px 5px; }
 
+/* Stats */
+.stats {
+  text-align: center; }
+  .stats .column header {
+    margin-bottom: .2rem; }
+  .stats h2 {
+    padding-bottom: 0;
+    font-weight: 800; }
+
 /* Gallery */
 .gallery::after {
   content: "";
@@ -982,10 +991,10 @@ dt:nth-of-type(odd) + dd {
     width: 25% !important; }
   .max-1188 .row.triptych .column,
   .max-1386 .row.triptych .column {
-    width: 297px; }
+    width: 25%; }
   .max-1188 .row.triptych .column.two,
   .max-1386 .row.triptych .column.two {
-    width: 594px; }
+    width: 50%; }
   .max-1188 .row.margin-right .column.one,
   .max-1188 .row.margin-left .column.two,
   .max-1386 .row.margin-right .column.one,
