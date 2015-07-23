@@ -29,6 +29,10 @@ function inspire() {
 		$("body").addClass("ready");
 		
 		process_section_backgrounds();
+		
+		$('.drop').click( function() {
+			$(this).toggleClass('dropped');
+		});
 
 		$(".action-item dt").on("click", function() {
 			$(this).parents(".action-item").toggleClass("opened").siblings(".opened").removeClass("opened");
