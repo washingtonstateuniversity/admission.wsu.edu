@@ -466,6 +466,26 @@ ul.list-style-none {
 	}
 }
 
+/* Stats */
+
+.stats {
+	
+	text-align: center;
+	
+	.column header {
+		margin-bottom: .2rem;	
+	}
+	
+	h2 {
+		padding-bottom: 0;
+		font-weight: 800;
+	}
+	
+	p {
+		//text-transform: uppercase;
+	}
+	
+}
 
 /* Gallery */
 
@@ -511,8 +531,8 @@ ul.list-style-none {
 		.column.quarter { width: 25% !important; }
 	
 		// triptych
-		.row.triptych .column { width: 297px; }
-		.row.triptych .column.two { width: 594px; }
+		.row.triptych .column { width: 25%; }
+		.row.triptych .column.two { width: 50%; }
 	
 		// Margin - Right & Left
 		.row.margin-right .column.one,
