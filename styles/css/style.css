@@ -46,6 +46,9 @@
 .min-height-400 {
   min-height: 400px; }
 
+.min-height-500 {
+  min-height: 500px; }
+
 .top-offset-100 {
   margin-top: 100px; }
 
@@ -360,6 +363,164 @@ body[class*="domain-blogs"] .main-footer {
   display: none; }
 
 /* Pages */
+/* Social Wall */
+.socialize .unbound.recto {
+  margin-right: 0 !important; }
+
+.socialize .row.single,
+.socialize .row.single .column {
+  width: 100% !important;
+  max-width: 100% !important; }
+
+.socialize {
+  background: -webkit-linear-gradient(top, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%);
+  background: linear-gradient(to bottom, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%);
+  /* W3C */ }
+  .socialize .gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    height: 610px;
+    max-width: 990px;
+    margin: 0 auto; }
+    .socialize .gallery img {
+      border: none;
+      width: 100%;
+      height: auto; }
+    .size-lt-xlarge .socialize .gallery img {
+      min-height: 100%;
+      width: auto;
+      max-width: 1000px; }
+    .size-gt-large .socialize .gallery img {
+      min-width: 100%;
+      height: auto; }
+    .socialize .gallery a {
+      display: block; }
+    .socialize .gallery .gallery-item {
+      margin: 0;
+      float: none;
+      height: 198px;
+      overflow: hidden;
+      width: 20%; }
+    .socialize .gallery .gallery-item:nth-of-type(1) {
+      margin-top: 99px; }
+    .socialize .gallery .gallery-item:nth-of-type(3) {
+      margin-top: 150px; }
+    .socialize .gallery .gallery-item:nth-of-type(8) {
+      margin-top: 66px; }
+    .socialize .gallery .gallery-icon {
+      line-height: 0;
+      overflow: hidden; }
+    .socialize .gallery figcaption {
+      display: none; }
+
+/* FOS Browser */
+.fos-index {
+  /* Drop Menus */
+  /* AZ */ }
+  .fos-index header {
+    margin-bottom: .5rem; }
+  .fos-index .areas-wrap {
+    background-color: #b5babe;
+    height: 2.8em;
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem; }
+  .fos-index .areas-wrap ul {
+    width: calc(100% - 2rem); }
+  .fos-index ul,
+  .fos-index li {
+    box-sizing: border-box; }
+  .fos-index ul {
+    height: auto;
+    padding: 0;
+    width: 100%; }
+  .fos-index li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    background-color: white; }
+  .fos-index li.top a {
+    color: #5E6A71;
+    padding: 10px 0px 10px 20px;
+    text-transform: uppercase;
+    pointer-events: none; }
+  .fos-index li.top:hover {
+    cursor: pointer; }
+  .fos-index li a {
+    color: #981e32;
+    font-size: 14px;
+    padding: 5px 20px;
+    display: block; }
+  .fos-index ul.drop {
+    padding: 0;
+    position: absolute;
+    z-index: 509;
+    background-color: white; }
+  .fos-index ul.drop li a:hover {
+    color: white;
+    background-color: #981e32;
+    -webkit-transition: background-color .2s ease-in-out;
+            transition: background-color .2s ease-in-out; }
+  .fos-index ul.drop li.item {
+    display: none; }
+  .fos-index ul.dropped {
+    padding-bottom: 20px; }
+  .fos-index ul.dropped li.item {
+    display: block; }
+  .fos-index .az li {
+    display: inline-block;
+    margin-bottom: 5px;
+    background: transparent; }
+  .fos-index .az li a {
+    color: #8d959a;
+    border: 1px #8d959a solid;
+    padding: 6px 12px; }
+  .fos-index .az li a:hover {
+    color: #5E6A71;
+    background-color: white;
+    border-color: white; }
+  .fos-index .colleges-wrap {
+    display: none; }
+
+/* Fairs */
+.fairs li {
+  display: inline-block;
+  margin-right: 2px; }
+.fairs li a {
+  color: white;
+  background-color: #981e32;
+  padding: 5px 5px; }
+
+/* Stats */
+.stats {
+  text-align: center; }
+  .stats .column header {
+    margin-bottom: .2rem; }
+  .stats h2 {
+    padding-bottom: 0;
+    font-weight: 800; }
+
+/* Gallery */
+.gallery::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.section-wrapper {
+  background-size: cover;
+  background-position: center center; }
+
+/* Inspiring Ticker */
 .inspiring {
   height: 500px;
   background-size: cover; }
@@ -824,16 +985,10 @@ dt:nth-of-type(odd) + dd {
 .padded p:last-of-type {
   padding-bottom: 0; }
 
-.gallery::after {
-  content: "";
-  display: table;
-  clear: both; }
-
 /* Layout Adjustments */
 @media screen and (min-width: 1188px) {
   #binder:not(.fluid).max-1188 .row,
   #binder:not(.fluid).max-1386 .row {
-    width: 1188px;
     max-width: 1188px; }
 
   .max-1188 .row.single .column,
@@ -862,34 +1017,34 @@ dt:nth-of-type(odd) + dd {
     width: 25% !important; }
   .max-1188 .row.triptych .column,
   .max-1386 .row.triptych .column {
-    width: 297px; }
+    width: 25%; }
   .max-1188 .row.triptych .column.two,
   .max-1386 .row.triptych .column.two {
-    width: 594px; }
+    width: 50%; }
   .max-1188 .row.margin-right .column.one,
   .max-1188 .row.margin-left .column.two,
   .max-1386 .row.margin-right .column.one,
   .max-1386 .row.margin-left .column.two {
-    width: 891px; }
+    width: 75%; }
   .max-1188 .row.margin-right .column.two,
   .max-1188 .row.margin-left .column.one,
   .max-1386 .row.margin-right .column.two,
   .max-1386 .row.margin-left .column.one {
-    width: 297px; }
+    width: 25%; }
   .max-1188 .row.side-right .column.one,
   .max-1188 .row.side-left .column.two,
   .max-1386 .row.side-right .column.one,
   .max-1386 .row.side-left .column.two {
-    width: 792px; }
+    width: 660px; }
   .max-1188 .row.side-right .column.two,
   .max-1188 .row.side-left .column.one,
   .max-1386 .row.side-right .column.two,
   .max-1386 .row.side-left .column.one {
-    width: 396px; } }
+    width: 330px; } }
 @media screen and (min-width: 1386px) {
   #binder:not(.fluid).max-1386 .row {
-    width: 1188px;
-    max-width: 1188px; }
+    width: 1386px;
+    max-width: 1386px; }
 
   .max-1386 .row.single .column {
     width: 1188px; }
