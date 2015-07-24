@@ -1,46 +1,246 @@
 /* Social Wall */
+
+.socialize .unbound.recto {
+	margin-right: 0 !important;
+}
+
+.socialize .row.single,
+.socialize .row.single .column {
+	width: 100% !important;
+	max-width: 100% !important;
+}
+
+.socialize {
+
+		background: linear-gradient(to bottom,  rgba(152,30,50,1) 0%,rgba(152,30,50,1) 50%,rgba(42,48,51,1) 50%,rgba(42,48,51,1) 100%); /* W3C */
+
+ .gallery {
+		
+		display: flex;
+		flex-direction: column;
+	  	flex-wrap: wrap;
+		height: 610px;
+		padding-bottom: 50px;
+		max-width: 990px;
+		margin: 0 auto;
+		
+		img {
+			border: none;
+			width: 100%;
+			height: auto;
+			
+			
+		}
+		
+		.size-lt-xlarge & img {
+			min-height: 100%;
+			width: auto;
+			max-width: 1000px;
+		}
+		
+		.size-gt-large & img {
+			min-width: 100%;
+			height: auto;
+			
+		}
+		
+		a {
+			display: block;
+		}
+		
+		.gallery-item {
+			margin: 0;
+			float: none;
+			height: 198px;
+			overflow: hidden;
+			width: 20%;
+		}
 	
-.socialize .gallery {
-	
-	display: flex;
-	width: 100%;
-	flex-flow: column;
-	flex-wrap: wrap;
-	height: 600px;
-	overflow: hidden;
-	
-	img {
-		border: none;
-		width: 100%;
-		height: auto;
-	}
-	
-	a {
-		display: block;
-	}
-	
-	.gallery-item {
-		margin: 0;
-		float: none;
+		.gallery-item:nth-of-type(1) {
+			margin-top: 99px;
+		}
+		.gallery-item:nth-of-type(3) {
+			margin-top: 150px;
+		}
+		.gallery-item:nth-of-type(8) {
+			margin-top: 66px;
+		}
+		
+		.gallery-icon {
+			line-height: 0;
+			overflow: hidden;
+		}
+		
+		figcaption {
+			display: none;	
+		}
 		
 	}
 	
-	.gallery-item:nth-of-type(2n + 1) {
-		//margin-top: 100px;
-		break-before: all;
+
+}
+
+.size-gt-large .socialize .gallery {
+	//height: 800px;
+}
+
+/* FOS Browser */
+
+.fos-index {
+	
+	header {
+		margin-bottom: .5rem;
 	}
 	
-	.gallery-icon {
-		line-height: 0;
+	.areas-wrap {
+		background-color: $gray-lighter;
+		height: 2.8em;
+		position: relative;
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+	
+	.areas-wrap ul {
+		width: calc(100% - 2rem);
+	}
+	
+	ul,
+	li {
+		box-sizing: border-box;
+	}
+	
+	ul {
+		height: auto;
+		padding: 0;
 		width: 100%;
-		//overflow: hidden;
-		//padding-bottom: 100%;
 	}
 	
-	figcaption {
-		display: none;	
+	li {
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+		background-color: white;
 	}
 	
+	li.top a {
+		color: $gray;
+		padding: 10px 0px 10px 20px;
+		text-transform: uppercase;
+		pointer-events: none;
+	}
+	
+	li.top:hover {
+		cursor: pointer;
+	}
+	
+	li a {
+		color: $crimson;
+		font-size: 14px;
+		padding: 5px 20px;
+		display: block;
+	}
+	
+	/* Drop Menus */
+	
+	ul.drop {
+		padding: 0;
+		position: absolute;
+		z-index: 509;
+		background-color: white;
+	}
+	
+	ul.drop li a:hover {
+		color: white;
+		background-color: $crimson;
+		transition: background-color .2s ease-in-out;
+	}
+
+	ul.drop li.item {
+		display: none;
+	}
+	
+	ul.dropped {
+		padding-bottom: 20px;
+	}
+	
+	ul.dropped li.item {
+		display: block;
+	}
+	
+	/* AZ */
+	
+	.az li {
+		display: inline-block;
+		margin-bottom: 5px;
+		background: transparent;
+	}
+	
+	.az li a {
+		color: $gray-light;
+		border: 1px $gray-light solid;
+		padding: 6px 12px;
+	}
+	
+	.az li a:hover {
+		color: $gray;
+		background-color: white;
+		border-color: white;
+	}
+
+	.colleges-wrap {
+		display: none;
+	}
+
+}
+
+/* Fairs */
+
+.fairs {
+	
+	li {
+		display: inline-block;
+		margin-right: 2px;
+	}
+	
+	li a {
+		color: white;
+		background-color: $crimson;
+		padding: 5px 5px;
+	}
+}
+
+/* Stats */
+
+.stats {
+	
+	text-align: center;
+	
+	.column header {
+		margin-bottom: .2rem;	
+	}
+	
+	h2 {
+		padding-bottom: 0;
+		font-weight: 800;
+	}
+	
+	p {
+		//text-transform: uppercase;
+	}
+	
+}
+
+/* Gallery */
+
+.gallery::after {
+	content: "";
+	display: table;
+	clear: both;	
+}
+
+.section-wrapper {
+	background-size: cover;
+	background-position: center center;
 }
 
 /* Inspiring Ticker */

@@ -22,7 +22,6 @@ function inspire() {
 	
 	$('.folded dt').click( function() { $(this).toggleClass('unfolded').next('dd').toggleClass('unfolded'); });
 	
-	
 	$(document).ready( function() {
 		
 		
