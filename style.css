@@ -390,7 +390,7 @@ body[class*="domain-blogs"] .main-footer {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     height: 610px;
-    max-width: 990px;
+    max-width: 1188px;
     margin: 0 auto; }
     .socialize .gallery img {
       border: none;
@@ -495,7 +495,8 @@ body[class*="domain-blogs"] .main-footer {
 /* Fairs */
 .fairs li {
   display: inline-block;
-  margin-right: 2px; }
+  margin-right: 2px;
+  margin-bottom: 2px; }
 .fairs li a {
   color: white;
   background-color: #981e32;
