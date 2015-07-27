@@ -24,13 +24,10 @@
   font-size: 54px;
   line-height: 48px;
   letter-spacing: -1px;
-  word-spacing: 990px;
+  word-spacing: 100vw;
   position: absolute;
   padding-left: 10px;
   bottom: -2px; }
-
-.main-header .guttered sup[data-default^="Inspiring"] {
-  margin-left: -2rem; }
 
 /* */
 .home .main-header,
@@ -191,36 +188,18 @@
 .main-footer .action-items {
   width: 33.3334%;
   max-width: 100%;
+  min-width: 396px;
   float: right; }
 
 .action-items {
   background-color: #981e32;
   overflow: hidden; }
 
-.actions-third {
-  width: 33.33334%; }
-
-.actions .column {
-  min-height: 10px; }
-
-.actions.affixed-bottom {
-  margin-top: -100px; }
-
-.actions.affixed-top {
+x.actions {
   position: fixed;
   top: 0;
   right: 0;
   max-width: 100%; }
-
-x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
-  top: 32px; }
-
-.size-lt-large .main-footer,
-x.admin-bar .size-lt-large .actions.affixed-top {
-  top: 50px; }
-
-.admin-bar .main-footer dd {
-  top: 50px; }
 
 .actions.affixed-top dl.action-item dt {
   text-align: center;
@@ -251,49 +230,29 @@ dl.action-item {
   margin: auto;
   float: left; }
 
-.actions.affixed-top .action-item dd {
-  position: fixed;
-  overflow-y: scroll;
-  height: auto;
-  top: 50px;
-  bottom: 0; }
+/* Admin Bar Adjustments */
+x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
+  top: 32px; }
 
-.size-lt-large .main-footer .action-item dd {
-  top: 100px; }
+.size-lt-large .main-footer,
+x.admin-bar .size-lt-large .actions.affixed-top {
+  top: 50px; }
 
-.actions.affixed-top {
-  margin-top: 0; }
+.admin-bar .main-footer {
+  top: 32px; }
+
+.admin-bar .size-lt-large .main-footer {
+  top: 50px; }
+
+.action-item,
+.action-item dt {
+  height: 50px; }
 
 .action-item dt {
   width: 100%;
   list-style: none;
   font-weight: 300;
-  padding: 0; }
-
-.action-item,
-.action-item dt {
-  height: 50px; }
-
-.action-item,
-.action-item dt {
-  height: 50px; }
-
-.inspiring-lead .main-footer {
-  top: calc(100vh - 100px); }
-  .inspiring-lead .main-footer .action-items {
-    margin-right: 33.3334%; }
-  .inspiring-lead .main-footer .action-item,
-  .inspiring-lead .main-footer .action-item dt {
-    height: 100px; }
-
-.action-item dt {
-  /*
-  	justify-content: center;
-    flex-direction: column;
-    -webkit-align-items: center;
-  	display: -webkit-flex;
-  	-webkit-justify-content: center;
-  */
+  padding: 0;
   display: table;
   background-color: #981e32; }
 
@@ -339,16 +298,56 @@ dl.action-item {
   overflow-x: hidden;
   overflow-y: scroll;
   width: 33.3334%;
-  background-color: white;
+  min-width: 396px;
   background-color: #c60c30;
   position: absolute;
   right: 0;
   padding: 2rem;
   box-sizing: border-box;
   color: white;
-  border-top: 10px #c60c30 solid;
   height: calc( 100vh - 50px );
   z-index: 999164; }
+
+.action-item a {
+  display: inline-block;
+  background-color: #6b1523;
+  background-color: white;
+  color: #981e32 !important;
+  padding: .4em .4em 0;
+  margin: -.2em .2em -.2em -.4em;
+  border-left-color: white;
+  border-style: solid;
+  border-right-color: #981e32;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  white-space: nowrap;
+  top: 0; }
+
+x.action-item a::before {
+  content: "l";
+  position: absolute;
+  background: #981e32;
+  height: 1em;
+  padding: .2em 0;
+  width: 40px;
+  left: -40px; }
+
+.action-item a:hover {
+  background-color: white;
+  color: #981e32;
+  -webkit-transition: border-left-width .2s ease-out;
+          transition: border-left-width .2s ease-out;
+  -webkit-transition: border-right-width .2s ease-out;
+          transition: border-right-width .2s ease-out;
+  border-width: 0 3px 3px 0; }
+
+x.action-item a {
+  display: inline-block;
+  background-color: #6b1523;
+  background-color: white;
+  color: #981e32 !important;
+  padding: .2em .4em;
+  margin: -.2em 0; }
 
 .action-item dd form {
   position: relative; }
@@ -384,6 +383,14 @@ dl.action-item {
 .action-item li a {
   font-weight: bold;
   color: white; }
+
+.inspiring-lead .main-footer {
+  top: calc(100vh - 100px); }
+  .inspiring-lead .main-footer .action-items {
+    margin-right: 33.3334%; }
+  .inspiring-lead .main-footer .action-item,
+  .inspiring-lead .main-footer .action-item dt {
+    height: 100px; }
 
 body[class*="domain-blogs"] .main-footer {
   display: none; }
@@ -765,6 +772,9 @@ x.kilroy {
   background-color: #981e32;
   color: #b5babe; }
 
+.size-lt-large #binder {
+  width: 100%; }
+
 /* Slides */
 .slide .wrap {
   display: block; }
@@ -936,9 +946,10 @@ dt:nth-of-type(odd) + dd {
   max-width: 100%;
   height: 500px;
   width: 100%;
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   box-sizing: border-box; }
+
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group.guttered {
+  padding-left: 0; }
 
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sup {
   display: none; }
@@ -946,13 +957,23 @@ dt:nth-of-type(odd) + dd {
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub {
   position: absolute;
   bottom: 0;
+  height: 200px;
+  width: 100%;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%); }
+
+.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub span {
+  white-space: normal;
   padding-bottom: 1rem;
   font-family: "Open Sans", "Lucida Grande", sans-serif;
   font-size: 3rem;
-  font-weight: 300; }
-
-.has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub span {
-  white-space: normal; }
+  line-height: 1;
+  font-weight: 300;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding-left: 2rem;
+  width: calc(100% - 2rem); }
 
 .comment-list {
   padding-left: 0; }

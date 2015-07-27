@@ -3,16 +3,16 @@
 if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 	
 	$info_snippet = "129";
-	$apply_snippet = "128";
-	$visit_snippet = "266";
+	$apply_snippet = "266";
+	$visit_snippet = "128";
 	$chat_snippet = "";
 	
 } else {
 	
-	$info_snippet = "267-703";
-	$apply_snippet = "267-705";
-	$visit_snippet = "267-704";
-	$chat_snippet = "267-706";
+	$info_snippet = "703";
+	$apply_snippet = "705";
+	$visit_snippet = "704";
+	$chat_snippet = "706";
 
 } ?>
 
