@@ -19,58 +19,28 @@
 .main-footer .action-items {
 	width: 33.3334%;
 	max-width: 100%;
+	min-width: 396px;
 	float: right;	
 }
 
 .action-items {
 	background-color: $crimson;
 	overflow: hidden;
-	//position: relative;
-	//height: 50px;
-	//z-index: 99164;
-	//width: 100%;
 }
 
-.actions-third {
-	width: 33.33334%;
-}
-
-
-.actions .column {
-	min-height: 10px;
-}
-
-.actions.affixed-bottom {
-	margin-top: -100px;
-}
-
-.actions.affixed-top {
+x.actions {
 	position: fixed;
 	top: 0;
 	right: 0;
 	max-width: 100%;
 }
 
-x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
-	top: 32px;
-}
 
-.size-lt-large .main-footer,
-x.admin-bar .size-lt-large .actions.affixed-top {
-	top: 50px;
-}
-
-.admin-bar .main-footer dd {
-	top: 50px;
-}
 
 .actions.affixed-top dl.action-item dt {
 	text-align: center;
 	width: 100%;
 }
-
-
-
 
 .actions.affixed-top dl.actions-list,
 .actions.affixed-top dl.action-item,
@@ -96,23 +66,30 @@ dl.actions-list {
 	padding: 0;
 	margin: auto;
 	float: left;
-	//position: relative;
 }
 
-.actions.affixed-top .action-item dd {
-	position: fixed;
-	overflow-y: scroll;
-	height: auto;
+/* Admin Bar Adjustments */
+x.admin-bar .size-gt-medium:not(.size-lt-990) .main-footer {
+	top: 32px;
+}
+
+.size-lt-large .main-footer,
+x.admin-bar .size-lt-large .actions.affixed-top {
 	top: 50px;
-	bottom: 0;
 }
 
-.size-lt-large .main-footer .action-item dd {
-	top: 100px;
+.admin-bar .main-footer {
+	top: 32px;
 }
 
-.actions.affixed-top {
-	margin-top: 0;
+.admin-bar .size-lt-large .main-footer {
+	top: 50px;
+}
+
+
+.action-item,
+.action-item dt {
+	height: 50px;
 }
 
 .action-item dt {
@@ -120,44 +97,6 @@ dl.actions-list {
 	list-style: none;
 	font-weight: 300;
 	padding: 0;	
-}
-
-.action-item,
-.action-item dt {
-	height: 50px;
-}
-
-.action-item,
-.action-item dt {
-	height: 50px;
-}
-
-.inspiring-lead .main-footer {
-	
-	top: calc(100vh - 100px);
-	
-	.action-items {
-		margin-right: 33.3334%;
-	}
-	
-	.action-item,
-	.action-item dt {
-		height: 100px;
-	}
-	
-}
-
-
-
-.action-item dt {
-	
-/*
-	justify-content: center;
-  flex-direction: column;
-  -webkit-align-items: center;
-	display: -webkit-flex;
-	-webkit-justify-content: center;
-*/
 	display: table;
 	background-color: $crimson;
 }
@@ -195,7 +134,6 @@ dl.actions-list {
 	background: $crimson-er;	
 }
 
-
 .action-item dd {
 	display: none;
 }
@@ -208,16 +146,70 @@ dl.actions-list {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	width: 33.3334%;
-	background-color: white;
+	min-width: 396px;
 	background-color: $crimson-er;
 	position: absolute;
 	right: 0;
 	padding: 2rem;
 	box-sizing: border-box;
 	color: white;
-	border-top: 10px $crimson-er solid;
 	height: calc( 100vh - 50px );
 	z-index: 999164;
+}
+
+.action-item li {
+	//padding-top: 2em;
+	//position: relative;
+}
+
+.action-item a {
+	display: inline-block;
+	background-color: #6b1523;
+	background-color: white;
+	color: $crimson !important;
+	padding: .4em .4em 0;
+	margin: -.2em .2em -.2em -.4em;
+	border-left-color: white;
+	border-style: solid;
+	border-right-color: $crimson;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	white-space: nowrap;
+	//position: absolute;
+	//display: block;
+	top: 0;
+}
+
+x.action-item a::before {
+	content: "l";
+	position: absolute;
+	background: $crimson;
+	height: 1em;
+	padding: .2em 0;
+	width: 40px;
+	left: -40px;
+	
+}
+.action-item a:hover {
+	//border-left-width: 0px;
+	//border-right-width: 40px;
+	//padding: .4em .8em;
+	//margin: -.4em -.2em -.4em -.8em;
+	//bottom: 0;
+	background-color: white;
+	color: $crimson;
+	transition: border-left-width .2s ease-out;
+	transition: border-right-width .2s ease-out;
+	border-width: 0 3px 3px 0;
+}
+
+x.action-item a {
+	display: inline-block;
+	background-color: $crimson-dark;
+	background-color: white;
+	color: $crimson !important;
+	padding: .2em .4em;
+	margin: -.2em 0;
 }
 
 .action-item dd form {
@@ -263,4 +255,19 @@ dl.actions-list {
 .action-item li a {
 	font-weight: bold;
 	color: white;
+}
+
+.inspiring-lead .main-footer {
+	
+	top: calc(100vh - 100px);
+	
+	.action-items {
+		margin-right: 33.3334%;
+	}
+	
+	.action-item,
+	.action-item dt {
+		height: 100px;
+	}
+	
 }
