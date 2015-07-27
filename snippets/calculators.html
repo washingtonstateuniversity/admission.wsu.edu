@@ -19,8 +19,7 @@ function checkGPA(gpa) {
 		z.style.display = "none";
 	}
 }
-</script>
-<script>
+
 function checkreading(reading) {
 	var y = document.getElementById("low-reading");
 	var z = document.getElementById("high-reading");
@@ -41,8 +40,7 @@ function checkreading(reading) {
 		z.style.display = "none";
 	}
 }
-</script>
-<script>
+
 function checkMath(math) {
 	var y = document.getElementById("low-math");
 	var z = document.getElementById("high-math");
@@ -63,8 +61,7 @@ function checkMath(math) {
 		z.style.display = "none";
 	}
 }
-</script>
-<script>
+
 function checkACT(act) {
 	var y = document.getElementById("low-act");
 	var z = document.getElementById("high-act");
@@ -85,8 +82,7 @@ function checkACT(act) {
 		z.style.display = "none";
 	}
 }
-</script>
-<script>
+
 function calculate() {
 	if (document.getElementById("gpa").value && ((document.getElementById("reading").value && document.getElementById("math").value) || document.getElementById("act").value)) {
 		var gpa = document.getElementById("gpa").value.valueOf() * 400;
@@ -175,6 +171,7 @@ function calculate() {
 				break;
 			default:
 				break;
+				
 		}
 		
 		if ((parseFloat(act) + parseFloat(gpa)) > sat) {
@@ -184,7 +181,7 @@ function calculate() {
 		if (document.getElementById("calculator").className == "UAA")
 		
 		{
-			alert("qvalue:"+qvalue+" sat:"+sat+" act:"+act+" gpa:"+gpa);
+			//alert("qvalue:"+qvalue+" sat:"+sat+" act:"+act+" gpa:"+gpa);
 			if (qvalue >= 2750) {
 				
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2><h3>You are eligible for $4000.</h3><p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please  apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
