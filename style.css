@@ -7,6 +7,32 @@
  Template:       spine
  Version:        0.0.1
 */
+/* Main Header Inspiring Line */
+.main-header sup[data-default^="Inspiring"] {
+  display: block !important;
+  border-left: 40px #981e32 solid;
+  height: 200px;
+  position: relative;
+  top: 0; }
+
+.main-header sup[data-default^="Inspiring"] span {
+  display: block;
+  font-family: "Open Sans", "Lucida Grande", sans-serif;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 48px;
+  letter-spacing: -1px;
+  word-spacing: 990px;
+  position: absolute;
+  padding-left: 10px;
+  bottom: -2px; }
+
+.main-header .guttered sup[data-default^="Inspiring"] {
+  margin-left: -2rem; }
+
+/* */
 .home .main-header,
 .page-you .main-header,
 .page-visits .main-header,
@@ -907,8 +933,8 @@ dt:nth-of-type(odd) + dd {
 
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group {
   min-height: 75px;
-  position: absolute;
   max-width: 100%;
+  height: 500px;
   width: 100%;
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
