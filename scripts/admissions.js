@@ -50,7 +50,7 @@ function inspire() {
 		
 		if ( $(".row:first-of-type").hasClass("inspiring") ) {
 			
-			//$("body").addClass("inspiring-lead");
+			$("body").addClass("inspiring-lead");
 		
 		}
 		
