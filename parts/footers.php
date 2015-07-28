@@ -35,7 +35,7 @@ if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
 		</dl>
 		<dl id="chat" class="action-item">
 			<dt><button>chat</buton></dt>
-			<dd></dd>
+			<dd><?php echo do_shortcode('[html_snippet id="'.$chat_snippet.'"]') ?></dd>
 		</dl>
 	</dl>
 </footer>
