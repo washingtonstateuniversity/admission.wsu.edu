@@ -392,8 +392,7 @@ body[class*="domain-blogs"] .main-footer {
 
 .socialize {
   background: -webkit-linear-gradient(top, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%);
-  background: linear-gradient(to bottom, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%);
-  /* W3C */ }
+  background: linear-gradient(to bottom, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%); }
   .socialize .gallery {
     display: -webkit-box;
     display: -webkit-flex;
@@ -519,6 +518,9 @@ body[class*="domain-blogs"] .main-footer {
   color: white;
   background-color: #981e32;
   padding: 5px 5px; }
+.fairs li a:hover {
+  color: #981e32;
+  background-color: white; }
 
 /* Stats */
 .stats {
@@ -700,62 +702,6 @@ ul.inspirings ul {
 
 .size-gt-small .inspiring-you .column.two {
   margin-top: 200px; }
-
-.slide-cub .wrap {
-  background: #20598a;
-  color: white !important; }
-
-.slide-college-hill .wrap {
-  background-color: rgba(255, 255, 255, 0.8); }
-
-.slide.slide-cub .wrap header h2,
-.slide .wrap p:last-of-type {
-  padding-bottom: 0; }
-
-.slide.slide-cub .wrap header,
-.slide.slide-cub .wrap header h2 {
-  color: white !important; }
-
-.inspiring-found .inspiring-line {
-  margin-left: 100px; }
-
-.slide-cub .white-list li a {
-  background-color: white;
-  color: #20598a; }
-
-.slide-family-room .wrap {
-  background: rgba(176, 36, 17, 0.7);
-  color: white; }
-
-.section-timeoflife .column.three {
-  background: rgba(30, 189, 113, 0.8); }
-
-.section-timeoflife .white-list li a {
-  color: #1ebd71; }
-
-.id-crew .wrap {
-  background-color: rgba(0, 0, 0, 0.5); }
-
-/* Inspiring Homesickness */
-.size-gt-small .inspiring-homesickness {
-  padding-left: 40px; }
-
-.inspiring-homesickness .column ~ .column {
-  clear: left;
-  margin-left: 40px; }
-
-.inspiring-homesickness .column.two,
-.inspiring-homesickness .column.three {
-  min-width: 396px; }
-
-.size-lt-medium .inspiring-homesickness .row .column.two,
-.size-lt-medium .inspiring-homesickness .row .column.three {
-  width: calc( 100% - 40px ); }
-
-x.kilroy {
-  background-color: white;
-  background-color: #981e32;
-  color: #b5babe; }
 
 .size-lt-large #binder {
   width: 100%; }
