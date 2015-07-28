@@ -942,7 +942,7 @@ dt:nth-of-type(odd) + dd {
 .has-featured-image:not(.domain-blogs-admission-wsu-edu) .header-group sub {
   position: absolute;
   bottom: 0;
-  height: 200px;
+  height: 120px;
   width: 100%;
   background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%); }
