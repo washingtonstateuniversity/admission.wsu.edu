@@ -31,9 +31,7 @@
 
 /* */
 .home .main-header,
-.page-you .main-header,
-.page-visits .main-header,
-.inspiring-lead .main-header {
+.page-you .main-header {
   display: none; }
 
 .inspiring header h2 {
@@ -313,7 +311,8 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   background-color: #6b1523;
   background-color: white;
   color: #981e32 !important;
-  padding: .4em .4em 0;
+  padding: 12px .4em 0;
+  height: 40px;
   margin: -.2em .2em -.2em -.4em;
   border-left-color: white;
   border-style: solid;
@@ -338,8 +337,7 @@ x.action-item a::before {
   -webkit-transition: border-left-width .2s ease-out;
           transition: border-left-width .2s ease-out;
   -webkit-transition: border-right-width .2s ease-out;
-          transition: border-right-width .2s ease-out;
-  border-width: 0 3px 3px 0; }
+          transition: border-right-width .2s ease-out; }
 
 x.action-item a {
   display: inline-block;
