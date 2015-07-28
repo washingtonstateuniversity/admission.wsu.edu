@@ -2,6 +2,8 @@
 
 // Provide support for the /web-template/ JSON endpoint.
 include_once( 'includes/web-template.php' );
+// Setup the widget used to display the footer area.
+include_once( 'includes/admission-footer-snippets-widget.php' );
 
 add_action( 'after_setup_theme', 'admission_theme_setup' );
 /**
@@ -11,6 +13,21 @@ function admission_theme_setup() {
 	// Add support for the BU Navigation plugin.
 	add_theme_support( 'bu-navigation-primary' );
 	remove_theme_support( 'bu-navigation-widget' );
+}
+
+add_action( 'widgets_init', 'admission_register_sidebars' );
+/**
+ * Register the sidebars and custom widgets used by the theme.
+ */
+function admission_register_sidebars() {
+	register_widget( 'Admission_Footer_Snippets_Widget' );
+
+	$footer_args = array(
+		'name' => 'Footer',
+		'id' => 'admission-footer',
+		'description' => 'Displays the action links on the top of every page.',
+	);
+	register_sidebar( $footer_args );
 }
 
 add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
