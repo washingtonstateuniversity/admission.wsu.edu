@@ -1,11 +1,11 @@
 /*
  Theme Name:     WSU Admissions
- Theme URI:      https://web.wsu.edu/
+ Theme URI:      http://web.wsu.edu
  Description:    A child theme for Washington State University's admission.wsu.edu
  Author:         WSU University Communications, Nate Jacobson
  Author URI:     http://ucomm.wsu.edu
  Template:       spine
- Version:        0.4.8
+ Version:        0.0.1
 */
 /* Main Header Inspiring Line */
 .main-header sup[data-default^="Inspiring"] {
@@ -306,46 +306,41 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   height: calc( 100vh - 50px );
   z-index: 999164; }
 
-.action-item a {
+.action-item a:first-child {
   display: inline-block;
   background-color: #6b1523;
   background-color: white;
   color: #981e32 !important;
-  padding: 12px .4em 0;
-  height: 40px;
-  margin: -.2em .2em -.2em -.4em;
+  padding: .2em .4em;
+  margin: -.2em .2em -.2em 0em;
   border-left-color: white;
   border-style: solid;
   border-right-color: #981e32;
   border-right-width: 0px;
   border-left-width: 0px;
   white-space: nowrap;
-  top: 0; }
-
-x.action-item a::before {
-  content: "l";
-  position: absolute;
-  background: #981e32;
-  height: 1em;
-  padding: .2em 0;
-  width: 40px;
-  left: -40px; }
+  top: 0;
+  text-transform: uppercase; }
 
 .action-item a:hover {
-  background-color: white;
-  color: #981e32;
-  -webkit-transition: border-left-width .2s ease-out;
-          transition: border-left-width .2s ease-out;
-  -webkit-transition: border-right-width .2s ease-out;
-          transition: border-right-width .2s ease-out; }
-
-x.action-item a {
-  display: inline-block;
   background-color: #6b1523;
-  background-color: white;
-  color: #981e32 !important;
-  padding: .2em .4em;
-  margin: -.2em 0; }
+  color: #c60c30 !important;
+  -webkit-transition: color .2s ease-out;
+          transition: color .2s ease-out;
+  -webkit-transition: background-color .2s ease-out;
+          transition: background-color .2s ease-out; }
+
+.action-item header {
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem; }
+
+.action-item hr {
+  height: 1rem;
+  border: none;
+  display: block;
+  background: #6b1523; }
 
 .action-item dd form {
   position: relative; }
@@ -381,14 +376,6 @@ x.action-item a {
 .action-item li a {
   font-weight: bold;
   color: white; }
-
-.inspiring-lead .main-footer {
-  top: calc(100vh - 100px); }
-  .inspiring-lead .main-footer .action-items {
-    margin-right: 33.3334%; }
-  .inspiring-lead .main-footer .action-item,
-  .inspiring-lead .main-footer .action-item dt {
-    height: 100px; }
 
 body[class*="domain-blogs"] .main-footer {
   display: none; }

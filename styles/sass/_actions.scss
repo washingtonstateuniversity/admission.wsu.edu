@@ -162,14 +162,14 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	//position: relative;
 }
 
-.action-item a {
+.action-item a:first-child {
 	display: inline-block;
 	background-color: #6b1523;
 	background-color: white;
 	color: $crimson !important;
-	padding: 12px .4em 0;
-	height: 40px;
-	margin: -.2em .2em -.2em -.4em;
+	padding: .2em .4em;
+	//height: 40px;
+	margin: -.2em .2em -.2em 0em;
 	border-left-color: white;
 	border-style: solid;
 	border-right-color: $crimson;
@@ -179,38 +179,29 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	//position: absolute;
 	//display: block;
 	top: 0;
+	text-transform: uppercase;
 }
 
-x.action-item a::before {
-	content: "l";
-	position: absolute;
-	background: $crimson;
-	height: 1em;
-	padding: .2em 0;
-	width: 40px;
-	left: -40px;
-	
-}
 .action-item a:hover {
-	//border-left-width: 0px;
-	//border-right-width: 40px;
-	//padding: .4em .8em;
-	//margin: -.4em -.2em -.4em -.8em;
-	//bottom: 0;
-	background-color: white;
-	color: $crimson;
-	transition: border-left-width .2s ease-out;
-	transition: border-right-width .2s ease-out;
+	background-color: $crimson-dark;
+	color: $crimson-er !important;
+	transition: color .2s ease-out;
+	transition: background-color .2s ease-out;
 	//border-width: 0 3px 3px 0;
 }
 
-x.action-item a {
-	display: inline-block;
-	background-color: $crimson-dark;
-	background-color: white;
-	color: $crimson !important;
-	padding: .2em .4em;
-	margin: -.2em 0;
+.action-item header {
+	font-weight: 800;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+.action-item hr {
+	height: 1rem;
+	border: none;
+	display: block;
+	background: $crimson-dark;
 }
 
 .action-item dd form {
@@ -256,19 +247,4 @@ x.action-item a {
 .action-item li a {
 	font-weight: bold;
 	color: white;
-}
-
-.inspiring-lead .main-footer {
-	
-	top: calc(100vh - 100px);
-	
-	.action-items {
-		margin-right: 33.3334%;
-	}
-	
-	.action-item,
-	.action-item dt {
-		height: 100px;
-	}
-	
 }
