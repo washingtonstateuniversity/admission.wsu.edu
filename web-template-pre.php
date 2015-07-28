@@ -3,7 +3,12 @@
 $site_name      = get_bloginfo('name');
 $site_tagline   = get_bloginfo('description');
 ?>
+
+
 <main class="spine-page-default">
+	
+	<?php get_template_part('parts/headers'); ?>
+<?php get_template_part('parts/featured-images'); ?>
 	<header class="ucomm-bookmark">
 		<hgroup>
 			<div class="site"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_name ); ?>" rel="home">Admissions</a></div>
