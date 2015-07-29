@@ -193,12 +193,6 @@
   background-color: #981e32;
   overflow: hidden; }
 
-x.actions {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 100%; }
-
 .actions.affixed-top dl.action-item dt {
   text-align: center;
   width: 100%; }
@@ -342,26 +336,33 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   display: block;
   background: #6b1523; }
 
-.action-item dd form {
+#info form {
   position: relative; }
-
-.action-item form input[type="text"] {
+#info .itemValue {
+  margin-bottom: 3px; }
+#info input[type="text"] {
   margin-bottom: 0px; }
-
-.action-item form input[type="text"] {
+#info input[type="text"] {
   width: 100%;
   background-color: #981e32;
   border: none;
   color: #d7dadb; }
-
-.action-item form input.required[type="text"] {
+#info input.required[type="text"] {
   background-color: #6b1523; }
-
-.action-item form input[type="text"]:focus {
+#info input[type="text"]:focus {
   background-color: black; }
-
-.action-item form .itemLabel {
+#info .itemLabel {
   display: none; }
+#info ::-webkit-input-placeholder {
+  color: white; }
+#info :-moz-placeholder {
+  /* Firefox 18- */
+  color: white; }
+#info ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white; }
+#info :-ms-input-placeholder {
+  color: white; }
 
 .action-item h2 {
   padding-top: 0; }
@@ -393,6 +394,18 @@ body[class*="domain-blogs"] .main-footer {
 .socialize {
   background: -webkit-linear-gradient(top, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%);
   background: linear-gradient(to bottom, #981e32 0%, #981e32 50%, #2a3033 50%, #2a3033 100%); }
+  .socialize .spine-social-channels {
+    width: 40%;
+    position: absolute;
+    z-index: 509; }
+    .socialize .spine-social-channels li {
+      width: 3em; }
+    .socialize .spine-social-channels a {
+      color: white;
+      line-height: 60px;
+      font-size: 2rem; }
+    .socialize .spine-social-channels a:hover::before {
+      color: #2a3033; }
   .socialize .gallery {
     display: -webkit-box;
     display: -webkit-flex;
@@ -506,7 +519,7 @@ body[class*="domain-blogs"] .main-footer {
     color: #5E6A71;
     background-color: white;
     border-color: white; }
-  .fos-index .colleges-wrap {
+  .home .fos-index .colleges-wrap, .page-academics .fos-index .colleges-wrap {
     display: none; }
 
 /* Fairs */

@@ -19,8 +19,9 @@ function inspire() {
 	
 	$(document).ready( function() {
 		
-		
 		$("body").addClass("ready");
+		
+		$(".home .spine-social-channels").clone().addClass("looseleaf").prependTo($(".socialize .column.one"));
 		
 		process_section_backgrounds();
 		

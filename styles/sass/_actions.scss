@@ -28,15 +28,6 @@
 	overflow: hidden;
 }
 
-x.actions {
-	position: fixed;
-	top: 0;
-	right: 0;
-	max-width: 100%;
-}
-
-
-
 .actions.affixed-top dl.action-item dt {
 	text-align: center;
 	width: 100%;
@@ -204,31 +195,46 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	background: $crimson-dark;
 }
 
-.action-item dd form {
-	position: relative;
-}
+#info {
 
-.action-item form input[type="text"] {
-	margin-bottom: 0px;
-}
+	form {
+		position: relative;
+	}
+	
+	.itemValue {
+		margin-bottom: 3px;
+	}
+	
+	input[type="text"] {
+		margin-bottom: 0px;
+	}
+	
+	input[type="text"] {
+		width: 100%;
+		background-color: $crimson;
+		border: none;
+		color: $gray-lightly;
+	}
+	
+	
+	
+	input.required[type="text"] {
+		background-color: $crimson-dark;
+	}
+	
+	input[type="text"]:focus {
+		background-color: black;
+	}
+	
+	.itemLabel {
+		display: none;
+	}
+	
+	::-webkit-input-placeholder { color: white; }
+	:-moz-placeholder { /* Firefox 18- */ color: white; }
+	::-moz-placeholder { /* Firefox 19+ */ color: white; }
+	:-ms-input-placeholder { color: white; }
 
-.action-item form input[type="text"] {
-	width: 100%;
-	background-color: $crimson;
-	border: none;
-	color: $gray-lightly;
-}
-
-.action-item form input.required[type="text"] {
-	background-color: $crimson-dark;
-}
-
-.action-item form input[type="text"]:focus {
-	background-color: black;
-}
-
-.action-item form .itemLabel {
-	display: none;
 }
 
 .action-item h2 {
