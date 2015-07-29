@@ -1,4 +1,4 @@
-<p>Tell us a bit about yourself.</p>
+<p>Tell us a bit about yourself so we can send you the right information.</p>
 
 <form action="https://goto.wsu.edu/Info" id="InfoRequestForm" method="post">    <div class="group three-columns">
 	       
@@ -20,45 +20,38 @@
 	</div>
 	
 </fieldset>
-	    
+
+<fieldset>
+	
+	<legend>Email</legend>
+
+    <div class="group">
+        <div class="itemGroup">
+            <div class="itemLabel">Email *</div>
+            <div class="itemValue"><input class="required" id="Email" name="Email" type="text" value="" placeholder="Email Address"></div>
+        </div>
+    </div>
+    
+</fieldset>
 	    
 <fieldset>
 	
 	<legend>Address</legend>
 
-    <div class="itemGroup">
-            <div class="itemLabel">Legal First Name *</div>
-            <div class="itemValue"><input class="required" id="FirstName" name="FirstName" type="text" value="" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;"></div>
-        </div>
-        <div class="itemGroup">
-            <div class="itemLabel">Middle Name</div>
-            <div class="itemValue"><input id="MiddleName" name="MiddleName" type="text" value=""></div>
-        </div>
-        <div class="itemGroup">
-            <div class="itemLabel">Last Name *</div>
-            <div class="itemValue"><input class="required" id="LastName" name="LastName" type="text" value=""></div>
-        </div>
-    </div>
-    <div class="group">
-        <div class="itemGroup">
-            <div class="itemLabel">Email *</div>
-            <div class="itemValue"><input class="required" id="Email" name="Email" type="text" value=""></div>
-        </div>
-    </div>
     <div class="group two-columns">
         <div class="itemGroup">
             <div class="itemLabel">Mailing Address Line 1 *</div>
-            <div class="itemValue"><input class="required" id="Address1" name="Address1" type="text" value=""></div>
+            <div class="itemValue"><input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Mailing Address (Line One)"></div>
         </div>
         <div class="itemGroup">
             <div class="itemLabel">Mailing Address Line 2</div>
-            <div class="itemValue"><input id="Address2" name="Address2" type="text" value=""></div>
+            <div class="itemValue"><input id="Address2" name="Address2" type="text" value="" placeholder="Mailing Address (Line Two)"></div>
         </div>
     </div>
     <div class="group two-columns">
         <div class="itemGroup">
             <div class="itemLabel">City *</div>
-            <div class="itemValue"><input class="required" id="City" name="City" type="text" value=""></div>
+            <div class="itemValue"><input class="required" id="City" name="City" type="text" value="" placeholder="City"></div>
         </div>
         <div class="itemGroup">
             <div class="itemLabel">State *</div>
@@ -392,84 +385,279 @@
    
         <div class="itemGroup">
             <div class="itemLabel">ZIP Code *</div>
-            <div class="itemValue"><input class="required" id="ZipCode" maxlength="10" name="ZipCode" type="text" value=""></div>
+            <div class="itemValue"><input class="required" id="ZipCode" maxlength="10" name="ZipCode" type="text" value="" placeholder="ZIP Code"></div>
         </div>
     </div>
 
+</fieldset>
+
+<fieldset>
 	
-	
+	<legend>Phone</legend>
 	
     <div class="itemGroup">
         <div class="itemLabel">Phone * (10-digit phone number with area code)</div>
-        <div class="itemValue"><input class="required" id="Phone" name="Phone" type="text" value="" placeholder="Phone"></div>
+        <div class="itemValue"><input class="required" id="Phone" name="Phone" type="text" value="" placeholder="Phone Number"></div>
     </div>
     <div class="itemGroup">
         <div class="itemLabel">Phone Type *</div>
         <div class="itemValue">
-            <select class="SelectMobilePhone required" id="PhoneType" name="PhoneType" onchange="updatePhoneType();"><option value=""></option>
-				<option value="Mobile">Mobile</option>
+            <select class="SelectMobilePhone required" id="PhoneType" name="PhoneType" onchange="updatePhoneType();">
+	            <option value="Mobile" selected="">Mobile</option>
 				<option value="Home">Home</option>
 				<option value="Other">Other</option>
 			</select>
         </div>
     </div>
 
-<div class="group two-columns MobilePhoneService" style="display: none;">
-    <div class="itemGroup">
-        <div class="itemLabel">Mobile Phone Service *</div>
-        <div class="itemValue"><select id="MobileProvider" name="MobileProvider"><option value=""></option>
-<option value="Airtel">Airtel</option>
-<option value="CBeyond">C Beyond</option>
-</select></div>
-    </div>
-    <div class="itemGroup">
-        <div class="itemLabel">Okay to text important deadline reminders? *</div>
-        <div class="itemValue">
-            <select id="OkayToText" name="OkayToText"><option value=""></option>
-<option value="YES">Yes</option>
-<option value="NO">No</option>
-</select>
-        </div>
-    </div>
-</div>
+	<div class="group two-columns MobilePhoneService">
+	    <div class="itemGroup">
+	        <div class="itemLabel">Mobile Phone Service *</div>
+	        <div class="itemValue"><select id="MobileProvider" name="MobileProvider"><option value=""></option>
+	<option value="Airtel">Airtel</option>
+	<option value="CBeyond">C Beyond</option>
+	</select></div>
+	    </div>
+	    <div class="itemGroup">
+	        <div class="itemLabel">Okay to text important deadline reminders? *</div>
+	        <div class="itemValue">
+	            <select id="OkayToText" name="OkayToText">
+		            <option value=""></option>
+					<option value="YES">Yes</option>
+					<option value="NO">No</option>
+				</select>
+	        </div>
+	    </div>
+	</div>
+
 </fieldset>
 	    
 <!-- ABOUT YOU -->
-<fieldset>
-       <legend>About You</legend>
-<div class="group two-columns">
-    <div class="itemGroup">
+<fieldset class="birthday">
+       <legend>Birthdate</legend>
+
+<div class="itemGroup">
+        
         <div class="itemLabel">Date of Birth *</div>
         <div class="itemValue">
-            <table style="width:100% !important; border-collapse:collapse; padding:0;">
-                <tbody><tr>
-                    <td style="width:40%; padding:0;"><select class="required" id="DateOfBirthMonth" name="DateOfBirthMonth"><option value=""></option>
-<option value="1">January</option>
-<option value="2">February</option>
+            <select class="required" id="DateOfBirthMonth" name="DateOfBirthMonth">
+                <option value=""></option>
+				<option value="1">January</option>
+				<option value="2">February</option>
+				<option value="3">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">August</option>
+				<option value="9">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
 
-</select></td>
-                    <td style="width:20%; padding:0 5px;"><select class="required" id="DateOfBirthDay" name="DateOfBirthDay"><option value=""></option>
-<option value="1">1</option>
-<option value="2">2</option>
+		<select class="required" id="DateOfBirthDay" name="DateOfBirthDay">
+		    <option value=""></option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
 
-</select></td>
-                </tr>
-            </tbody></table>
-            
-            
+		<select class="required" id="DateOfBirthYear" name="DateOfBirthYear">
+		    <option value=""></option>
+			<option value="2005">2005</option>
+			<option value="2004">2004</option>
+			<option value="2003">2003</option>
+			<option value="2002">2002</option>
+			<option value="2001">2001</option>
+			<option value="2000">2000</option>
+			<option value="1999">1999</option>
+			<option value="1998">1998</option>
+			<option value="1997">1997</option>
+			<option value="1996">1996</option>
+			<option value="1995">1995</option>
+			<option value="1994">1994</option>
+			<option value="1993">1993</option>
+			<option value="1992">1992</option>
+			<option value="1991">1991</option>
+			<option value="1990">1990</option>
+			<option value="1989">1989</option>
+			<option value="1988">1988</option>
+			<option value="1987">1987</option>
+			<option value="1986">1986</option>
+			<option value="1985">1985</option>
+			<option value="1984">1984</option>
+			<option value="1983">1983</option>
+			<option value="1982">1982</option>
+			<option value="1981">1981</option>
+			<option value="1980">1980</option>
+			<option value="1979">1979</option>
+			<option value="1978">1978</option>
+			<option value="1977">1977</option>
+			<option value="1976">1976</option>
+			<option value="1975">1975</option>
+			<option value="1974">1974</option>
+			<option value="1973">1973</option>
+			<option value="1972">1972</option>
+			<option value="1971">1971</option>
+			<option value="1970">1970</option>
+			<option value="1969">1969</option>
+			<option value="1968">1968</option>
+			<option value="1967">1967</option>
+			<option value="1966">1966</option>
+			<option value="1965">1965</option>
+			<option value="1964">1964</option>
+			<option value="1963">1963</option>
+			<option value="1962">1962</option>
+			<option value="1961">1961</option>
+			<option value="1960">1960</option>
+			<option value="1959">1959</option>
+			<option value="1958">1958</option>
+			<option value="1957">1957</option>
+			<option value="1956">1956</option>
+			<option value="1955">1955</option>
+			<option value="1954">1954</option>
+			<option value="1953">1953</option>
+			<option value="1952">1952</option>
+			<option value="1951">1951</option>
+			<option value="1950">1950</option>
+			<option value="1949">1949</option>
+			<option value="1948">1948</option>
+			<option value="1947">1947</option>
+			<option value="1946">1946</option>
+			<option value="1945">1945</option>
+			<option value="1944">1944</option>
+			<option value="1943">1943</option>
+			<option value="1942">1942</option>
+			<option value="1941">1941</option>
+			<option value="1940">1940</option>
+		</select>
             
         </div>
     </div>
+    
+</fieldset>
+
+<fieldset class="plans">
+	
+	<legend>Your Plans</legend>
+	
+	<div class="itemGroup">
+		
+        <div class="itemLabel">Anticipated Start Term *</div>
+        <div class="itemValue">
+	        <select class="required" id="AnticipatedStartTerm" name="AnticipatedStartTerm">
+		        <option value=""></option>
+				<option value="2153">2015 Spring</option>
+				<option value="2155">2015 Summer</option>
+				<option value="2157">2015 Fall</option>
+				<option value="2163">2016 Spring</option>
+				<option value="2165">2016 Summer</option>
+				<option value="2167">2016 Fall</option>
+				<option value="2173">2017 Spring</option>
+				<option value="2175">2017 Summer</option>
+				<option value="2177">2017 Fall</option>
+				<option value="2183">2018 Spring</option>
+				<option value="2185">2018 Summer</option>
+				<option value="2187">2018 Fall</option>
+				<option value="2193">2019 Spring</option>
+				<option value="2195">2019 Summer</option>
+				<option value="2197">2019 Fall</option>
+				<option value="2203">2020 Spring</option>
+				<option value="2205">2020 Summer</option>
+				<option value="2207">2020 Fall</option>
+				<option value="2213">2021 Spring</option>
+				<option value="2215">2021 Summer</option>
+				<option value="2217">2021 Fall</option>
+				<option value="2223">2022 Spring</option>
+				<option value="2225">2022 Summer</option>
+				<option value="2227">2022 Fall</option>
+				<option value="2233">2023 Spring</option>
+				<option value="2235">2023 Summer</option>
+				<option value="2237">2023 Fall</option>
+				<option value="2243">2024 Spring</option>
+				<option value="2245">2024 Summer</option>
+				<option value="2247">2024 Fall</option>
+				<option value="2253">2025 Spring</option>
+				<option value="2255">2025 Summer</option>
+				<option value="2257">2025 Fall</option>
+				<option value="2263">2026 Spring</option>
+				<option value="2265">2026 Summer</option>
+				<option value="2267">2026 Fall</option>
+				<option value="2273">2027 Spring</option>
+				<option value="2275">2027 Summer</option>
+				<option value="2277">2027 Fall</option>
+				<option value="2283">2028 Spring</option>
+				<option value="2285">2028 Summer</option>
+				<option value="2287">2028 Fall</option>
+				<option value="2293">2029 Spring</option>
+				<option value="2295">2029 Summer</option>
+				<option value="2297">2029 Fall</option>
+				<option value="2303">2030 Spring</option>
+				<option value="2305">2030 Summer</option>
+				<option value="2307">2030 Fall</option>
+			</select>
+		</div>
+	</div>
+		    
+    <div class="itemGroup">
+
+        <div class="itemLabel">I will be entering WSU as a *</div>
+        <div class="itemValue">
+            <input id="entering_freshman" name="EnteringAs" type="radio" value="TRD">
+            <label for="entering_freshman" class="light">Freshman (including Running Start or "college in the high school" students)</label>
+
+            <br>
+
+            <input id="entering_transfer" name="EnteringAs" type="radio" value="TRN">
+            <label for="entering_transfer" class="light">Transfer student from another accredited college or university</label>
+
+            <br>
+
+            <input id="entering_nondegree" name="EnteringAs" type="radio" value="NDG">
+            <label for="entering_nondegree" class="light">Non-degree seeking student</label>
+
+            <br>
+
+            <input id="entering_formerStudent" name="EnteringAs" type="radio" value="FSR">
+            <label for="entering_formerStudent" class="light">Former WSU student who is returning</label>
+        </div>
+
+    </div>
+        
 </fieldset>
 	    
-	    
-	    
-	    <input type="button" name="showInfo" id="showInfo" value="Continue to Provide Additional Information" onclick="ShowAdditionalInfo();">
 	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
 	    
-	    
 	    <input type="submit" value="Submit">
-	<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
-	
+		<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
 
 </form>
