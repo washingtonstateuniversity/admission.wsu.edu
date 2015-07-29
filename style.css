@@ -813,13 +813,18 @@ ul.list-style-none {
   padding-top: 0; }
 
 .folded dt,
-.folded dd {
+.folded dd,
+.toggled dt,
+.toggled dd {
   display: block; }
-.folded dt {
+.folded dt,
+.toggled dt {
   font-size: 1.2rem;
   padding: .5rem 0;
   font-weight: 300; }
 .folded dt:nth-of-type(odd)
+dt:nth-of-type(odd) + dd,
+.toggled dt:nth-of-type(odd)
 dt:nth-of-type(odd) + dd {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,ffffff+100&amp;0+0,1+50,0+100 */
   /* FF3.6+ */
@@ -834,7 +839,9 @@ dt:nth-of-type(odd) + dd {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-9 */ }
 .folded dt:not(.unfolded):nth-of-type(even),
-.folded dt:not(.unfolded):nth-of-type(even) + dd {
+.folded dt:not(.unfolded):nth-of-type(even) + dd,
+.toggled dt:not(.unfolded):nth-of-type(even),
+.toggled dt:not(.unfolded):nth-of-type(even) + dd {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,eaeaea+50,ffffff+100&amp;0+0,1+50,0+100 */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, #eaeaea), color-stop(100%, rgba(255, 255, 255, 0)));
@@ -847,27 +854,36 @@ dt:nth-of-type(odd) + dd {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-9 */ }
-.folded dt {
+.folded dt,
+.toggled dt {
   border-top: 1px transparent solid; }
-.folded dd {
+.folded dd,
+.toggled dd {
   display: none; }
 .folded dt.unfolded,
-.folded dd.unfolded {
+.folded dd.unfolded,
+.toggled dt.unfolded,
+.toggled dd.unfolded {
   color: black; }
-.folded dt.unfolded {
+.folded dt.unfolded,
+.toggled dt.unfolded {
   border-top: 1px #5E6A71 solid;
   padding-bottom: .25rem; }
-.folded dt.unfolded + dd {
+.folded dt.unfolded + dd,
+.toggled dt.unfolded + dd {
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }
-.folded dd {
+.folded dd,
+.toggled dd {
   opacity: .5;
   -webkit-transition: opacity .5s ease-in;
           transition: opacity .5s ease-in; }
-.folded dd.unfolded {
+.folded dd.unfolded,
+.toggled dd.unfolded {
   display: block;
   padding-bottom: 1rem;
   opacity: 1; }
-.folded dt:hover {
+.folded dt:hover,
+.toggled dt:hover {
   cursor: pointer;
   color: black; }
 
