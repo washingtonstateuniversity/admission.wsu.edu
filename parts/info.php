@@ -655,6 +655,12 @@
         
 </fieldset>
 	    
+	    <hr>
+	    
+	    <button>Tell us more</button>
+	    
+	    <span>or</span>
+	    
 	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
 	    
 	    <input type="submit" value="Submit">
