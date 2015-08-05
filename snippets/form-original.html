@@ -1,8 +1,8 @@
 <div id="InfoForm">
-<form action="/Info" id="InfoRequestForm" method="post">    <div class="group three-columns">
+<form action="/Info" id="InfoRequestForm" method="post" _lpchecked="1">    <div class="group three-columns">
         <div class="itemGroup">
             <div class="itemLabel">Legal First Name *</div>
-            <div class="itemValue"><input class="required" id="FirstName" name="FirstName" type="text" value=""></div>
+            <div class="itemValue"><input class="required" id="FirstName" name="FirstName" type="text" value="" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; cursor: auto; background-position: 100% 50%; background-repeat: no-repeat no-repeat;"></div>
         </div>
         <div class="itemGroup">
             <div class="itemLabel">Middle Name</div>
@@ -358,11 +358,6 @@
             <div class="itemValue"><input class="required" id="ZipCode" maxlength="10" name="ZipCode" type="text" value=""></div>
         </div>
     </div>
-    
-    
-    
-    
-    
     <div class="group">
         <div class="itemGroup">
             <div class="itemLabel">Phone * (10-digit phone number with area code)</div>
@@ -631,7 +626,7 @@
             </div>
         </div>
     </div>
-    <div class="group two-columns additionalInfo">
+    <div class="group two-columns additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">1st Academic Interest</div>
             <div class="itemValue"><select id="AcademicInterest1" name="AcademicInterest1"><option value=""></option>
@@ -1049,40 +1044,40 @@
 </select></div>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemLabel">Are you also interested in any of the following?</div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_PreMed field is required." id="InterestedIn_PreMed" name="InterestedIn_PreMed" type="checkbox" value="true"><input name="InterestedIn_PreMed" type="hidden" value="false">
             <label class="light" for="InterestedIn_PreMed">Pre-Medicine</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_PreVetMed field is required." id="InterestedIn_PreVetMed" name="InterestedIn_PreVetMed" type="checkbox" value="true"><input name="InterestedIn_PreVetMed" type="hidden" value="false">
             <label class="light" for="InterestedIn_PreVetMed">Pre-Veterinary Medicine</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_PreLaw field is required." id="InterestedIn_PreLaw" name="InterestedIn_PreLaw" type="checkbox" value="true"><input name="InterestedIn_PreLaw" type="hidden" value="false">
             <label class="light" for="InterestedIn_PreLaw">Pre-Law</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_HonorsCollege field is required." id="InterestedIn_HonorsCollege" name="InterestedIn_HonorsCollege" type="checkbox" value="true"><input name="InterestedIn_HonorsCollege" type="hidden" value="false">
             <label class="light" for="InterestedIn_HonorsCollege">Honors College</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">High School <span class="light">(type partial name to lookup high school)</span></div>
             <div class="itemValue"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="HighSchoolLookup" name="HighSchool" type="text" value="" class="ui-autocomplete-input" autocomplete="off"></div>
         </div>
     </div>
-            <div class="group two-columns additionalInfo">
+            <div class="group two-columns additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">High School GPA <span class="light">(4-pt scale)</span></div>
             <div class="itemValue"><input id="HighSchoolGPA" maxlength="4" name="HighSchoolGPA" type="text" value=""></div>
@@ -1092,19 +1087,19 @@
             <div class="itemValue"><input id="HighSchoolGradYear" maxlength="4" name="HighSchoolGradYear" type="text" value=""></div>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">College, if applicable <span class="light">(type partial name to lookup college)</span></div>
             <div class="itemValue"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="CollegeLookup" name="College" type="text" value="" class="ui-autocomplete-input" autocomplete="off"></div>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">College GPA <span class="light">(4-pt scale)</span></div>
             <div class="itemValue"><input id="CollegeGPA" maxlength="4" name="CollegeGPA" type="text" value=""></div>
         </div>
     </div>
-    <div class="group three-columns additionalInfo">
+    <div class="group three-columns additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">Gender</div>
             <div class="itemValue"><select id="Gender" name="Gender"><option value=""></option>
@@ -1193,34 +1188,34 @@
 </select></div>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemLabel">In addition to academics, scholaships, and financial aid, I am interested in:</div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_ROTC field is required." id="InterestedIn_ROTC" name="InterestedIn_ROTC" type="checkbox" value="true"><input name="InterestedIn_ROTC" type="hidden" value="false">
             <label class="light" for="InterestedIn_ROTC">ROTC (Air Force, Army, or Navy/Marine Corps)</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_VeteransAffairs field is required." id="InterestedIn_VeteransAffairs" name="InterestedIn_VeteransAffairs" type="checkbox" value="true"><input name="InterestedIn_VeteransAffairs" type="hidden" value="false">
             <label class="light" for="InterestedIn_VeteransAffairs">Veterans' Affairs</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_MarchingBand field is required." id="InterestedIn_MarchingBand" name="InterestedIn_MarchingBand" type="checkbox" value="true"><input name="InterestedIn_MarchingBand" type="hidden" value="false">
             <label class="light" for="InterestedIn_MarchingBand">Marching Band</label>
         </div>
     </div>
-    <div class="group additionalInfo">
+    <div class="group additionalInfo" style="display: block;">
         <div class="itemGroup">
             <input data-val="true" data-val-required="The InterestedIn_GIESORC field is required." id="InterestedIn_GIESORC" name="InterestedIn_GIESORC" type="checkbox" value="true"><input name="InterestedIn_GIESORC" type="hidden" value="false">
             <label class="light" for="InterestedIn_GIESORC">Gender Identity/Expression and Sexual Orientation Resource Center</label>
         </div>
     </div>
-    <div class="group two-columns additionalInfo">
+    <div class="group two-columns additionalInfo" style="display: block;">
         <div class="itemGroup">
             <div class="itemLabel">Parent/Guardian Name</div>
             <div class="itemValue"><input id="ParentGuardianName" name="ParentGuardianName" type="text" value=""></div>
@@ -1230,7 +1225,7 @@
             <div class="itemValue"><input id="ParentGuardianEmail" name="ParentGuardianEmail" type="text" value=""></div>
         </div>
     </div>
-    <input type="button" name="showInfo" id="showInfo" value="Continue to Provide Additional Information" onclick="ShowAdditionalInfo();">
-    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
+    <input type="button" name="showInfo" id="showInfo" value="Continue to Provide Additional Information" onclick="ShowAdditionalInfo();" style="display: none;">
+    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="">
     <input type="submit" value="Submit">
-<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value=""></form></div>
+<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="1"></form></div>
