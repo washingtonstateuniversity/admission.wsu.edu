@@ -657,6 +657,12 @@
 	    
 	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
 	    
+	    <hr>
+	    
+	    <button>Tell us more</button>
+	    
+	    <span>Or</span>
+	    
 	    <input type="submit" value="Submit">
 		<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
 
