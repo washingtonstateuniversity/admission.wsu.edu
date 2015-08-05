@@ -1,68 +1,66 @@
-
-
-	<div id="calculator" class="UAA">
-		<div id="notice">
-			<p id="awardlevel"></p>
+<div id="calculator" class="UAA">
+	<div id="notice">
+		<p id="awardlevel"></p>
+	
+		<h2>Eligibility Calculator</h2>
 		
-			<h2>Eligibility Calculator</h2>
+		<legend class="instructions">Enter your high school GPA 
+		<br>a <span class="min-gpa">minimum of 2.5</span>, based on a 4.0 scale</legend>
+		
+		<div id="low-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or above 2.5</div>
+		<div id="high-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or below 4.0</div>
+		
+		<dl class="gpa">
+			<dt>
+				<label for="gpa">GPA <small>(unweighted)</small></label>
+			</dt>
 			
-			<legend class="instructions">Enter your high school GPA 
-			<br>a <span class="min-gpa">minimum of 2.5</span>, based on a 4.0 scale</legend>
+			<dd>
+				<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" onchange="checkGPA(this.value);calculate()">
+			</dd>
+		</dl>
+		
+		<legend class="instructions">Enter your best SAT score for each of the following</legend>
+		
+		<div id="low-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or above 200</div>
+		<div id="high-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or below 800</div>
+		
+		<dl class="reading">
+			<dt>
+				<label for="reading">Critical reading</label>
+			</dt>
 			
-			<div id="low-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or above 2.5</div>
-			<div id="high-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or below 4.0</div>
+			<dd>
+				<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" onchange="checkreading(this.value);calculate()">
+			</dd>
+		</dl>
+		
+		<div id="low-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or above 200</div>
+		<div id="high-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or below 800</div>
+		
+		<dl class="math">
+			<dt>
+				<label for="math">Math</label>
+			</dt>
 			
-			<dl class="gpa">
-				<dt>
-					<label for="gpa">GPA <small>(unweighted)</small></label>
-				</dt>
-				
-				<dd>
-					<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" onchange="checkGPA(this.value);calculate()">
-				</dd>
-			</dl>
+			<dd>
+				<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" onchange="checkMath(this.value);calculate()">
+			</dd>
+		</dl>
+		
+		<legend class="instructions">... And / or enter your best ACT score:</legend>
+		
+		<div id="low-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or above 11</div>
+		<div id="high-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or below 36</div>
+		
+		<dl class="act">
+			<dt>
+				<label for="act">ACT</label>
+			</dt>
 			
-			<legend class="instructions">Enter your best SAT score for each of the following</legend>
-			
-			<div id="low-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or above 200</div>
-			<div id="high-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or below 800</div>
-			
-			<dl class="reading">
-				<dt>
-					<label for="reading">Critical reading</label>
-				</dt>
-				
-				<dd>
-					<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" onchange="checkreading(this.value);calculate()">
-				</dd>
-			</dl>
-			
-			<div id="low-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or above 200</div>
-			<div id="high-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or below 800</div>
-			
-			<dl class="math">
-				<dt>
-					<label for="math">Math</label>
-				</dt>
-				
-				<dd>
-					<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" onchange="checkMath(this.value);calculate()">
-				</dd>
-			</dl>
-			
-			<legend class="instructions">... And / or enter your best ACT score:</legend>
-			
-			<div id="low-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or above 11</div>
-			<div id="high-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or below 36</div>
-			
-			<dl class="act">
-				<dt>
-					<label for="act">ACT</label>
-				</dt>
-				
-				<dd>
-					<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" onchange="checkACT(this.value);calculate()">
-				</dd>
-			</dl>
-		</div>
+			<dd>
+				<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" onchange="checkACT(this.value);calculate()">
+			</dd>
+		</dl>
 	</div>
+</div>

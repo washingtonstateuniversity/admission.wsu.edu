@@ -1,3 +1,5 @@
+(function($){
+
 function checkGPA(gpa) {
 	var y = document.getElementById("low-gpa");
 	var z = document.getElementById("high-gpa");
@@ -177,10 +179,10 @@ function calculate() {
 			qvalue = parseFloat(act) + parseFloat(gpa);
 		}
 		
-		if (document.getElementById("calculator").className == "UAA")
+		if ( $("calculator").hasClass("UAA") )
 		
 		{
-			alert("qvalue:"+qvalue+" sat:"+sat+" act:"+act+" gpa:"+gpa);
+			//alert("qvalue:"+qvalue+" sat:"+sat+" act:"+act+" gpa:"+gpa);
 			if (qvalue >= 2750) {
 				
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2><h3>You are eligible for $4000.</h3><p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please  apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
@@ -208,3 +210,5 @@ function calculate() {
 		document.getElementById("awardlevel").innerHTML = "";
 	}
 }
+
+})(jQuery);

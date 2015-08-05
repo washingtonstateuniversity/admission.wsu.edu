@@ -347,6 +347,27 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   background-color: #981e32;
   border: none;
   color: #d7dadb; }
+#info #additional-info.closed fieldset {
+  display: none; }
+#info select {
+  background: #6b1523;
+  height: 30px;
+  color: white;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  filter: alpha(opacity=0);
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 5px; }
+#info select option {
+  display: none; }
+#info .styled-select {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  background: url(new_arrow.png) no-repeat right #ddd;
+  border: 1px solid #ccc; }
 #info input.required[type="text"] {
   background-color: #6b1523; }
 #info input[type="text"]:focus {
