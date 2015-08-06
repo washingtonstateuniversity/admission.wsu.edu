@@ -46,12 +46,6 @@
 .inspiring-line.text-shadow header h2 {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
 
-.inspiring u,
-.inspiring .underline {
-  color: white;
-  background-color: #981e32;
-  text-decoration: none; }
-
 .inspiring-line span {
   white-space: nowrap; }
 
@@ -188,6 +182,9 @@
   max-width: 100%;
   min-width: 396px;
   float: right; }
+
+.size-lt-medium .main-footer .action-items {
+  min-width: 100%; }
 
 .action-items {
   background-color: #981e32;
@@ -770,14 +767,13 @@ ul.inspirings ul {
   -webkit-animation-delay: 10.4s; }
 
 .inspirings ul li:nth-of-type(16) {
-  -webkit-animation-duration: 10000s; }
+  -webkit-animation-duration: 100000s; }
 
 .inspiring-you {
-  background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg");
-  background-position: right center; }
+  background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg"); }
 
-.night-time .inspiring-you {
-  background-image: url("/wp-content/uploads/sites/13/2014/10/wsuatnight.jpg"); }
+.size-gt-small .inspiring-you {
+  background-position: right center; }
 
 .size-gt-small .inspiring-you .column.two {
   margin-top: 200px; }

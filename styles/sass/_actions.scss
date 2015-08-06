@@ -23,6 +23,10 @@
 	float: right;	
 }
 
+.size-lt-medium .main-footer .action-items {
+	min-width: 100%;
+}
+
 .action-items {
 	background-color: $crimson;
 	overflow: hidden;
