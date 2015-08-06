@@ -411,7 +411,9 @@
 	    
 	    <span>or</span>
 	    
-	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
+	    <input type="submit" value="Submit">
+	    
+	    
 	    
 		<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
 
@@ -840,7 +842,7 @@
 
     </fieldset>
 
-   <input type="submit" value="Submit">
+   <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
 
 
 </form>
