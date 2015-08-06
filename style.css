@@ -183,6 +183,9 @@
   min-width: 396px;
   float: right; }
 
+.size-lt-medium .main-footer .action-items {
+  min-width: 100%; }
+
 .action-items {
   background-color: #981e32;
   overflow: hidden; }
