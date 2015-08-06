@@ -23,7 +23,8 @@
 	float: right;	
 }
 
-.size-lt-medium .main-footer .action-items {
+.size-small .main-footer .action-items,
+.size-small .action-item dd {
 	min-width: 100%;
 }
 
@@ -122,19 +123,6 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	border-left: 2px #7c182d solid;	
 }
 
-
-
-.action-item.opened + .action-item dt a:hover,
-.action-item.opened + .action-item dt button:hover {
-	//border-left-color: black;	
-}
-
-.action-item:nth-of-type(even) dt a,
-.action-item:nth-of-type(even) dt button {
-	//background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
-	
-}
-
 .action-item:nth-of-type(n+1) dt a:hover,
 .action-item:nth-of-type(n+1) dt button:hover,
 .action-item.opened dt,
@@ -148,7 +136,6 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 .action-item:nth-of-type(n+1):not(.opened) dt button:hover {
 	background-color: #7c182d;
 }
-
 
 .action-item dd {
 	display: none;
@@ -174,18 +161,12 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	z-index: 999164;
 }
 
-.action-item li {
-	//padding-top: 2em;
-	//position: relative;
-}
-
 .action-item a:first-child {
 	display: inline-block;
 	background-color: #6b1523;
 	background-color: white;
 	color: $crimson !important;
 	padding: .2em .4em;
-	//height: 40px;
 	margin: -.2em .2em -.2em 0em;
 	border-left-color: white;
 	border-style: solid;
@@ -193,8 +174,6 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	border-right-width: 0px;
 	border-left-width: 0px;
 	white-space: nowrap;
-	//position: absolute;
-	//display: block;
 	top: 0;
 	text-transform: uppercase;
 }
@@ -204,7 +183,6 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	color: $crimson-er !important;
 	transition: color .2s ease-out;
 	transition: background-color .2s ease-out;
-	//border-width: 0 3px 3px 0;
 }
 
 .action-item header {
@@ -241,7 +219,8 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		border: none;
 		color: $gray-lightly;
 		border-radius: 0;
-			}
+	}
+
 	
 	#additional-info.closed {
 		display: none;
@@ -252,8 +231,7 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	}
 	
 	select {
-		background: $crimson-dark;
-		background: $gray;
+		background: $gray-light;
 		height: 26px;
 		color: white;
 		border: none; 
@@ -263,12 +241,17 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		box-sizing: border-box;
 		width: 100%;
 		padding-left: 5px;
+		padding-right: 5px;
 		border-radius: 0;
+	}
+
+	.birthday select {
+		width: auto;
 	}
 	
 	select option {
 		position: relative;
-		}
+	}
 	
 	select option::before {
 		content: "";
@@ -284,11 +267,11 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	
 	input.required[type="text"],
 	select.required {
-		//background-color: $crimson-dark;
 		background-color: $gray-light;
 		border-left: 3px $gray-lightest solid;
 	}
 	
+	select:focus,
 	input[type="text"]:focus,
 	input[type="text"].required:focus {
 		color: black;
@@ -300,25 +283,22 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	}
 	
 	input[type="text"] {
-	
 		&::-webkit-input-placeholder { color: white; }
 		&:-moz-placeholder { color: white; }
 		&::-moz-placeholder { color: white; }
 		&:-ms-input-placeholder { color: white; }
-	
 	}
 	
 	input[type="text"]:focus {
-	
 		&::-webkit-input-placeholder { color: $gray; }
 		&:-moz-placeholder { color: $gray; }
 		&::-moz-placeholder { color: $gray; }
 		&:-ms-input-placeholder { color: $gray; }
-	
 	}
 	
 	form button,
-	form input[type="button"] {
+	form input[type="button"],
+	form input[type="submit"] {
 		border-radius: 0;
 		border-width: 1px;
 		color: $gray;
@@ -327,19 +307,22 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	}
 	
 	form button:hover,
-	form input[type="button"]:hover {
+	form input[type="button"]:hover,
+	form input[type="submit"]:hover {
 		color: $gray-darker;
 		border-color: white;
 		background-color: white;
 	}
 	
-	form button.secondary {
+	form button.secondary,
+	form input[type="submit"].secondary {
 		background: transparent;
 		color: $gray-light;
 		border-color: $gray-light;
 	}
 	
-	form button.secondary:hover {
+	form button.secondary:hover,
+	form input[type="submit"].secondary:hover {
 		color: white;
 		background: transparent;
 		border-color: white;
