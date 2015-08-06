@@ -4,6 +4,13 @@
 		$("#disclose-additional").on("click", function() {
 			$("#additional-info").toggleClass("closed");
 		});
+		$("#PhoneType").on("change", function() {
+			if ( $("#PhoneType").val() == "Mobile" ) {
+				$("#MobileProvider,#OkayToText").removeClass("hidden");
+			} else {
+				$("#MobileProvider,#OkayToText").addClass("hidden");
+			}
+		});
 	});
 })(jQuery);
 </script>
@@ -32,8 +39,8 @@
 		
 		<legend>Email</legend>
 	
-	    <label class="hidden">Email *</label>
-	    <div class="itemValue"><input class="required" id="Email" name="Email" type="text" value="" placeholder="Email Address"></div>
+	    <label for="Email" class="hidden">Email</label>
+	    <input class="required" id="Email" name="Email" type="text" value="" placeholder="Email Address"
 	            
 	</fieldset>
 	    
@@ -377,472 +384,265 @@
 	
 	</fieldset>
 	
+	<!-- Phone -->
 	<fieldset>
 		
 		<legend>Phone</legend>
 		
         <label class="hidden">Phone * (10-digit phone number with area code)</label>
-        <input class="required" id="Phone" name="Phone" type="text" value="" placeholder="Phone Number">
+        <input class="required" id="Phone" name="Phone" type="text" value="" placeholder="Phone Number (10-digit phone number with area code)">
    
-        <label>Phone Type *</label>
-        <select class="SelectMobilePhone required" id="PhoneType" name="PhoneType" onchange="updatePhoneType();">
-            <option value="Mobile" selected="">Mobile</option>
+        <label>Phone Type</label>
+        <select class="SelectMobilePhone required" id="PhoneType" name="PhoneType">
+            <option value="" selected>Select</option>
+            <option value="Mobile">Mobile</option>
 			<option value="Home">Home</option>
 			<option value="Other">Other</option>
 		</select>
 
-        <label>Mobile Phone Service *</label>
-        <select id="MobileProvider" name="MobileProvider">
-	        <option value=""></option>
-			<option value="Airtel">Airtel</option>
+        <label class="hidden">Mobile Phone Service</label>
+        <select id="MobileProvider" name="MobileProvider" class="required hidden">
+	        <option value="" selected>Select Carrier</option>
+	        <option value="Airtel">Airtel</option>
 			<option value="CBeyond">C Beyond</option>
+			<option value="Cellcom">Cellcom</option>
+			<option value="CSpire">C Spire</option>
+			<option value="USCellular">US Cellular</option>
+			<option value="InlandCellular">Inland Cellular</option>
+			<option value="Iwireless">I wireless</option>
+			<option value="Alltel">Alltel</option>
+			<option value="Sprint">Sprint</option>
+			<option value="Cricket">Cricket</option>
+			<option value="GCI">GCI</option>
+			<option value="Cingular">Cingular</option>
+			<option value="AlaskaCommunications">Alaska Communications</option>
+			<option value="BoostMobile">Boost Mobile</option>
+			<option value="MetroPCS">MetroPCS</option>
+			<option value="ChoiceWireless">Choice Wireless</option>
+			<option value="Cleartalk">Cleartalk</option>
+			<option value="SimpleMobile">Simple Mobile</option>
+			<option value="T-Mobile">T-Mobile</option>
+			<option value="AT&amp;T">AT&amp;T</option>
+			<option value="VirginMobile">Virgin Mobile</option>
+			<option value="Vodafone">Vodafone</option>
+			<option value="VerizonWireless">Verizon Wireless</option>
+			<option value="Other">Other</option>
 		</select>
 				
         <label class="hidden">Okay to text important deadline reminders? *</label>
-        <select id="OkayToText" name="OkayToText">
-            <option value=""></option>
+        <select id="OkayToText" name="OkayToText" class="required hidden">
+            <option value="">Okay to text reminders?</option>
 			<option value="YES">Yes</option>
 			<option value="NO">No</option>
 		</select>
 	
 	</fieldset>
-	    
-	    <button id="disclose-additional" class="secondary" type="button" onclick="return false;">Tell us more</button>
-	    
-	    <span>or</span>
-	    
-	    <input type="submit" value="Submit">
-	    
-	    
-	    
-		<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
+	
+	<!-- ABOUT YOU -->
+	<!--<header>About You</header>-->
 
-	<hr id="additional-info" class="closed">
-	<header>Additional Info</header>
-
-    <fieldset class="academic-interest">
-	    
-	    <!-- 1st Academic Interest -->
-        <label>Primary Academic Interest</label>
-        <select id="AcademicInterest1" name="AcademicInterest1">
-	            <option value=""></option>
-				<option value="P0000_0005">Accounting</option>
-				<option value="P0000_0010">Actuarial Science Mathematics</option>
-				<option value="P0000_0015">Advertising</option>
-				<option value="P0000_0030">Agricultural and Food Systems</option>
-				<option value="P0000_0035">Agricultural Biotechnology</option>
-				<option value="P0000_0040">Agricultural Economics</option>
-				<option value="P0000_0045">Agricultural Education</option>
-				<option value="P0000_0025">Agricultural Technology and Production Management</option>
-				<option value="P0000_0020">Agriculture and Food Business Economics</option>
-				<option value="P0000_0050">Agriculture and Food Security</option>
-				<option value="P0000_0055">Animal Science Management</option>
-				<option value="P0000_0060">Animal Science, Pre-Veterinary Medicine</option>
-				<option value="P0000_0065">Animal Sciences</option>
-				<option value="P0000_0070">Anthropology</option>
-				<option value="P0000_0075">Apparel Design</option>
-				<option value="P0000_0085">Apparel Merchandising</option>
-				<option value="P0000_0080">Apparel, Merchandising, Design and Textiles</option>
-				<option value="P0000_0090">Applied Intercultural Communication</option>
-				<option value="P0000_0970">Applied Mathematics</option>
-				<option value="P0000_0095">Architectural Studies</option>
-				<option value="P0000_0100">Art</option>
-				<option value="P0000_0105">Art History</option>
-				<option value="P0000_0110">Asian Studies</option>
-				<option value="P0000_0115">Astrophysics</option>
-				<option value="P0000_0120">Athletic Training</option>
-				<option value="P0000_0125">Basic Medical Sciences</option>
-				<option value="P0000_0130">Biochemistry/Biophysics</option>
-				<option value="P0000_0135">Bioengineering</option>
-				<option value="P0000_0140">Bioengineering Pre-Med</option>
-				<option value="P0000_0150">Biological Sciences</option>
-				<option value="P0000_0145">Biological Sciences, Teaching</option>
-				<option value="P0000_0155">Biology</option>
-				<option value="P0000_0160">Biology Teaching</option>
-				<option value="P0000_0165">Biophysics/Physics</option>
-				<option value="P0000_0170">Botany</option>
-				<option value="P0000_0175">Broadcast News</option>
-				<option value="P0000_0180">Broadcast Production</option>
-				<option value="P0000_0185">Business</option>
-				<option value="P0000_9000">Business Certification Check</option>
-				<option value="P0000_0190">Business Economics (Economics)</option>
-				<option value="P0000_D000">CACD - Deficient</option>
-				<option value="P0000_I000">CACD - Inactive</option>
-				<option value="P0000_0195">Chemical Engineering</option>
-				<option value="P0000_0200">Chemical Engineering Pre-Med</option>
-				<option value="P0000_0205">Chemistry</option>
-				<option value="P0000_0975">Chemistry Teaching</option>
-				<option value="P0000_0210">Chinese</option>
-				<option value="P0000_0215">Chinese Teaching</option>
-				<option value="P0000_0220">Civil Engineering</option>
-				<option value="P0000_0225">Communication</option>
-				<option value="P0000_0226">Communication and Society</option>
-				<option value="P0000_0955">Communication Technology</option>
-				<option value="P0000_0230">Comparative Ethnic Studies</option>
-				<option value="P0000_0235">Computational Mathematics</option>
-				<option value="P0000_0240">Computational Neuroscience</option>
-				<option value="P0000_0245">Computational Physics</option>
-				<option value="P0000_0250">Computer Engineering</option>
-				<option value="P0000_0255">Computer Science (BA)</option>
-				<option value="P0000_0260">Computer Science (BS)</option>
-				<option value="P0000_0265">Construction Management</option>
-				<option value="P0000_0270">Continuum Physics</option>
-				<option value="P0000_0275">Creative Writing</option>
-				<option value="P0000_0280">Criminal Justice</option>
-				<option value="P0000_0285">Digital Technology and Culture</option>
-				<option value="P0000_0930">Earth Sciences</option>
-				<option value="P0000_0290">Ecology/Evolutionary Biology</option>
-				<option value="P0000_0295">Economic Analysis and Policy</option>
-				<option value="P0000_0980">Economic Development</option>
-				<option value="P0000_0300">Economic Sciences</option>
-				<option value="P0000_0945">Economics, Policy, and Law</option>
-				<option value="P0000_0305">Education</option>
-				<option value="P0000_0310">Electrical Engineering</option>
-				<option value="P0000_0315">Elementary Education</option>
-				<option value="P0000_0320">Engineering</option>
-				<option value="P0000_0325">English</option>
-				<option value="P0000_0330">English Teaching/Language Arts</option>
-				<option value="P0000_0335">Entomology (Biology)</option>
-				<option value="P0000_0340">Entrepreneurship</option>
-				<option value="P0000_0935">Environmental and Ecosystem Sciences</option>
-				<option value="P0000_0345">Environmental and Resource Economics</option>
-				<option value="P0000_0350">Environmental Engineering</option>
-				<option value="P0000_0355">Environmental Physics</option>
-				<option value="P0000_0360">Environmental Science</option>
-				<option value="P0000_0940">Exploring</option>
-				<option value="P0000_0365">Family and Consumer Sciences</option>
-				<option value="P0000_0370">Field Crop Management</option>
-				<option value="P0000_0375">Finance</option>
-				<option value="P0000_0380">Financial Markets (Economics)</option>
-				<option value="P0000_0385">Fine Arts</option>
-				<option value="P0000_0390">Food Science</option>
-				<option value="P0000_0395">Foreign Languages and Cultures</option>
-				<option value="P0000_0400">French</option>
-				<option value="P0000_0405">French Teaching</option>
-				<option value="P0000_0410">Fruit  Management</option>
-				<option value="P0000_0415">Genetics and Cell Biology</option>
-				<option value="P0000_0420">Geology</option>
-				<option value="P0000_0425">Global Politics</option>
-				<option value="P0000_0430">Health and Fitness</option>
-				<option value="P0000_0435">History</option>
-				<option value="P0000_0440">History Pre-Law</option>
-				<option value="P0000_0445">History Teaching</option>
-				<option value="P0000_0450">Hospitality Business Management</option>
-				<option value="P0000_0455">Human Development</option>
-				<option value="P0000_0460">Humanities (General Studies)</option>
-				<option value="P0000_0950">Integrated Communication</option>
-				<option value="P0000_0465">Integrated Plant Sciences</option>
-				<option value="P0000_0470">Interior Design</option>
-				<option value="P0000_0475">International Area Studies</option>
-				<option value="P0000_0480">International Business</option>
-				<option value="P0000_0485">International Trade</option>
-				<option value="P0000_0490">Jazz Studies</option>
-				<option value="P0000_0495">Journalism</option>
-				<option value="P0000_0498">Journalism &amp; Media Production</option>
-				<option value="P0000_0500">Landscape Architecture</option>
-				<option value="P0000_0505">Landscape Design  (IPS)</option>
-				<option value="P0000_0510">Landscape Nurse Mgt</option>
-				<option value="P0000_0515">Linguistics (General Studies)</option>
-				<option value="P0000_0520">Literary Studies</option>
-				<option value="P0000_0525">Management and Operations</option>
-				<option value="P0000_0530">Management Information Systems</option>
-				<option value="P0000_0535">Marketing</option>
-				<option value="P0000_0540">Materials Chemistry</option>
-				<option value="P0000_0545">Materials Physics</option>
-				<option value="P0000_0550">Materials Science and Engineer</option>
-				<option value="P0000_0555">Mathematical Modeling</option>
-				<option value="P0000_0560">Mathematical Physics</option>
-				<option value="P0000_0565">Mathematics</option>
-				<option value="P0000_0570">Mathematics (General Studies)</option>
-				<option value="P0000_0580">Mathematics Teaching (Gen St)</option>
-				<option value="P0000_0585">Mechanical Engineering</option>
-				<option value="P0000_0590">Medical Technology</option>
-				<option value="P0000_0595">Microbiology</option>
-				<option value="P0000_0600">Molecular Biology</option>
-				<option value="P0000_0605">Movement Studies</option>
-				<option value="P0000_0965">Multimedia Journalism</option>
-				<option value="P0000_0610">Music</option>
-				<option value="P0000_0615">Music Brass Perc Strings Winds</option>
-				<option value="P0000_0620">Music Composition</option>
-				<option value="P0000_0630">Music Keyboard Pedagogy</option>
-				<option value="P0000_0635">Music Performance</option>
-				<option value="P0000_0640">Music Teaching</option>
-				<option value="P0000_0645">Music: Keyboard</option>
-				<option value="P0000_0650">Music: Voice</option>
-				<option value="P0000_0655">Nanotechnology</option>
-				<option value="P0000_0660">Natural Resource Policy</option>
-				<option value="P0000_0665">Natural Resource Sciences</option>
-				<option value="P0000_0670">Neuroscience</option>
-				<option value="P0000_0675">Neuroscience Pre-Med</option>
-				<option value="P0000_0680">Neuroscience Pre-Veterinary Medicine</option>
-				<option value="P0000_0685">Nursing</option>
-				<option value="P0000_0690">Nutrition and Exercise Physiology</option>
-				<option value="P0000_0695">Operations Research</option>
-				<option value="P0000_0700">Optics and Electronics</option>
-				<option value="P0000_0705">Organic Agricultural Systems</option>
-				<option value="P0000_0710">Organizational Communication</option>
-				<option value="P0000_0715">Philosophy</option>
-				<option value="P0000_0720">Philosophy Pre-Law</option>
-				<option value="P0000_0725">Physical Science Teaching</option>
-				<option value="P0000_0730">Physical Sciences</option>
-				<option value="P0000_0735">Physics</option>
-				<option value="P0000_0740">Physics Education</option>
-				<option value="P0000_0745">Political Science</option>
-				<option value="P0000_0750">Political Science Pre-Law</option>
-				<option value="P0000_0755">Pre-Dentistry</option>
-				<option value="P0000_0760">Pre-Law</option>
-				<option value="P0000_0765">Pre-Medicine</option>
-				<option value="P0000_0770">Pre-Occupational Therapy</option>
-				<option value="P0000_0775">Pre-Optometry</option>
-				<option value="P0000_0780">Pre-Pharmacy</option>
-				<option value="P0000_0785">Pre-Physical Therapy</option>
-				<option value="P0000_0790">Pre-Physician's Assistant</option>
-				<option value="P0000_0795">Pre-Veterinary Medicine</option>
-				<option value="P0000_0990">Professional Chemistry</option>
-				<option value="P0000_0800">Psychology</option>
-				<option value="P0000_0805">Public Relations</option>
-				<option value="P0000_0985">Quantitative Economics</option>
-				<option value="P0000_0810">Religious Studies (Gen St)</option>
-				<option value="P0000_0815">Rhetoric  Writing</option>
-				<option value="P0000_0960">Science Communication</option>
-				<option value="P0000_0820">Science Teaching</option>
-				<option value="P0000_0825">Social Sciences (Gen St)</option>
-				<option value="P0000_0830">Social Studies</option>
-				<option value="P0000_0835">Sociology</option>
-				<option value="P0000_0840">Spanish</option>
-				<option value="P0000_0845">Spanish Teaching</option>
-				<option value="P0000_0850">Speech and Hearing Sciences</option>
-				<option value="P0000_0855">Sport Management</option>
-				<option value="P0000_0920">Sport Science</option>
-				<option value="P0000_0857">Strategic Communication</option>
-				<option value="P0000_0995">Studio Fine Arts</option>
-				<option value="P0000_0860">Theoretical Mathematics</option>
-				<option value="P0000_0865">Turfgrass Management</option>
-				<option value="P0000_0870">Undecided</option>
-				<option value="P0000_0875">Viticulture  (IPS)</option>
-				<option value="P0000_0880">Wetland Aquatic Resources</option>
-				<option value="P0000_0885">Wildlife Ecology</option>
-				<option value="P0000_0925">Wildlife Ecology and Conservation</option>
-				<option value="P0000_0890">Wildlife Ecology Pre-Vet Sci</option>
-				<option value="P0000_0895">Wine Business Management (HBM)</option>
-				<option value="P0000_0900">Women's Studies</option>
-				<option value="P0000_0905">Zoology</option>
-				<option value="P0000_0910">Zoology Pre-Med/ Pre-Dental</option>
-				<option value="P0000_0915">Zoology Pre-Veterinary Medicine</option>
-			</select>
-    
-		<!-- 2nd Academic Interest -->
-        <label>Secondary Academic Interest</label>
-        <select id="AcademicInterest2" name="AcademicInterest2">
-        <option value=""></option>
-		<option value="P0000_0005">Accounting</option>
-		<option value="P0000_0010">Actuarial Science Mathematics</option>
-		<option value="P0000_0015">Advertising</option>
-		<option value="P0000_0030">Agricultural and Food Systems</option>
-		<option value="P0000_0035">Agricultural Biotechnology</option>
-		<option value="P0000_0040">Agricultural Economics</option>
-		<option value="P0000_0045">Agricultural Education</option>
-		<option value="P0000_0025">Agricultural Technology and Production Management</option>
-		<option value="P0000_0020">Agriculture and Food Business Economics</option>
-		<option value="P0000_0050">Agriculture and Food Security</option>
-		<option value="P0000_0055">Animal Science Management</option>
-		<option value="P0000_0060">Animal Science, Pre-Veterinary Medicine</option>
-		<option value="P0000_0065">Animal Sciences</option>
-		<option value="P0000_0070">Anthropology</option>
-		<option value="P0000_0075">Apparel Design</option>
-		<option value="P0000_0085">Apparel Merchandising</option>
-		<option value="P0000_0080">Apparel, Merchandising, Design and Textiles</option>
-		<option value="P0000_0090">Applied Intercultural Communication</option>
-		<option value="P0000_0970">Applied Mathematics</option>
-		<option value="P0000_0095">Architectural Studies</option>
-		<option value="P0000_0100">Art</option>
-		<option value="P0000_0105">Art History</option>
-		<option value="P0000_0110">Asian Studies</option>
-		<option value="P0000_0115">Astrophysics</option>
-		<option value="P0000_0120">Athletic Training</option>
-		<option value="P0000_0125">Basic Medical Sciences</option>
-		<option value="P0000_0130">Biochemistry/Biophysics</option>
-		<option value="P0000_0135">Bioengineering</option>
-		<option value="P0000_0140">Bioengineering Pre-Med</option>
-		<option value="P0000_0150">Biological Sciences</option>
-		<option value="P0000_0145">Biological Sciences, Teaching</option>
-		<option value="P0000_0155">Biology</option>
-		<option value="P0000_0160">Biology Teaching</option>
-		<option value="P0000_0165">Biophysics/Physics</option>
-		<option value="P0000_0170">Botany</option>
-		<option value="P0000_0175">Broadcast News</option>
-		<option value="P0000_0180">Broadcast Production</option>
-		<option value="P0000_0185">Business</option>
-		<option value="P0000_9000">Business Certification Check</option>
-		<option value="P0000_0190">Business Economics (Economics)</option>
-		<option value="P0000_D000">CACD - Deficient</option>
-		<option value="P0000_I000">CACD - Inactive</option>
-		<option value="P0000_0195">Chemical Engineering</option>
-		<option value="P0000_0200">Chemical Engineering Pre-Med</option>
-		<option value="P0000_0205">Chemistry</option>
-		<option value="P0000_0975">Chemistry Teaching</option>
-		<option value="P0000_0210">Chinese</option>
-		<option value="P0000_0215">Chinese Teaching</option>
-		<option value="P0000_0220">Civil Engineering</option>
-		<option value="P0000_0225">Communication</option>
-		<option value="P0000_0226">Communication and Society</option>
-		<option value="P0000_0955">Communication Technology</option>
-		<option value="P0000_0230">Comparative Ethnic Studies</option>
-		<option value="P0000_0235">Computational Mathematics</option>
-		<option value="P0000_0240">Computational Neuroscience</option>
-		<option value="P0000_0245">Computational Physics</option>
-		<option value="P0000_0250">Computer Engineering</option>
-		<option value="P0000_0255">Computer Science (BA)</option>
-		<option value="P0000_0260">Computer Science (BS)</option>
-		<option value="P0000_0265">Construction Management</option>
-		<option value="P0000_0270">Continuum Physics</option>
-		<option value="P0000_0275">Creative Writing</option>
-		<option value="P0000_0280">Criminal Justice</option>
-		<option value="P0000_0285">Digital Technology and Culture</option>
-		<option value="P0000_0930">Earth Sciences</option>
-		<option value="P0000_0290">Ecology/Evolutionary Biology</option>
-		<option value="P0000_0295">Economic Analysis and Policy</option>
-		<option value="P0000_0980">Economic Development</option>
-		<option value="P0000_0300">Economic Sciences</option>
-		<option value="P0000_0945">Economics, Policy, and Law</option>
-		<option value="P0000_0305">Education</option>
-		<option value="P0000_0310">Electrical Engineering</option>
-		<option value="P0000_0315">Elementary Education</option>
-		<option value="P0000_0320">Engineering</option>
-		<option value="P0000_0325">English</option>
-		<option value="P0000_0330">English Teaching/Language Arts</option>
-		<option value="P0000_0335">Entomology (Biology)</option>
-		<option value="P0000_0340">Entrepreneurship</option>
-		<option value="P0000_0935">Environmental and Ecosystem Sciences</option>
-		<option value="P0000_0345">Environmental and Resource Economics</option>
-		<option value="P0000_0350">Environmental Engineering</option>
-		<option value="P0000_0355">Environmental Physics</option>
-		<option value="P0000_0360">Environmental Science</option>
-		<option value="P0000_0940">Exploring</option>
-		<option value="P0000_0365">Family and Consumer Sciences</option>
-		<option value="P0000_0370">Field Crop Management</option>
-		<option value="P0000_0375">Finance</option>
-		<option value="P0000_0380">Financial Markets (Economics)</option>
-		<option value="P0000_0385">Fine Arts</option>
-		<option value="P0000_0390">Food Science</option>
-		<option value="P0000_0395">Foreign Languages and Cultures</option>
-		<option value="P0000_0400">French</option>
-		<option value="P0000_0405">French Teaching</option>
-		<option value="P0000_0410">Fruit  Management</option>
-		<option value="P0000_0415">Genetics and Cell Biology</option>
-		<option value="P0000_0420">Geology</option>
-		<option value="P0000_0425">Global Politics</option>
-		<option value="P0000_0430">Health and Fitness</option>
-		<option value="P0000_0435">History</option>
-		<option value="P0000_0440">History Pre-Law</option>
-		<option value="P0000_0445">History Teaching</option>
-		<option value="P0000_0450">Hospitality Business Management</option>
-		<option value="P0000_0455">Human Development</option>
-		<option value="P0000_0460">Humanities (General Studies)</option>
-		<option value="P0000_0950">Integrated Communication</option>
-		<option value="P0000_0465">Integrated Plant Sciences</option>
-		<option value="P0000_0470">Interior Design</option>
-		<option value="P0000_0475">International Area Studies</option>
-		<option value="P0000_0480">International Business</option>
-		<option value="P0000_0485">International Trade</option>
-		<option value="P0000_0490">Jazz Studies</option>
-		<option value="P0000_0495">Journalism</option>
-		<option value="P0000_0498">Journalism &amp; Media Production</option>
-		<option value="P0000_0500">Landscape Architecture</option>
-		<option value="P0000_0505">Landscape Design  (IPS)</option>
-		<option value="P0000_0510">Landscape Nurse Mgt</option>
-		<option value="P0000_0515">Linguistics (General Studies)</option>
-		<option value="P0000_0520">Literary Studies</option>
-		<option value="P0000_0525">Management and Operations</option>
-		<option value="P0000_0530">Management Information Systems</option>
-		<option value="P0000_0535">Marketing</option>
-		<option value="P0000_0540">Materials Chemistry</option>
-		<option value="P0000_0545">Materials Physics</option>
-		<option value="P0000_0550">Materials Science and Engineer</option>
-		<option value="P0000_0555">Mathematical Modeling</option>
-		<option value="P0000_0560">Mathematical Physics</option>
-		<option value="P0000_0565">Mathematics</option>
-		<option value="P0000_0570">Mathematics (General Studies)</option>
-		<option value="P0000_0580">Mathematics Teaching (Gen St)</option>
-		<option value="P0000_0585">Mechanical Engineering</option>
-		<option value="P0000_0590">Medical Technology</option>
-		<option value="P0000_0595">Microbiology</option>
-		<option value="P0000_0600">Molecular Biology</option>
-		<option value="P0000_0605">Movement Studies</option>
-		<option value="P0000_0965">Multimedia Journalism</option>
-		<option value="P0000_0610">Music</option>
-		<option value="P0000_0615">Music Brass Perc Strings Winds</option>
-		<option value="P0000_0620">Music Composition</option>
-		<option value="P0000_0630">Music Keyboard Pedagogy</option>
-		<option value="P0000_0635">Music Performance</option>
-		<option value="P0000_0640">Music Teaching</option>
-		<option value="P0000_0645">Music: Keyboard</option>
-		<option value="P0000_0650">Music: Voice</option>
-		<option value="P0000_0655">Nanotechnology</option>
-		<option value="P0000_0660">Natural Resource Policy</option>
-		<option value="P0000_0665">Natural Resource Sciences</option>
-		<option value="P0000_0670">Neuroscience</option>
-		<option value="P0000_0675">Neuroscience Pre-Med</option>
-		<option value="P0000_0680">Neuroscience Pre-Veterinary Medicine</option>
-		<option value="P0000_0685">Nursing</option>
-		<option value="P0000_0690">Nutrition and Exercise Physiology</option>
-		<option value="P0000_0695">Operations Research</option>
-		<option value="P0000_0700">Optics and Electronics</option>
-		<option value="P0000_0705">Organic Agricultural Systems</option>
-		<option value="P0000_0710">Organizational Communication</option>
-		<option value="P0000_0715">Philosophy</option>
-		<option value="P0000_0720">Philosophy Pre-Law</option>
-		<option value="P0000_0725">Physical Science Teaching</option>
-		<option value="P0000_0730">Physical Sciences</option>
-		<option value="P0000_0735">Physics</option>
-		<option value="P0000_0740">Physics Education</option>
-		<option value="P0000_0745">Political Science</option>
-		<option value="P0000_0750">Political Science Pre-Law</option>
-		<option value="P0000_0755">Pre-Dentistry</option>
-		<option value="P0000_0760">Pre-Law</option>
-		<option value="P0000_0765">Pre-Medicine</option>
-		<option value="P0000_0770">Pre-Occupational Therapy</option>
-		<option value="P0000_0775">Pre-Optometry</option>
-		<option value="P0000_0780">Pre-Pharmacy</option>
-		<option value="P0000_0785">Pre-Physical Therapy</option>
-		<option value="P0000_0790">Pre-Physician's Assistant</option>
-		<option value="P0000_0795">Pre-Veterinary Medicine</option>
-		<option value="P0000_0990">Professional Chemistry</option>
-		<option value="P0000_0800">Psychology</option>
-		<option value="P0000_0805">Public Relations</option>
-		<option value="P0000_0985">Quantitative Economics</option>
-		<option value="P0000_0810">Religious Studies (Gen St)</option>
-		<option value="P0000_0815">Rhetoric  Writing</option>
-		<option value="P0000_0960">Science Communication</option>
-		<option value="P0000_0820">Science Teaching</option>
-		<option value="P0000_0825">Social Sciences (Gen St)</option>
-		<option value="P0000_0830">Social Studies</option>
-		<option value="P0000_0835">Sociology</option>
-		<option value="P0000_0840">Spanish</option>
-		<option value="P0000_0845">Spanish Teaching</option>
-		<option value="P0000_0850">Speech and Hearing Sciences</option>
-		<option value="P0000_0855">Sport Management</option>
-		<option value="P0000_0920">Sport Science</option>
-		<option value="P0000_0857">Strategic Communication</option>
-		<option value="P0000_0995">Studio Fine Arts</option>
-		<option value="P0000_0860">Theoretical Mathematics</option>
-		<option value="P0000_0865">Turfgrass Management</option>
-		<option value="P0000_0870">Undecided</option>
-		<option value="P0000_0875">Viticulture  (IPS)</option>
-		<option value="P0000_0880">Wetland Aquatic Resources</option>
-		<option value="P0000_0885">Wildlife Ecology</option>
-		<option value="P0000_0925">Wildlife Ecology and Conservation</option>
-		<option value="P0000_0890">Wildlife Ecology Pre-Vet Sci</option>
-		<option value="P0000_0895">Wine Business Management (HBM)</option>
-		<option value="P0000_0900">Women's Studies</option>
-		<option value="P0000_0905">Zoology</option>
-		<option value="P0000_0910">Zoology Pre-Med/ Pre-Dental</option>
-		<option value="P0000_0915">Zoology Pre-Veterinary Medicine</option>
+	<!-- Birthday -->
+	<fieldset class="birthday">
+	
+        <label>Birthdate</label><br>
+	    <select class="required" id="DateOfBirthMonth" name="DateOfBirthMonth">
+			<option value="">Month</option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
 		</select>
+		<select class="required" id="DateOfBirthDay" name="DateOfBirthDay">
+		    <option value="">Day</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+		<select class="required" id="DateOfBirthYear" name="DateOfBirthYear">
+		    <option value="">Year</option>
+			<option value="2005">2005</option>
+			<option value="2004">2004</option>
+			<option value="2003">2003</option>
+			<option value="2002">2002</option>
+			<option value="2001">2001</option>
+			<option value="2000">2000</option>
+			<option value="1999">1999</option>
+			<option value="1998">1998</option>
+			<option value="1997">1997</option>
+			<option value="1996">1996</option>
+			<option value="1995">1995</option>
+			<option value="1994">1994</option>
+			<option value="1993">1993</option>
+			<option value="1992">1992</option>
+			<option value="1991">1991</option>
+			<option value="1990">1990</option>
+			<option value="1989">1989</option>
+			<option value="1988">1988</option>
+			<option value="1987">1987</option>
+			<option value="1986">1986</option>
+			<option value="1985">1985</option>
+			<option value="1984">1984</option>
+			<option value="1983">1983</option>
+			<option value="1982">1982</option>
+			<option value="1981">1981</option>
+			<option value="1980">1980</option>
+			<option value="1979">1979</option>
+			<option value="1978">1978</option>
+			<option value="1977">1977</option>
+			<option value="1976">1976</option>
+			<option value="1975">1975</option>
+			<option value="1974">1974</option>
+			<option value="1973">1973</option>
+			<option value="1972">1972</option>
+			<option value="1971">1971</option>
+			<option value="1970">1970</option>
+			<option value="1969">1969</option>
+			<option value="1968">1968</option>
+			<option value="1967">1967</option>
+			<option value="1966">1966</option>
+			<option value="1965">1965</option>
+			<option value="1964">1964</option>
+			<option value="1963">1963</option>
+			<option value="1962">1962</option>
+			<option value="1961">1961</option>
+			<option value="1960">1960</option>
+			<option value="1959">1959</option>
+			<option value="1958">1958</option>
+			<option value="1957">1957</option>
+			<option value="1956">1956</option>
+			<option value="1955">1955</option>
+			<option value="1954">1954</option>
+			<option value="1953">1953</option>
+			<option value="1952">1952</option>
+			<option value="1951">1951</option>
+			<option value="1950">1950</option>
+			<option value="1949">1949</option>
+			<option value="1948">1948</option>
+			<option value="1947">1947</option>
+			<option value="1946">1946</option>
+			<option value="1945">1945</option>
+			<option value="1944">1944</option>
+			<option value="1943">1943</option>
+			<option value="1942">1942</option>
+			<option value="1941">1941</option>
+			<option value="1940">1940</option>
+		</select>
+	    
+	</fieldset>
+	
+	<!-- Student Plans -->
+	<fieldset class="plans">
+	
+		<legend>Your Plans</legend>
+				
+	    <label class="hidden">Anticipated Start Term *</label>
+	    <select class="required" id="AnticipatedStartTerm" name="AnticipatedStartTerm">
+	        <option value="">When do you plan to start?</option>
+			<option value="2153">2015 Spring</option>
+			<option value="2155">2015 Summer</option>
+			<option value="2157">2015 Fall</option>
+			<option value="2163">2016 Spring</option>
+			<option value="2165">2016 Summer</option>
+			<option value="2167">2016 Fall</option>
+			<option value="2173">2017 Spring</option>
+			<option value="2175">2017 Summer</option>
+			<option value="2177">2017 Fall</option>
+			<option value="2183">2018 Spring</option>
+			<option value="2185">2018 Summer</option>
+			<option value="2187">2018 Fall</option>
+			<option value="2193">2019 Spring</option>
+			<option value="2195">2019 Summer</option>
+			<option value="2197">2019 Fall</option>
+			<option value="2203">2020 Spring</option>
+			<option value="2205">2020 Summer</option>
+			<option value="2207">2020 Fall</option>
+			<option value="2213">2021 Spring</option>
+			<option value="2215">2021 Summer</option>
+			<option value="2217">2021 Fall</option>
+			<option value="2223">2022 Spring</option>
+			<option value="2225">2022 Summer</option>
+			<option value="2227">2022 Fall</option>
+			<option value="2233">2023 Spring</option>
+			<option value="2235">2023 Summer</option>
+			<option value="2237">2023 Fall</option>
+			<option value="2243">2024 Spring</option>
+			<option value="2245">2024 Summer</option>
+			<option value="2247">2024 Fall</option>
+			<option value="2253">2025 Spring</option>
+			<option value="2255">2025 Summer</option>
+			<option value="2257">2025 Fall</option>
+			<option value="2263">2026 Spring</option>
+			<option value="2265">2026 Summer</option>
+			<option value="2267">2026 Fall</option>
+			<option value="2273">2027 Spring</option>
+			<option value="2275">2027 Summer</option>
+			<option value="2277">2027 Fall</option>
+			<option value="2283">2028 Spring</option>
+			<option value="2285">2028 Summer</option>
+			<option value="2287">2028 Fall</option>
+			<option value="2293">2029 Spring</option>
+			<option value="2295">2029 Summer</option>
+			<option value="2297">2029 Fall</option>
+			<option value="2303">2030 Spring</option>
+			<option value="2305">2030 Summer</option>
+			<option value="2307">2030 Fall</option>
+		</select>
+	
+	    <label class="hidden">Entering as a ...</label>
+	    <select class="required" id="AnticipatedStartTerm" name="EnteringAs">
+	        <option value="">Entering as a ...</option>
+			<option value="TRN">Freshman</option>
+			<option value="TRD">Transfer Student</option>
+			<option value="NDG">Non-degree seeking student</option>
+			<option value="FSR">Former WSU student who is returning</option>
+		</select>
+	        
+	</fieldset>
+	
+	<hr>
 
-    </fieldset>
-
-   <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
-
-
+    <button id="disclose-additional" class="secondary" type="submit" onclick="">Tell us more</button>
+    
+    <span>or</span>
+    
+    <input type="submit" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
+    
+	<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
+    
 </form>
