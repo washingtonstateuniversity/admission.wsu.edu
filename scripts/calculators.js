@@ -179,6 +179,9 @@ function calculate() {
 			qvalue = parseFloat(act) + parseFloat(gpa);
 		}
 		
+	
+$(document).ready( function() {
+		
 		if ( $("calculator").hasClass("UAA") )
 		
 		{
@@ -210,5 +213,7 @@ function calculate() {
 		document.getElementById("awardlevel").innerHTML = "";
 	}
 }
+
+});
 
 })(jQuery);

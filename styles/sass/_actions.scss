@@ -239,14 +239,18 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		border-radius: 0;
 			}
 	
-	#additional-info.closed * {
+	#additional-info.closed {
+		display: none;
+	}
+	
+	#additional-info.closed ~ * {
 		display: none;
 	}
 	
 	select {
 		background: $crimson-dark;
 		background: $gray;
-		height: 30px;
+		height: 26px;
 		color: white;
 		border: none; 
 		outline: none;
@@ -307,6 +311,34 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		&::-moz-placeholder { color: $gray; }
 		&:-ms-input-placeholder { color: $gray; }
 	
+	}
+	
+	form button,
+	form input[type="button"] {
+		border-radius: 0;
+		border-width: 1px;
+		color: $gray;
+		border-color: $gray-lightly;
+		background-color: $gray-lightly;
+	}
+	
+	form button:hover,
+	form input[type="button"]:hover {
+		color: $gray-darker;
+		border-color: white;
+		background-color: white;
+	}
+	
+	form button.secondary {
+		background: transparent;
+		color: $gray-light;
+		border-color: $gray-light;
+	}
+	
+	form button.secondary:hover {
+		color: white;
+		background: transparent;
+		border-color: white;
 	}
 
 }

@@ -354,12 +354,14 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   border: none;
   color: #d7dadb;
   border-radius: 0; }
-#info #additional-info.closed * {
+#info #additional-info.closed {
+  display: none; }
+#info #additional-info.closed ~ * {
   display: none; }
 #info select {
   background: #6b1523;
   background: #5E6A71;
-  height: 30px;
+  height: 26px;
   color: white;
   border: none;
   outline: none;
@@ -407,6 +409,26 @@ x.admin-bar .size-lt-large .actions.affixed-top {
   color: #5E6A71; }
 #info input[type="text"]:focus:-ms-input-placeholder {
   color: #5E6A71; }
+#info form button,
+#info form input[type="button"] {
+  border-radius: 0;
+  border-width: 1px;
+  color: #5E6A71;
+  border-color: #d7dadb;
+  background-color: #d7dadb; }
+#info form button:hover,
+#info form input[type="button"]:hover {
+  color: #2a3033;
+  border-color: white;
+  background-color: white; }
+#info form button.secondary {
+  background: transparent;
+  color: #8d959a;
+  border-color: #8d959a; }
+#info form button.secondary:hover {
+  color: white;
+  background: transparent;
+  border-color: white; }
 
 .action-item h2 {
   padding-top: 0; }
