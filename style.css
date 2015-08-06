@@ -357,7 +357,7 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 #info #additional-info.closed ~ * {
   display: none; }
 #info select {
-  background: #8d959a;
+  background-color: #5E6A71;
   height: 26px;
   color: white;
   border: none;
@@ -477,6 +477,8 @@ body[class*="domain-blogs"] .main-footer {
       font-size: 2rem; }
     .socialize .spine-social-channels a:hover::before {
       color: #2a3033; }
+  .size-lt-medium main .socialize .spine-social-channels {
+    display: none; }
   .socialize .gallery {
     display: -webkit-box;
     display: -webkit-flex;
@@ -518,6 +520,10 @@ body[class*="domain-blogs"] .main-footer {
       margin-top: 150px; }
     .socialize .gallery .gallery-item:nth-of-type(8) {
       margin-top: 66px; }
+    .size-lt-medium .socialize .gallery .gallery-item:nth-of-type(6) ~ .gallery-item {
+      display: none; }
+    .size-lt-medium .socialize .gallery .gallery-item {
+      width: 33.33334%; }
     .socialize .gallery .gallery-icon {
       line-height: 0;
       overflow: hidden; }

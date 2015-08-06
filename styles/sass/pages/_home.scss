@@ -34,6 +34,10 @@
 		}
 		
 	}
+	
+	.size-lt-medium main & .spine-social-channels {
+		display: none;
+	}
 
 	.gallery {
 		
@@ -81,6 +85,14 @@
 		}
 		.gallery-item:nth-of-type(8) {
 			margin-top: 66px;
+		}
+		
+		.size-lt-medium & .gallery-item:nth-of-type(6) ~ .gallery-item {
+			display: none;
+		}
+		
+		.size-lt-medium & .gallery-item {
+			width: 33.33334%;
 		}
 		
 		.gallery-icon {
