@@ -111,19 +111,40 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	text-align: center;
 	width: 100%;
 	outline: none;
-	}
+}
+
+.action-item:nth-of-type(n+2) dt a,
+.action-item:nth-of-type(n+2) dt button {
+	border-left: 2px #7c182d solid;	
+}
+
+
+
+.action-item.opened + .action-item dt a:hover,
+.action-item.opened + .action-item dt button:hover {
+	//border-left-color: black;	
+}
 
 .action-item:nth-of-type(even) dt a,
 .action-item:nth-of-type(even) dt button {
-	background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
+	//background: linear-gradient(to bottom, $crimson 0%,$crimson-dark 100%); /* W3C */
+	
 }
 
 .action-item:nth-of-type(n+1) dt a:hover,
 .action-item:nth-of-type(n+1) dt button:hover,
 .action-item.opened dt,
 .action-item.opened dt button {
-	background: $crimson-er;	
+	background: $crimson-er;
+	background: $gray-darker;	
 }
+
+
+.action-item:nth-of-type(n+1):not(.opened) dt a:hover,
+.action-item:nth-of-type(n+1):not(.opened) dt button:hover {
+	background-color: #7c182d;
+}
+
 
 .action-item dd {
 	display: none;
@@ -139,6 +160,7 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	width: 33.3334%;
 	min-width: 396px;
 	background-color: $crimson-er;
+	background-color: $gray-darker;
 	position: absolute;
 	right: 0;
 	padding: 2rem;
@@ -190,9 +212,11 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 
 .action-item hr {
 	height: 1rem;
+	height: 3px;
 	border: none;
 	display: block;
 	background: $crimson-dark;
+	background: $gray;
 }
 
 #info {
@@ -201,28 +225,32 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		position: relative;
 	}
 	
-	.itemValue {
+	input[type="text"],
+	select {
 		margin-bottom: 3px;
-	}
-	
-	input[type="text"] {
-		margin-bottom: 0px;
 	}
 	
 	input[type="text"] {
 		width: 100%;
 		background-color: $crimson;
+		background-color: $gray;
 		border: none;
 		color: $gray-lightly;
+		border-radius: 0;
+			}
+	
+	#additional-info.closed {
+		display: none;
 	}
 	
-	#additional-info.closed fieldset {
+	#additional-info.closed ~ * {
 		display: none;
 	}
 	
 	select {
 		background: $crimson-dark;
-		height: 30px;
+		background: $gray;
+		height: 26px;
 		color: white;
 		border: none; 
 		outline: none;
@@ -231,36 +259,87 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 		box-sizing: border-box;
 		width: 100%;
 		padding-left: 5px;
+		border-radius: 0;
 	}
 	
 	select option {
-	   display: none;
+		position: relative;
+		}
+	
+	select option::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid white;
 	}
 	
-	.styled-select {
-	   width: 240px;
-	   height: 34px;
-	   overflow: hidden;
-	   background: url(new_arrow.png) no-repeat right #ddd;
-	   border: 1px solid #ccc;
+	input.required[type="text"],
+	select.required {
+		//background-color: $crimson-dark;
+		background-color: $gray-light;
+		border-left: 3px $gray-lightest solid;
 	}
 	
-	input.required[type="text"] {
-		background-color: $crimson-dark;
-	}
-	
-	input[type="text"]:focus {
-		background-color: black;
+	input[type="text"]:focus,
+	input[type="text"].required:focus {
+		color: black;
+		background-color: $gray-lightest;
 	}
 	
 	.itemLabel {
 		display: none;
 	}
 	
-	::-webkit-input-placeholder { color: white; }
-	:-moz-placeholder { /* Firefox 18- */ color: white; }
-	::-moz-placeholder { /* Firefox 19+ */ color: white; }
-	:-ms-input-placeholder { color: white; }
+	input[type="text"] {
+	
+		&::-webkit-input-placeholder { color: white; }
+		&:-moz-placeholder { color: white; }
+		&::-moz-placeholder { color: white; }
+		&:-ms-input-placeholder { color: white; }
+	
+	}
+	
+	input[type="text"]:focus {
+	
+		&::-webkit-input-placeholder { color: $gray; }
+		&:-moz-placeholder { color: $gray; }
+		&::-moz-placeholder { color: $gray; }
+		&:-ms-input-placeholder { color: $gray; }
+	
+	}
+	
+	form button,
+	form input[type="button"] {
+		border-radius: 0;
+		border-width: 1px;
+		color: $gray;
+		border-color: $gray-lightly;
+		background-color: $gray-lightly;
+	}
+	
+	form button:hover,
+	form input[type="button"]:hover {
+		color: $gray-darker;
+		border-color: white;
+		background-color: white;
+	}
+	
+	form button.secondary {
+		background: transparent;
+		color: $gray-light;
+		border-color: $gray-light;
+	}
+	
+	form button.secondary:hover {
+		color: white;
+		background: transparent;
+		border-color: white;
+	}
 
 }
 

@@ -1,13 +1,15 @@
 <script>
 (function($){
-	$("#disclose-additional").on("click", function() {
-		$("#additional-info").toggleClass("closed");
+	$(document).ready( function() {
+		$("#disclose-additional").on("click", function() {
+			$("#additional-info").toggleClass("closed");
+		});
 	});
 })(jQuery);
 </script>
 
 
-<p>Tell us a bit about yourself so we can send you the right information.</p>
+<p>Tell us a bit about yourself so we can send you the right information. (Lighter fields are required.)</p>
 
 <form action="https://goto.wsu.edu/Info" id="InfoRequestForm" method="post">
 	       
@@ -404,15 +406,12 @@
 		</select>
 	
 	</fieldset>
-
-	    
-	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();" style="display:none;">
-	    
-	    <hr>
 	    
 	    <button id="disclose-additional" class="secondary" type="button" onclick="return false;">Tell us more</button>
 	    
-	    <span>Or</span>
+	    <span>or</span>
+	    
+	    <input type="button" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
 	    
 		<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
 
@@ -422,7 +421,7 @@
     <fieldset class="academic-interest">
 	    
 	    <!-- 1st Academic Interest -->
-        <label>1st Academic Interest</label>
+        <label>Primary Academic Interest</label>
         <select id="AcademicInterest1" name="AcademicInterest1">
 	            <option value=""></option>
 				<option value="P0000_0005">Accounting</option>
@@ -631,7 +630,7 @@
 			</select>
     
 		<!-- 2nd Academic Interest -->
-        <label>2nd Academic Interest</label>
+        <label>Secondary Academic Interest</label>
         <select id="AcademicInterest2" name="AcademicInterest2">
         <option value=""></option>
 		<option value="P0000_0005">Accounting</option>
