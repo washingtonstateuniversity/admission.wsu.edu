@@ -4,7 +4,8 @@
 	
 	background-color: white;
 	padding: 1rem;
-	border-left: 3px $gray-lighter solid;
+	border-left: 1px $gray-lighter solid;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 	
 	header {
 		font-size: 1.6rem;
@@ -13,16 +14,87 @@
 		text-transform: uppercase;
 	}
 	
+	p {
+		margin-bottom: 0;
+	}
+	
+	dt.metric-title {
+		border-top: 2px $gray-lighter solid;
+		font-weight: 800;
+		font-size: 1.2;
+		color: $gray-light;
+	}
+	
 	.correction {
 		display: none;
+		font-size: .9em;
+		line-height: 1.1;
+		color: $yellow-darker;
+		position: absolute;
+		z-index: 509;
+		top: 0;
+		//bottom: 100%;
+		right: calc(100% + 10px);
+		min-width: 100px;
+		border: 1px $yellow-dark solid;
+		background-color: $yellow-er;
+		padding: 1rem;
+		text-align: right;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	}
 	
-	dd,input {
+	.correction::before {
+		content: "Whoops";
+		font-weight: bold;
+		display: block;
+	}
+	
+	.operator {
+		color: $gray-lighter;
+		font-size: 2rem;
+		width: 1em;
+		font-weight: 300;
+		display: inline-block;
+		border: 1px $gray-lighter solid;
+		border-radius: 5px;
+		line-height: 1em;
+		margin-right: 5px;
+		text-align: center;
+	}
+	
+	dt {
+		font-weight: normal;
+	}
+	
+	dd {
 		width: 100%;
+		position: relative;
 	}
 	
-	dd dd {
+	input {
+		width: 6rem;
+		font-size: 2rem;
+	}
+	
+	dl.metric ~ dl.metric {
+		margin-top: 1rem;
+	}
+	
+	dl.sat dt {
+		float: left;
+	}
+	
+	dd.reading,
+	dl.act {
+		clear: both;
+	}
+	
+	dd.reading,
+	dd.math {
 		width: 50%;
+		display: block;
+		float: left;
+		box-sizing: border-box;
 	}
 	
 	
