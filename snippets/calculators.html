@@ -1,42 +1,43 @@
-<div id="calculator" class="UAA">
+<div id="calculator">
+	<span class="operator">+</span><span class="operator">/</span><span class="operator">=</span>
 	<header>Eligibility Calculator</header>
-	<dl class="gpa">
-		<!--<span class="instructions">Enter your high school GPA, a <span class="min-gpa">minimum of 2.5</span>, based on a 4.0 scale</span>-->
-		<dt>GPA (unweighted)</dt>
+	<p class="instructions">Enter your <em>unweighted</em> GPA and one or both of your SAT or ACT scores.</p>
+	<dl class="gpa metric">
+		<dt class="metric-title">GPA</dt>
 		<dd>
-			<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" placeholder="GPA">
+			<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" placeholder="">
+			<div id="correction-gpa" class="correction">Please enter a GPA value between 2.5 and 4.0</div>
 		</dd>
-		<div id="correction-gpa" class="correction">Please enter a GPA value between 2.5 and 4.0</div>
 	</dl>
 	<dl class="sat metric">
-		<dt>SAT</dt>
+		<dt class="metric-title">SAT</dt>
 		<dd class="reading">
 			<dl>
-				<dt>Critical reading</dt>
+				<dt>Reading</dt>
 				<dd>
-					<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" placeholder="Critical Reading">
+					<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" placeholder="">
+					<div id="correction-reading" class="correction">Please enter a critical reading SAT value between 200 and 800</div>
 				</dd>
-				<div id="correction-reading" class="correction">Please enter a critical reading SAT value between 200 and 800</div>
+				
 			</dl>
 		</dd>
 		<dd class="math">
 			<dl>
 				<dt>Math</dt>
 				<dd>
-					<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" placeholder="Math">
+					<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" placeholder="">
 				</dd>
 				<div id="correction-math" class="correction">Please enter a math SAT value between 200 and 800</div>
 			</dl>
 		</dd>
 	</dl>
-	<dl class="act">
-		<div class="instructions">... And / or enter your best ACT score:</div>
-		<dt>ACT</dt>
+	<dl class="act metric">
+		<dt class="metric-title">ACT</dt>
 		<dd>
-			<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" placeholder="ACT">
+			<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" placeholder="">
+			<div id="correction-act" class="correction">Please enter an ACT score between 11 and 36</div>
 		</dd>
-		<div id="low-act" class="correction">Please enter a ACT score value equal to or above 11</div>
-		<div id="high-act" class="correction">Please enter a ACT score value equal to or below 36</div>
+		
 	</dl>
 	<output id="awardlevel"></output>
 </div>

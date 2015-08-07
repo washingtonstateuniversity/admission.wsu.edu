@@ -804,18 +804,71 @@ ul.inspirings ul {
 #calculator {
   background-color: white;
   padding: 1rem;
-  border-left: 3px #b5babe solid; }
+  border-left: 1px #b5babe solid;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
   #calculator header {
     font-size: 1.6rem;
     font-weight: 800;
     line-height: 1;
     text-transform: uppercase; }
+  #calculator p {
+    margin-bottom: 0; }
+  #calculator dt.metric-title {
+    border-top: 2px #b5babe solid;
+    font-weight: 800;
+    font-size: 1.2;
+    color: #8d959a; }
   #calculator .correction {
-    display: none; }
-  #calculator dd, #calculator input {
-    width: 100%; }
-  #calculator dd dd {
-    width: 50%; }
+    display: none;
+    font-size: .9em;
+    line-height: 1.1;
+    color: #77580c;
+    position: absolute;
+    z-index: 509;
+    top: 0;
+    right: calc(100% + 10px);
+    min-width: 100px;
+    border: 1px #9e7510 solid;
+    background-color: #ffb81c;
+    padding: 1rem;
+    text-align: right;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  #calculator .correction::before {
+    content: "Whoops";
+    font-weight: bold;
+    display: block; }
+  #calculator .operator {
+    color: #b5babe;
+    font-size: 2rem;
+    width: 1em;
+    font-weight: 300;
+    display: inline-block;
+    border: 1px #b5babe solid;
+    border-radius: 5px;
+    line-height: 1em;
+    margin-right: 5px;
+    text-align: center; }
+  #calculator dt {
+    font-weight: normal; }
+  #calculator dd {
+    width: 100%;
+    position: relative; }
+  #calculator input {
+    width: 6rem;
+    font-size: 2rem; }
+  #calculator dl.metric ~ dl.metric {
+    margin-top: 1rem; }
+  #calculator dl.sat dt {
+    float: left; }
+  #calculator dd.reading,
+  #calculator dl.act {
+    clear: both; }
+  #calculator dd.reading,
+  #calculator dd.math {
+    width: 50%;
+    display: block;
+    float: left;
+    box-sizing: border-box; }
 
 .size-lt-large #binder {
   width: 100%; }
