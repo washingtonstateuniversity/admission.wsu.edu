@@ -31,6 +31,7 @@
 .action-items {
 	background-color: $crimson;
 	overflow: hidden;
+	display: flex;
 }
 
 .actions.affixed-top dl.action-item dt {
@@ -59,6 +60,7 @@ dl.actions-list {
  
  dl.action-item {
 	width: 25%;
+	flex: 1;
 	padding: 0;
 	margin: auto;
 	float: left;
@@ -231,7 +233,7 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	}
 	
 	select {
-		background: $gray-light;
+		background-color: $gray;
 		height: 26px;
 		color: white;
 		border: none; 

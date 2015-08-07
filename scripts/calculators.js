@@ -1,87 +1,34 @@
+/* jshint unused:false */
+
 (function($){
+	
+function checkScore(metric,score) {
+	
+	var low = 0;
+	var high = 0;
+	
+	if ( metric === "gpa" ) { high = 4.0; low = 2.5; }
+	if ( metric === "reading" || metric === "math" ) { high = 800; low = 200; }
+	if ( metric === "act" ) { high = 36; low = 11; }
 
-function checkGPA(gpa) {
-	var y = document.getElementById("low-gpa");
-	var z = document.getElementById("high-gpa");
+	if (score) {
+		
+		if ( score < low || score > high ) {
 
-	if (gpa) {
-		if (gpa < 2.5) { 
-			y.style.display = "";
-			z.style.display = "none";
-		} else if (gpa > 4.0) {
-			y.style.display = "none";
-			z.style.display = "";
+			$("#correction-"+metric).show();
+			
 		} else {
-			y.style.display = "none";
-			z.style.display = "none";
+			
+			$("#correction-"+metric).hide();
+
 		}
+		
 	} else {
-		y.style.display = "none";
-		z.style.display = "none";
+		
+		$("#correction-"+metric).hide();
+		
 	}
-}
 
-function checkreading(reading) {
-	var y = document.getElementById("low-reading");
-	var z = document.getElementById("high-reading");
-
-	if (reading) {
-		if (reading < 200) { 
-			y.style.display = "";
-			z.style.display = "none";
-		} else if (reading > 800) {
-			y.style.display = "none";
-			z.style.display = "";
-		} else {
-			y.style.display = "none";
-			z.style.display = "none";
-		}
-	} else {
-		y.style.display = "none";
-		z.style.display = "none";
-	}
-}
-
-function checkMath(math) {
-	var y = document.getElementById("low-math");
-	var z = document.getElementById("high-math");
-
-	if (math) {
-		if (math < 200) { 
-			y.style.display = "";
-			z.style.display = "none";
-		} else if (math > 800) {
-			y.style.display = "none";
-			z.style.display = "";
-		} else {
-			y.style.display = "none";
-			z.style.display = "none";
-		}
-	} else {
-		y.style.display = "none";
-		z.style.display = "none";
-	}
-}
-
-function checkACT(act) {
-	var y = document.getElementById("low-act");
-	var z = document.getElementById("high-act");
-
-	if (act) {
-		if (act < 11) { 
-			y.style.display = "";
-			z.style.display = "none";
-		} else if (act > 36) {
-			y.style.display = "none";
-			z.style.display = "";
-		} else {
-			y.style.display = "none";
-			z.style.display = "none";
-		}
-	} else {
-		y.style.display = "none";
-		z.style.display = "none";
-	}
 }
 
 function calculate() {
@@ -178,23 +125,21 @@ function calculate() {
 		if ((parseFloat(act) + parseFloat(gpa)) > sat) {
 			qvalue = parseFloat(act) + parseFloat(gpa);
 		}
-		
-	
-$(document).ready( function() {
-		
-		if ( $("calculator").hasClass("UAA") )
-		
-		{
-			//alert("qvalue:"+qvalue+" sat:"+sat+" act:"+act+" gpa:"+gpa);
-			if (qvalue >= 2750) {
-				
+
+		// University Achievement Award
+		if ( $("#calculator").hasClass("UAA") ) {
+			
+			if ( qvalue >= 2750 ) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2><h3>You are eligible for $4000.</h3><p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please  apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
-			} else if (qvalue >= 2400) {
+			} else if ( qvalue >= 2400 ) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2><h3>You are eligible for $2000.</h3><p>Your good academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please  apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
 			} else if (qvalue < 2400) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Based on the scores you provided, you do not qualify for the University Achievement Award.</h2><p>If your scores change, please calculate your eligibility again. You may qualify for other awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
 			}
-		} else if (document.getElementById("calculator").style.class == "CAA") {
+		
+		// Cougar Achievement Award
+		} else if (document.getElementById("calculator").style.class === "CAA") {
+			
 			if (qvalue >= 2500) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <h3>You are eligible for <strong>$11,000</strong> in your first year, renewable for up to three additional years.</h3> <p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
 			} else if (qvalue >= 2400) {
@@ -202,18 +147,44 @@ $(document).ready( function() {
 			} else if (qvalue < 2400) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Based on the scores you provided, you do not qualify for the Cougar Freshman Academic Award.</h2> <p>If your scores change, you may use this calculator again to see if you are eligible. You may qualify for other awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
 			}
-		} else if (document.getElementById("calculator").style.class == "CC") {
+		
+		// Cougar Achievement Award
+		} else if (document.getElementById("calculator").style.class === "CC") {
 			if (qvalue >= 2200) {
 				document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <p>Your good academic record indicates you're eligible for the Crimson Crew program provided you also: <br>1) Have a college preparatory curriculum <br>2) Positive grade trends <br>3) <a href=\"http://admission.wsu.edu/applications/index.html\">Apply</a> to the WSU Pullman campus</p>";
 			} else if (qvalue < 2200) {
 				document.getElementById("awardlevel").innerHTML = "<p>Based on the information you provided, it does not appear you're eligible for the Crimson Crew program at this time.</p> <h2>But wait!</h2> <p>That doesn't mean you're not eligible for admission. Discuss further with your admission counselor at <a href=\"http://rep.wsu.edu\">rep.wsu.edu</a>.</p>";
 			}
+		} else {
+			document.getElementById("awardlevel").innerHTML = "";
 		}
-	} else {
-		document.getElementById("awardlevel").innerHTML = "";
+
 	}
+	
 }
 
-});
+	$(document).ready( function() {
+					
+		$(".gpa input").on("change", function() {
+			var score = $(".gpa input").val();
+			//alert(gpa);
+			checkScore("gpa",score);
+		});
+		
+		/* SAT Scores */
+		
+		$(".math input").on("change", function() {
+			var score = $(".math input").val();
+			checkScore("math",score);
+		});
+		
+		$(".reading input").on("change", function() {
+			var score = $(".reading input").val();
+			checkScore("reading",score);
+		});
+		
+		calculate();
+		
+	});
 
 })(jQuery);

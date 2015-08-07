@@ -1,66 +1,42 @@
 <div id="calculator" class="UAA">
-	<div id="notice">
-		<p id="awardlevel"></p>
-	
-		<h2>Eligibility Calculator</h2>
-		
-		<legend class="instructions">Enter your high school GPA 
-		<br>a <span class="min-gpa">minimum of 2.5</span>, based on a 4.0 scale</legend>
-		
-		<div id="low-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or above 2.5</div>
-		<div id="high-gpa" style="display: none"><br>NOTE: Please enter a GPA value equal to or below 4.0</div>
-		
-		<dl class="gpa">
-			<dt>
-				<label for="gpa">GPA <small>(unweighted)</small></label>
-			</dt>
-			
-			<dd>
-				<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" onchange="checkGPA(this.value);calculate()">
-			</dd>
-		</dl>
-		
-		<legend class="instructions">Enter your best SAT score for each of the following</legend>
-		
-		<div id="low-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or above 200</div>
-		<div id="high-reading" style="display: none"><br>NOTE: Please enter a critical reading SAT value equal to or below 800</div>
-		
-		<dl class="reading">
-			<dt>
-				<label for="reading">Critical reading</label>
-			</dt>
-			
-			<dd>
-				<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" onchange="checkreading(this.value);calculate()">
-			</dd>
-		</dl>
-		
-		<div id="low-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or above 200</div>
-		<div id="high-math" style="display: none"><br>NOTE: Please enter a math SAT value equal to or below 800</div>
-		
-		<dl class="math">
-			<dt>
-				<label for="math">Math</label>
-			</dt>
-			
-			<dd>
-				<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" onchange="checkMath(this.value);calculate()">
-			</dd>
-		</dl>
-		
-		<legend class="instructions">... And / or enter your best ACT score:</legend>
-		
-		<div id="low-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or above 11</div>
-		<div id="high-act" style="display: none"><br>NOTE: Please enter a ACT score value equal to or below 36</div>
-		
-		<dl class="act">
-			<dt>
-				<label for="act">ACT</label>
-			</dt>
-			
-			<dd>
-				<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" onchange="checkACT(this.value);calculate()">
-			</dd>
-		</dl>
-	</div>
+	<header>Eligibility Calculator</header>
+	<dl class="gpa">
+		<!--<span class="instructions">Enter your high school GPA, a <span class="min-gpa">minimum of 2.5</span>, based on a 4.0 scale</span>-->
+		<dt>GPA (unweighted)</dt>
+		<dd>
+			<input type="text" id="gpa" class="autowide" name="gpa" size="4" maxlength="4" value="" placeholder="GPA">
+		</dd>
+		<div id="correction-gpa" class="correction">Please enter a GPA value between 2.5 and 4.0</div>
+	</dl>
+	<dl class="sat metric">
+		<dt>SAT</dt>
+		<dd class="reading">
+			<dl>
+				<dt>Critical reading</dt>
+				<dd>
+					<input type="text" id="reading" class="autowide" name="reading" size="4" maxlength="3" value="" placeholder="Critical Reading">
+				</dd>
+				<div id="correction-reading" class="correction">Please enter a critical reading SAT value between 200 and 800</div>
+			</dl>
+		</dd>
+		<dd class="math">
+			<dl>
+				<dt>Math</dt>
+				<dd>
+					<input type="text" id="math" class="autowide" name="math" size="4" maxlength="3" value="" placeholder="Math">
+				</dd>
+				<div id="correction-math" class="correction">Please enter a math SAT value between 200 and 800</div>
+			</dl>
+		</dd>
+	</dl>
+	<dl class="act">
+		<div class="instructions">... And / or enter your best ACT score:</div>
+		<dt>ACT</dt>
+		<dd>
+			<input type="text" id="act" class="autowide" name="act" size="2" maxlength="2" value="" placeholder="ACT">
+		</dd>
+		<div id="low-act" class="correction">Please enter a ACT score value equal to or above 11</div>
+		<div id="high-act" class="correction">Please enter a ACT score value equal to or below 36</div>
+	</dl>
+	<output id="awardlevel"></output>
 </div>
