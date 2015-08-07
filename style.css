@@ -189,7 +189,11 @@
 
 .action-items {
   background-color: #981e32;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .actions.affixed-top dl.action-item dt {
   text-align: center;
@@ -216,6 +220,10 @@ dl.actions-list {
 
 dl.action-item {
   width: 25%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0;
   margin: auto;
   float: left; }
@@ -791,6 +799,23 @@ ul.inspirings ul {
 
 .size-gt-small .inspiring-you .column.two {
   margin-top: 200px; }
+
+/* Calculators */
+#calculator {
+  background-color: white;
+  padding: 1rem;
+  border-left: 3px #b5babe solid; }
+  #calculator header {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase; }
+  #calculator .correction {
+    display: none; }
+  #calculator dd, #calculator input {
+    width: 100%; }
+  #calculator dd dd {
+    width: 50%; }
 
 .size-lt-large #binder {
   width: 100%; }

@@ -1,0 +1,29 @@
+/* Calculators */
+
+#calculator {
+	
+	background-color: white;
+	padding: 1rem;
+	border-left: 3px $gray-lighter solid;
+	
+	header {
+		font-size: 1.6rem;
+		font-weight: 800;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	
+	.correction {
+		display: none;
+	}
+	
+	dd,input {
+		width: 100%;
+	}
+	
+	dd dd {
+		width: 50%;
+	}
+	
+	
+}
