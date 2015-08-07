@@ -138,7 +138,7 @@
 			//alert(qvalue);
 			
 			// University Achievement Award
-			if ( $("body").hasClass("page-university-achievement-award") ) {
+			if ( $("#UAA").length ) {
 				
 				if ( qvalue >= 2750 ) {
 					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2><h3>You are eligible for $4000.</h3><p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please  apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
@@ -149,7 +149,7 @@
 				}
 			
 			// Cougar Achievement Award
-			} else if ( $("body").hasClass("page-cougar-academic-award") ) {
+			} else if ( $("#CAA").length ) {
 				
 				if (qvalue >= 2500) {
 					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <h3>You are eligible for <strong>$11,000</strong> in your first year, renewable for up to three additional years.</h3> <p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"http://admission.wsu.edu/applications/apply.html#scholarships\">admission and scholarships</a>.</p>";
@@ -160,7 +160,7 @@
 				}
 			
 			// Cougar Commitment
-			} else if ( $("body").hasClass("page-cougar-commitment") ) {
+			} else if ( $("#CC").length ) {
 				if (qvalue >= 2200) {
 					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <p>Your good academic record indicates you're eligible for the Crimson Crew program provided you also: <br>1) Have a college preparatory curriculum <br>2) Positive grade trends <br>3) <a href=\"http://admission.wsu.edu/applications/index.html\">Apply</a> to the WSU Pullman campus</p>";
 				} else if (qvalue < 2200) {
