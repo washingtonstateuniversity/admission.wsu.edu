@@ -94,15 +94,12 @@ class WSUWP_Web_Template {
 		$site_name      = get_bloginfo('name');
 		$site_tagline   = get_bloginfo('description');
 
-		get_header();
+		
 		?>
-		<main class="spine-page-default">
-		<header class="ucomm-bookmark">
-			<hgroup>
-				<div class="site"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_name ); ?>" rel="home">Admissions</a></div>
-				<div class="tagline"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_tagline ); ?>" rel="home"><?php echo esc_html( $site_tagline ); ?></a></div>
-			</hgroup>
-		</header>
+		<main class="app-web-template">
+		
+		<?php get_template_part('parts/headers'); ?>
+		
 		<section class="row single gutter marginalize-ends">
 		<div class="column one">
 		<?php
