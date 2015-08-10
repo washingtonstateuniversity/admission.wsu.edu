@@ -93,7 +93,8 @@ class WSUWP_Web_Template {
 
 		$site_name      = get_bloginfo('name');
 		$site_tagline   = get_bloginfo('description');
-
+		
+		get_header();
 		?>
 		<main class="app-web-template">
 		
