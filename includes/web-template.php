@@ -94,12 +94,15 @@ class WSUWP_Web_Template {
 		$site_name      = get_bloginfo('name');
 		$site_tagline   = get_bloginfo('description');
 
-		
 		?>
 		<main class="app-web-template">
 		
-		<?php get_template_part('parts/headers'); ?>
-		
+		<header class="main-header">
+			<div class="header-group hgroup guttered padded-bottom short">
+				<sup class="sup-header" data-section="" data-pagetitle="Requirements &amp; Applications" data-posttitle="Requirements &amp; Applications"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_name ); ?>" rel="home">Admissions</a></sup>
+				<sub class="sub-header" data-sitename="Admissions" data-pagetitle="Requirements &amp; Applications" data-posttitle="Requirements &amp; Applications" data-default="Requirements &amp; Applications" data-alternate=""><span class="sub-header-default"><a href="<?php home_url(); ?>" title="<?php echo esc_attr( $site_tagline ); ?>" rel="home"><?php echo esc_html( $site_tagline ); ?></a></span></sub>
+			</div>
+		</header>
 		<section class="row single gutter marginalize-ends">
 		<div class="column one">
 		<?php
