@@ -14,11 +14,6 @@
 			$menu = "offsite-temp";
 		} else {
 			switch_to_blog( 267 );
-			if ( get_current_blog_id() == 903 ) {
-				$menu = "offsite";
-			} else {
-				$menu = "offsite-temp";
-			}
 		}
 		
 	}
