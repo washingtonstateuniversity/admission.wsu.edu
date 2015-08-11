@@ -26,7 +26,7 @@ function inspire() {
 		process_section_backgrounds();
 		
 		$('.drop').click( function() {
-			$('.dropped').removeClass('dropped');
+			$('.dropped').not(this).removeClass('dropped');
 			$(this).toggleClass('dropped');
 		});
 
