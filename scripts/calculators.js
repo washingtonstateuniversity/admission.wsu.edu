@@ -33,7 +33,7 @@
 	
 	function calculate() {
 
-		if ( ( $(".gpa input").val().length > 1 ) && ( ( $(".act input").val().length == 2 ) || ( ( $(".reading input").val().length == 3 ) && $(".math input").val().length == 3 ) ) )  {  
+		if ( ( $(".gpa input").val().length > 1 ) && ( ( $(".act input").val().length === 2 ) || ( ( $(".reading input").val().length === 3 ) && $(".math input").val().length === 3 ) ) )  {  
 		
 			var qvalue = 0;
 			var gpa = $("input#gpa").val() * 400;
@@ -178,7 +178,7 @@
 
 	$(document).ready( function() {
 					
-		$(".gpa input").on("keyup", function() {
+		$(".gpa input").on("change", function() {
 			var score = $(".gpa input").val();
 			
 			checkScore("gpa",score);
@@ -186,19 +186,19 @@
 		
 		/* SAT Scores */
 		
-		$(".math input").on("keyup", function() {
+		$(".math input").on("change", function() {
 			var score = $(".math input").val();
 			checkScore("math",score);
 		});
 		
-		$(".reading input").on("keyup", function() {
+		$(".reading input").on("change", function() {
 			var score = $(".reading input").val();
 			checkScore("reading",score);
 		});
 		
 		/* ACT Scores */
 		
-		$(".act input").on("keyup", function() {
+		$(".act input").on("change", function() {
 			var score = $(".act input").val();
 			checkScore("act",score);
 		});

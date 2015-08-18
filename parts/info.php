@@ -49,17 +49,17 @@
 		<legend>Address</legend>
 	
 	    <label class="hidden">Mailing Address Line 1 *</label>
-	    <div class="itemValue"><input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Mailing Address (Line One)">
+	    <input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Mailing Address (Line One)">
 		    
 		<label class="hidden">Mailing Address Line 2</label>
-		<div class="itemValue"><input id="Address2" name="Address2" type="text" value="" placeholder="Mailing Address (Line Two)"></div>
+		<input class="required" id="Address2" name="Address2" type="text" value="" placeholder="Mailing Address (Line Two)">
 	
 	    <label class="hidden">City *</label>
-	    <input class="required" id="City" name="City" type="text" value="" placeholder="City">
+	    <input class="required" id="City" name="City" type="text" value="" placeholder="City" required>
 	
 	    <!-- Select State -->
-	    <label class="hidden">State *</label>
-	    <select class="required" id="State" name="State">
+	    <label class="hidden">State</label>
+	    <select id="State" name="State" required>
 	            <option value="">Select State</option>
 	            <option value="WA">WA - Washington</option>
 				<option value="AL">AL - Alabama</option>
@@ -122,7 +122,7 @@
 	
 	    <!-- Country Select -->
 	    <label for="Country" class="hidden">Country</label>
-	    <select id="Country" name="Country">
+	    <select class="required" id="Country" name="Country" required>
 	            <option value="">Select Country</option>
 	            <option value="USA">United States of America</option>
 				<option value="AFG">Afghanistan</option>
@@ -627,8 +627,8 @@
 	    <label class="hidden">Entering as a ...</label>
 	    <select class="required" id="AnticipatedStartTerm" name="EnteringAs">
 	        <option value="">Entering as a ...</option>
-			<option value="TRN">Freshman</option>
-			<option value="TRD">Transfer Student</option>
+			<option value="TRD">Freshman</option>
+			<option value="TRN">Transfer Student</option>
 			<option value="NDG">Non-degree seeking student</option>
 			<option value="FSR">Former WSU student who is returning</option>
 		</select>

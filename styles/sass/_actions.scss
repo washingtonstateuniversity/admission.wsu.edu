@@ -268,8 +268,10 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	}
 	
 	input.required[type="text"],
-	select.required {
-		background-color: $gray-light;
+	input:required,
+	select.required,
+	select:required {
+		background-color: $gray-light !important;
 		border-left: 3px $gray-lightest solid;
 	}
 	
