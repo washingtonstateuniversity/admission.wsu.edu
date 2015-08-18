@@ -1,9 +1,11 @@
 <script>
 (function($){
 	$(document).ready( function() {
+		
 		$("#disclose-additional").on("click", function() {
 			$("#additional-info").toggleClass("closed");
 		});
+		
 		$("#PhoneType").on("change", function() {
 			if ( $("#PhoneType").val() == "Mobile" ) {
 				$("#MobileProvider,#OkayToText").removeClass("hidden");
@@ -11,6 +13,30 @@
 				$("#MobileProvider,#OkayToText").addClass("hidden");
 			}
 		});
+		
+		$("#Country").on("change", function() {
+			if ( $("#Country").val() == "USA" ) {
+				$("#State").removeClass("hidden");
+			};
+		});
+		
+		$("#info input[type=text], #info select").each( function() {
+			
+			var name = $(this).attr("name");
+			var stored_value = JSON.parse(localStorage.getItem(name));
+			if ( stored_value != "" ) {
+				$(this).val(stored_value);
+			}
+			
+		}).change( function() {
+			
+			var key = $(this).attr("name");
+			var value = $(this).val();
+			localStorage.setItem(key, JSON.stringify(value));
+			//alert(key);
+			
+		});
+		
 	});
 })(jQuery);
 </script>
@@ -25,13 +51,13 @@
 	   	<legend>Name</legend>
 		
 	    <label class="hidden">Legal First Name *</label>
-	    <input class="required" id="FirstName" name="FirstName" type="text" value="" placeholder="Legal First Name (Required)">
+	    <input class="required" id="FirstName" name="FirstName" type="text" value="" placeholder="Legal First Name (Required)" required>
 
 	    <label class="hidden">Middle Name</label>
 	    <input id="MiddleName" name="MiddleName" type="text" value="" placeholder="Middle Name">
 
-	    <label class="hidden">Last Name *</label>
-	    <input class="required" id="LastName" name="LastName" type="text" value="" placeholder="Last Name">
+	    <label class="hidden">Last Name</label>
+	    <input class="required" id="LastName" name="LastName" type="text" value="" placeholder="Last Name" required>
 		
 	</fieldset>
 
@@ -40,87 +66,15 @@
 		<legend>Email</legend>
 	
 	    <label for="Email" class="hidden">Email</label>
-	    <input class="required" id="Email" name="Email" type="text" value="" placeholder="Email Address"
+	    <input class="required" id="Email" name="Email" type="text" value="" placeholder="Email Address" required>
 	            
 	</fieldset>
 	    
 	<fieldset id="address" class="address">
 		
 		<legend>Address</legend>
-	
-	    <label class="hidden">Mailing Address Line 1 *</label>
-	    <input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Mailing Address (Line One)">
-		    
-		<label class="hidden">Mailing Address Line 2</label>
-		<input class="required" id="Address2" name="Address2" type="text" value="" placeholder="Mailing Address (Line Two)">
-	
-	    <label class="hidden">City *</label>
-	    <input class="required" id="City" name="City" type="text" value="" placeholder="City" required>
-	
-	    <!-- Select State -->
-	    <label class="hidden">State</label>
-	    <select id="State" name="State" required>
-	            <option value="">Select State</option>
-	            <option value="WA">WA - Washington</option>
-				<option value="AL">AL - Alabama</option>
-				<option value="AK">AK - Alaska</option>
-				<option value="AZ">AZ - Arizona</option>
-				<option value="AR">AR - Arkansas</option>
-				<option value="CA">CA - California</option>
-				<option value="CO">CO - Colorado</option>
-				<option value="CT">CT - Connecticut</option>
-				<option value="DC">DC - District of Columbia</option>
-				<option value="DE">DE - Delaware</option>
-				<option value="FL">FL - Florida</option>
-				<option value="GA">GA - Georgia</option>
-				<option value="HI">HI - Hawaii</option>
-				<option value="ID">ID - Idaho</option>
-				<option value="IL">IL - Illinois</option>
-				<option value="IN">IN - Indiana</option>
-				<option value="IA">IA - Iowa</option>
-				<option value="KS">KS - Kansas</option>
-				<option value="KY">KY - Kentucky</option>
-				<option value="LA">LA - Louisiana</option>
-				<option value="ME">ME - Maine</option>
-				<option value="MD">MD - Maryland</option>
-				<option value="MA">MA - Massachusetts</option>
-				<option value="MI">MI - Michigan</option>
-				<option value="MN">MN - Minnesota</option>
-				<option value="MS">MS - Mississippi</option>
-				<option value="MO">MO - Missouri</option>
-				<option value="MT">MT - Montana</option>
-				<option value="NE">NE - Nebraska</option>
-				<option value="NV">NV - Nevada</option>
-				<option value="NH">NH - New Hampshire</option>
-				<option value="NJ">NJ - New Jersey</option>
-				<option value="NM">NM - New Mexico</option>
-				<option value="NY">NY - New York</option>
-				<option value="NC">NC - North Carolina</option>
-				<option value="ND">ND - North Dakota</option>
-				<option value="OH">OH - Ohio</option>
-				<option value="OK">OK - Oklahoma</option>
-				<option value="OR">OR - Oregon</option>
-				<option value="PA">PA - Pennsylvania</option>
-				<option value="RI">RI - Rhode Island</option>
-				<option value="SC">SC - South Carolina</option>
-				<option value="SD">SD - South Dakota</option>
-				<option value="TN">TN - Tennessee</option>
-				<option value="TX">TX - Texas</option>
-				<option value="UT">UT - Utah</option>
-				<option value="VT">VT - Vermont</option>
-				<option value="VA">VA - Virginia</option>
-				<option value="WV">WV - West Virginia</option>
-				<option value="WI">WI - Wisconsin</option>
-				<option value="WY">WY - Wyoming</option>
-				<option value="">---</option>
-				<option value="AS">AS - American Samoa</option>
-				<option value="GU">GU - Guam</option>
-				<option value="MP">MP - Northern Mariana Islands</option>
-				<option value="PR">PR - Puerto Rico</option>
-				<option value="VI">VI - U.S. Virgin Islands</option>
-			</select>
-	
-	    <!-- Country Select -->
+		
+		<!-- Country Select -->
 	    <label for="Country" class="hidden">Country</label>
 	    <select class="required" id="Country" name="Country" required>
 	            <option value="">Select Country</option>
@@ -377,7 +331,79 @@
 				<option value="ZMB">Zambia</option>
 				<option value="ZWE">Zimbabwe</option>
 			</select>
-		
+	
+	    <label class="hidden">Mailing Address Line 1 *</label>
+	    <input class="required" id="Address1" name="Address1" type="text" value="" placeholder="Mailing Address (Line One)">
+		    
+		<label class="hidden">Mailing Address Line 2</label>
+		<input id="Address2" name="Address2" type="text" value="" placeholder="Mailing Address (Line Two)">
+	
+	    <label class="hidden">City *</label>
+	    <input class="required" id="City" name="City" type="text" value="" placeholder="City" required>
+	
+	    <!-- Select State -->
+	    <label class="hidden">State</label>
+	    <select id="State" class="required" name="State" class="hidden" required>
+	            <option value="">Select State</option>
+	            <option value="WA">WA - Washington</option>
+				<option value="AL">AL - Alabama</option>
+				<option value="AK">AK - Alaska</option>
+				<option value="AZ">AZ - Arizona</option>
+				<option value="AR">AR - Arkansas</option>
+				<option value="CA">CA - California</option>
+				<option value="CO">CO - Colorado</option>
+				<option value="CT">CT - Connecticut</option>
+				<option value="DC">DC - District of Columbia</option>
+				<option value="DE">DE - Delaware</option>
+				<option value="FL">FL - Florida</option>
+				<option value="GA">GA - Georgia</option>
+				<option value="HI">HI - Hawaii</option>
+				<option value="ID">ID - Idaho</option>
+				<option value="IL">IL - Illinois</option>
+				<option value="IN">IN - Indiana</option>
+				<option value="IA">IA - Iowa</option>
+				<option value="KS">KS - Kansas</option>
+				<option value="KY">KY - Kentucky</option>
+				<option value="LA">LA - Louisiana</option>
+				<option value="ME">ME - Maine</option>
+				<option value="MD">MD - Maryland</option>
+				<option value="MA">MA - Massachusetts</option>
+				<option value="MI">MI - Michigan</option>
+				<option value="MN">MN - Minnesota</option>
+				<option value="MS">MS - Mississippi</option>
+				<option value="MO">MO - Missouri</option>
+				<option value="MT">MT - Montana</option>
+				<option value="NE">NE - Nebraska</option>
+				<option value="NV">NV - Nevada</option>
+				<option value="NH">NH - New Hampshire</option>
+				<option value="NJ">NJ - New Jersey</option>
+				<option value="NM">NM - New Mexico</option>
+				<option value="NY">NY - New York</option>
+				<option value="NC">NC - North Carolina</option>
+				<option value="ND">ND - North Dakota</option>
+				<option value="OH">OH - Ohio</option>
+				<option value="OK">OK - Oklahoma</option>
+				<option value="OR">OR - Oregon</option>
+				<option value="PA">PA - Pennsylvania</option>
+				<option value="RI">RI - Rhode Island</option>
+				<option value="SC">SC - South Carolina</option>
+				<option value="SD">SD - South Dakota</option>
+				<option value="TN">TN - Tennessee</option>
+				<option value="TX">TX - Texas</option>
+				<option value="UT">UT - Utah</option>
+				<option value="VT">VT - Vermont</option>
+				<option value="VA">VA - Virginia</option>
+				<option value="WV">WV - West Virginia</option>
+				<option value="WI">WI - Wisconsin</option>
+				<option value="WY">WY - Wyoming</option>
+				<option value="">---</option>
+				<option value="AS">AS - American Samoa</option>
+				<option value="GU">GU - Guam</option>
+				<option value="MP">MP - Northern Mariana Islands</option>
+				<option value="PR">PR - Puerto Rico</option>
+				<option value="VI">VI - U.S. Virgin Islands</option>
+			</select>
+			
 		<!-- ZIP -->
 	    <label for="ZipCode" class="hidden">ZIP Code *</label>
 	    <input class="required" id="ZipCode" maxlength="10" name="ZipCode" type="text" value="" placeholder="ZIP Code">
@@ -641,8 +667,8 @@
     
     <span>or</span>
     
-    <input type="submit" name="hideInfo" id="hideInfo" value="Submit Basic Info Only" onclick="HideAdditionalInfo();">
+    <input type="submit" value="Submit Basic Info Only" />
     
-	<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="">
+	<input id="ExpandAdditionalInfo" name="ExpandAdditionalInfo" type="hidden" value="" />
     
 </form>
