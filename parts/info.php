@@ -36,10 +36,6 @@
 			
 		});
 		
-		$(".page-national-merit #info").load("https://goto.wsu.edu/info #InfoRequestForm", function() {
-		  //alert( "Load was performed." );
-		});
-		
 	});
 })(jQuery);
 </script>
