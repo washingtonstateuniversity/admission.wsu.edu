@@ -30,9 +30,9 @@
 			
 		}).change( function() {
 			
-			var key = $(this).attr("name");
+			var name = $(this).attr("name");
 			var value = $(this).val();
-			localStorage.setItem(key, JSON.stringify(value));
+			localStorage.setItem(name, JSON.stringify(value));
 			//alert(key);
 			
 		});
