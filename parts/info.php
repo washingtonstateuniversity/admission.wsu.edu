@@ -33,8 +33,11 @@
 			var name = $(this).attr("name");
 			var value = $(this).val();
 			sessionStorage.setItem(name, JSON.stringify(value));
-			//alert(key);
 			
+		});
+		
+		$(".page-national-merit #info").load("https://goto.wsu.edu/info #InfoRequestForm", function() {
+		  //alert( "Load was performed." );
 		});
 		
 	});
