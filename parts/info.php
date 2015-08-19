@@ -23,7 +23,7 @@
 		$("#info input[type=text], #info select").each( function() {
 			
 			var name = $(this).attr("name");
-			var stored_value = JSON.parse(localStorage.getItem(name));
+			var stored_value = JSON.parse(sessionStorage.getItem(name));
 			if ( stored_value != "" ) {
 				$(this).val(stored_value);
 			}
@@ -32,7 +32,7 @@
 			
 			var name = $(this).attr("name");
 			var value = $(this).val();
-			localStorage.setItem(name, JSON.stringify(value));
+			sessionStorage.setItem(name, JSON.stringify(value));
 			//alert(key);
 			
 		});
