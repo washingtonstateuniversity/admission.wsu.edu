@@ -35,7 +35,6 @@ add_action( 'wp_enqueue_scripts', 'admissions_scripts_styles' );
  * Enqueue child theme Scripts and Styles
  */
 function admissions_scripts_styles() {
-	//wp_enqueue_script( 'uchat-script', '//uchat.co/widget.js?school=washingtonstate', array( 'jquery' ) );
 	wp_enqueue_script( 'calculators-scripts', get_stylesheet_directory_uri() . '/scripts/calculators.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'admissions-scripts', get_stylesheet_directory_uri() . '/scripts/admissions.js', array( 'jquery' ), false, true );
 }
