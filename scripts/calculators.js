@@ -149,10 +149,8 @@
 			// Cougar Achievement Award
 			} else if ( $("#CAA").length ) {
 				
-				if (qvalue >= 2500) {
-					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <h3>You are eligible for <strong>$11,000</strong> in your first year, renewable for up to three additional years.</h3> <p>Your strong academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"https://www.applyweb.com/wsunivss/index.ftl\">admission and scholarships</a>.</p>";
-				} else if (qvalue >= 2400) {
-					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <h3>You are eligible for <strong>$4000</strong> in your first year, renewable for up to three additional years.</h3> <p>Your good academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"https://www.applyweb.com/wsunivss/index.ftl\">admission and scholarships</a>.</p>";
+			if (qvalue >= 2400) {
+					document.getElementById("awardlevel").innerHTML = "<h2>Congratulations!</h2> <h3>You are eligible for <strong>$11,000</strong> in your first year, renewable for up to three additional years.</h3> <p>Your good academic record may also qualify you for additional awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"https://www.applyweb.com/wsunivss/index.ftl\">admission and scholarships</a>.</p>";
 				} else if (qvalue < 2400) {
 					document.getElementById("awardlevel").innerHTML = "<strong>Based on the scores you provided, you do not qualify for the Cougar Freshman Academic Award.</strong> <p>If your scores change, you may use this calculator again to see if you are eligible. You may qualify for other awards from the University's 700-plus scholarship programs. If you haven't already done so, please apply for  <a href=\"https://www.applyweb.com/wsunivss/index.ftl\">admission and scholarships</a>.</p>";
 				}
