@@ -41,23 +41,6 @@ function inspire() {
 		    }
 		});
 		
-		if ( $(".fp-section").length ) {
-		
-			$('main').fullpage({
-				//sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-				fixedElements: '.main-header, .footer',
-				verticalCentered: false,
-				touchSensitivity: 10
-			});
-		
-		}
-		
-		if ( $(".row:first-of-type").hasClass("inspiring") ) {
-			
-			$("body").addClass("inspiring-lead");
-		
-		}
-		
 		$(".slide").wrapInner("<span class=\"wrap\"></span>");
 		
 		if ( $('[class^="id-"]').length ) {
