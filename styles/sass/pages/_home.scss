@@ -401,7 +401,11 @@ $duration: 2;
 }
 
 .inspiring-you {
-	background-image: url('/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg');
+	background-image: url("images/bg-inspiring-you.jpg");
+}
+
+.inspiring-academics {
+	background-image: url("images/bg-inspiring-academics.jpg");
 }
 
 .size-gt-small .inspiring-you {
