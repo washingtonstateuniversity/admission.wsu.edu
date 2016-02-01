@@ -5,6 +5,55 @@ include_once( 'includes/web-template.php' );
 // Setup the widget used to display the footer area.
 include_once( 'includes/admission-footer-snippets-widget.php' );
 
+/**
+ * Retrieve the ID of the main site for admission.wsu.edu.
+ *
+ * @return int ID of the site.
+ */
+function admission_get_main_site_id() {
+	// The primary domain can be filtered for local development.
+	$home_domain = apply_filters( 'admission_home_domain', 'admission.wsu.edu' );
+
+	$site = get_blog_details( array( 'domain' => $home_domain, 'path' => '/' ) );
+
+	if ( $site ) {
+		return $site->blog_id;
+	}
+
+	return get_current_blog_id();
+}
+
+/**
+ * Determine whether to show the shared, primary navigation from admission.wsu.edu.
+ *
+ * @return bool
+ */
+function admission_show_main_navigation() {
+	$site = get_blog_details();
+
+	// The primary domain can be filtered for local development.
+	$home_domain = apply_filters( 'admission_home_domain', 'admission.wsu.edu' );
+
+	// Site paths that should show the primary navigation. This will include
+	// page paths under these sites.
+	$shared_nav_paths = array(
+		'/',
+		'/for-counselors/',
+		'/for-parents/',
+		'/for-advisors/',
+		'/admitted/',
+	);
+
+	// The shared nav paths can be filtered for local development.
+	$shared_nav_paths = apply_filters( 'admission_shared_nav_paths', $shared_nav_paths );
+
+	if ( $home_domain === $site->domain && in_array( $site->path, $shared_nav_paths ) ) {
+		return true;
+	}
+
+	return false;
+}
+
 add_action( 'after_setup_theme', 'admission_theme_setup' );
 /**
  * Setup functionality used by the theme.

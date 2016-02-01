@@ -1,29 +1,17 @@
 <nav id="spine-sitenav" class="spine-sitenav">
 	<?php
-		
-	$menu = "site";
 
-	if (
-		get_current_blog_id() == 15 ||
-		get_current_blog_id() == 339 ||
-		get_current_blog_id() == 340 ||
-		get_current_blog_id() == 646 ||
-		get_current_blog_id() == 903 ) {
-	
-		if ( defined( 'WSU_LOCAL_CONFIG') && WSU_LOCAL_CONFIG ) {
-			switch_to_blog( 16 );
-			$menu = "network-temp";
-		} elseif ( get_current_blog_id() == 903 ) {
-			switch_to_blog( 267 );
-			$menu = "network";
-		} else {
-			switch_to_blog( 267 );
-			$menu = "network-temp";
-		}
-				
-	}	
-	
-	if ( function_exists( 'bu_navigation_display_primary' ) && $menu !== "network-temp" ) {
+	if ( admission_show_main_navigation() ) {
+		$admission_menu_id = 'network';
+	} else {
+		$admission_menu_id = 'site';
+	}
+
+	if ( 'network' === $admission_menu_id ) {
+		switch_to_blog( admission_get_main_site_id() );
+	}
+
+	if ( function_exists( 'bu_navigation_display_primary' ) ) {
 		$bu_nav_args = array(
 			'post_types'      => array( 'page' ), // post types to display
 			'include_links'   => true, // whether or not to include BU Navigation links with pages
@@ -43,7 +31,7 @@
 	} else {
 		$spine_site_args = array(
 			'theme_location'  => 'site',
-			'menu'            => $menu,
+			'menu'            => $admission_menu_id,
 			'container'       => false,
 			'container_class' => false,
 			'container_id'    => false,
@@ -53,6 +41,10 @@
 			'depth'           => 5,
 		);
 		wp_nav_menu( $spine_site_args );
+	}
+
+	if ( ms_is_switched() ) {
+		restore_current_blog();
 	}
 	?>
 </nav>
