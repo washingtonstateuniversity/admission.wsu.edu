@@ -79,8 +79,7 @@ module.exports = function(grunt) {
             temporary: {
                 src: [
                     'style-sass.css',
-                    'style-sass.css.map',
-                    'style.css.map'
+                    'style-sass.css.map'
                 ]
             }
         }
