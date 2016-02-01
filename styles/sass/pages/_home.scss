@@ -141,15 +141,15 @@
 	}
 	
 	li {
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 		list-style: none;
 		background-color: white;
 	}
 	
 	li.top a {
 		color: $gray;
-		padding: 10px 0px 10px 20px;
+		padding: 10px 0 10px 20px;
 		text-transform: uppercase;
 		pointer-events: none;
 	}
