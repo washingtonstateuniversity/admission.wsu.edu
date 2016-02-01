@@ -933,6 +933,10 @@ ul.inspirings ul {
   background-image: url("images/bg-inspiring-you.jpg");
 }
 
+.inspiring-academics {
+  background-image: url("images/bg-inspiring-academics.jpg");
+}
+
 .size-gt-small .inspiring-you {
   background-position: right center; }
 
