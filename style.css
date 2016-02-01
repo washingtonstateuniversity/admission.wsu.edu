@@ -930,7 +930,8 @@ ul.inspirings ul {
   -webkit-animation-duration: 100000s; }
 
 .inspiring-you {
-  background-image: url("/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg"); }
+  background-image: url("images/bg-inspiring-you.jpg");
+}
 
 .size-gt-small .inspiring-you {
   background-position: right center; }
