@@ -25,7 +25,6 @@
 	}
 	
 	dt:not(.unfolded)::before {
-		content: "+";
 		display: block;
 		float: right;
 		color: $gray-light;

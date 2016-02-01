@@ -109,10 +109,6 @@
 
 }
 
-.size-gt-large .socialize .gallery {
-	//height: 800px;
-}
-
 /* FOS Browser */
 
 .fos-index {
@@ -145,15 +141,15 @@
 	}
 	
 	li {
-		padding: 0px;
-		margin: 0px;
+		padding: 0;
+		margin: 0;
 		list-style: none;
 		background-color: white;
 	}
 	
 	li.top a {
 		color: $gray;
-		padding: 10px 0px 10px 20px;
+		padding: 10px 0 10px 20px;
 		text-transform: uppercase;
 		pointer-events: none;
 	}
@@ -169,7 +165,7 @@
 		display: block;
 	}
 	
-	/* Drop Menus */
+	// Drop menus
 	
 	ul.drop {
 		padding: 0;
@@ -196,7 +192,7 @@
 		display: block;
 	}
 	
-	/* AZ */
+	// AZ
 	
 	.az li {
 		display: inline-block;
@@ -260,10 +256,6 @@
 		font-weight: 800;
 	}
 	
-	p {
-		//text-transform: uppercase;
-	}
-	
 }
 
 /* Gallery */
@@ -282,7 +274,6 @@
 /* Inspiring Ticker */
 
 .inspiring {
-	//height: 100vh;
 	height: 500px;
 	background-size: cover;
 }
@@ -312,7 +303,6 @@ ul.inspirings {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	//height: 200px;
 	margin-left: 15px;
 }
 
@@ -346,7 +336,6 @@ ul.inspirings ul {
 }
 
 .inspirings li {
-	//text-align: right;
 	display: block;
 	padding: 0;
 	bottom: 0;
@@ -365,13 +354,8 @@ ul.inspirings ul {
 
 .inspirings ul li {
 	opacity: 0;
-	//display: none;
 	position: absolute;
 	left: 0;
-}
-
-.inspirings ul li:first-child {
-	//display: block;
 }
 
 $inspiration: 1;
@@ -384,9 +368,6 @@ $duration: 2;
 		-webkit-animation-name: on;
 		-webkit-animation-duration: #{$duration}s;
 		-webkit-animation-delay: #{$delay}s;
-		 
-		//-webkit-animation-iteration-count: 3;
-		//-webkit-animation-direction: alternate;
 	}
 	$inspiration: $inspiration + 1;
 	@if $inspiration < 9 {
@@ -401,7 +382,11 @@ $duration: 2;
 }
 
 .inspiring-you {
-	background-image: url('/wp-content/uploads/sites/13/2014/10/DSC_7594.jpg');
+	background-image: url("images/bg-inspiring-you.jpg");
+}
+
+.inspiring-academics {
+	background-image: url("images/bg-inspiring-academics.jpg");
 }
 
 .size-gt-small .inspiring-you {

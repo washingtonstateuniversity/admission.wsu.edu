@@ -1,4 +1,1 @@
-
-*.codekit
-
-*.scssc
+node_modules

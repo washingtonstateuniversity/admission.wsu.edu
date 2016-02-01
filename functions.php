@@ -5,6 +5,9 @@ include_once( 'includes/web-template.php' );
 // Setup the widget used to display the footer area.
 include_once( 'includes/admission-footer-snippets-widget.php' );
 
+// This theme supplies a minified stylesheet.
+add_filter( 'spine_child_min_css', '__return_true' );
+
 /**
  * Retrieve the ID of the main site for admission.wsu.edu.
  *

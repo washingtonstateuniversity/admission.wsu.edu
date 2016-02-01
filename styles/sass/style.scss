@@ -1,11 +1,11 @@
 /*
  Theme Name:     WSU Admissions
- Theme URI:      http://web.wsu.edu
+ Theme URI:      https://admission.wsu.edu/
  Description:    A child theme for Washington State University's admission.wsu.edu
  Author:         WSU University Communications, Nate Jacobson
- Author URI:     http://ucomm.wsu.edu
+ Author URI:     https://web.wsu.edu
  Template:       spine
- Version:        0.0.1
+ Version:        1.2.3
 */
 
 @import 'global/vars';
@@ -28,10 +28,6 @@
 
 /* Slides */
 
-.slide {
-	//position: relative;
-}
-
 .slide .wrap {
 	display: block;
 }
@@ -39,7 +35,6 @@
 .slide .wrap {
 	max-width: 50%;
 	width: 33%;
-	//margin: 1rem auto;
 	padding: 2rem;
 }
 
@@ -50,7 +45,6 @@
 
 .slide-college-hill .wrap {
 	width: 33.333334%;
-	//margin: 100px auto 0 20%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -58,7 +52,6 @@
 
 .slide-pullman .wrap {
 	width: 33.333334%;
-	//margin: 100px auto 0 20%;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -87,7 +80,6 @@ p:last-of-type ~ ul {
 
 .inline-block-list li {
 	display: inline-block;
-	//margin-right: 5px;
 }
 
 .column.placed-southeast,
@@ -100,11 +92,7 @@ p:last-of-type ~ ul {
 }
 
 .column:not(.inspiring-line) header {
-	//color: white;
-	//padding-bottom: 1rem;
-	//border-bottom: 3px white solid;
 	margin-bottom: .5rem;
-	//padding: .5rem .5rem 0;
 }
 
 .page .column:not(.inspiring-line) header h2 {
@@ -129,7 +117,7 @@ h2 {
 	font-weight: 300;
 	font-size: 2rem;
 	text-transform: none;
-	font-color: $gray-darker;
+	color: $gray-darker;
 }
 
 h3 {
@@ -160,7 +148,6 @@ ul.list-style-none {
 	background-color: transparent;
 	position: relative;
 	width: 100%;
-	height: 0;
 	overflow: visible;
 	z-index: 100;
 	height: 500px;
@@ -234,8 +221,6 @@ ul.list-style-none {
 	background-clip: border-box;
 }
 
-
-
 .fp-tableCell {
 	display: block;
 }
@@ -243,7 +228,6 @@ ul.list-style-none {
 .column[class*="step-"] p big {
 	height: 0;
 	display: block;
-	top: 50%;
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -271,7 +255,6 @@ ul.list-style-none {
 }
 
 .step {
-	//background-color: $gray-lightest;
 	margin-bottom: 1rem;
 }
 
@@ -285,13 +268,11 @@ ul.list-style-none {
 	
 	#binder:not(.fluid).max-1188 .row,
 	#binder:not(.fluid).max-1386 .row {
-		//width: 1188px;
 		max-width: 1188px;
 	}
 	
 	.max-1188,
 	.max-1386 {
-	
 		// single
 		.row.single .column { width: 990px; }
 		.column.singled { width: 990px !important; }

@@ -48,7 +48,6 @@
 dl.actions-list {
 	width: 100%;
 	height: 50px;
-	background: $crimson;
 	padding: 0;
 	display: -webkit-flex;
 	-webkit-flex-direction: row;
@@ -101,10 +100,8 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 
 .action-item dt a,
 .action-item dt button {
-	text-align: center;
 	color: white;
 	height: 100%;
-	display: block;
 	vertical-align: middle;
 	display: table-cell;
 	border-radius: 0;
@@ -169,12 +166,12 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 	background-color: white;
 	color: $crimson !important;
 	padding: .2em .4em;
-	margin: -.2em .2em -.2em 0em;
+	margin: -.2em .2em -.2em 0;
 	border-left-color: white;
 	border-style: solid;
 	border-right-color: $crimson;
-	border-right-width: 0px;
-	border-left-width: 0px;
+	border-right-width: 0;
+	border-left-width: 0;
 	white-space: nowrap;
 	top: 0;
 	text-transform: uppercase;
@@ -183,8 +180,7 @@ x.admin-bar .size-lt-large .actions.affixed-top {
 .action-item a:hover {
 	background-color: $crimson-dark;
 	color: $crimson-er !important;
-	transition: color .2s ease-out;
-	transition: background-color .2s ease-out;
+	transition: color .2s ease-out, background-color .2s ease-out;
 }
 
 .action-item header {

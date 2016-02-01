@@ -9,9 +9,7 @@
 
 .column.slide[class*="lighten-"] header {
 	color: $gray-dark;
-	//color: white;
 	border-bottom-color: $gray-dark;
-	//background-color: $gray-dark;
 }
 
 .darkened-35 { background-color: rgba(0, 0, 0, 0.35); }
@@ -43,7 +41,6 @@
 	display: block;
 	border: 1px pink solid;
 	z-index: 0;
-	//background: white;
 	left: 0;
 	top: 0;
 }
