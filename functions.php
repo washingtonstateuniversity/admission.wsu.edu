@@ -57,6 +57,34 @@ function admission_show_main_navigation() {
 	return false;
 }
 
+add_filter( 'bu_navigation_filter_item_attrs', 'admission_bu_navigation_filter_item_atts', 10, 2 );
+/**
+ * Filter BU Navigation to add the `current` tag to a nav item that matches the requested
+ * URL when loading one of the admission sub-sites.
+ *
+ * @param array  $item_classes
+ * @param object $page
+ *
+ * @return array
+ */
+function admission_bu_navigation_filter_item_atts( $item_classes, $page ) {
+	$page_url = parse_url( $page->url );
+	$page_path = '/';
+
+	if ( ! empty( $page_url ) ) {
+		$page_paths = explode( '/', $page_url['path'] );
+		if ( ! empty( $page_paths[1] ) ) {
+			$page_path = '/' . $page_paths[1] . '/';
+		}
+	}
+
+	if ( in_array( $page_path, array( '/for-counselors/', '/for-parents/', '/for-advisors/' ) ) && $_SERVER['REQUEST_URI'] == $page_path ) {
+		$item_classes[] = 'current';
+	}
+
+	return $item_classes;
+}
+
 add_action( 'after_setup_theme', 'admission_theme_setup' );
 /**
  * Setup functionality used by the theme.
