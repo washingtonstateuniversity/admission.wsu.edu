@@ -78,7 +78,14 @@ function admission_bu_navigation_filter_item_atts( $item_classes, $page ) {
 		}
 	}
 
-	if ( in_array( $page_path, array( '/for-counselors/', '/for-parents/', '/for-advisors/' ) ) && $_SERVER['REQUEST_URI'] == $page_path ) {
+	$request_paths = explode( '/', $_SERVER['REQUEST_URI'] );
+	$request_path = false;
+
+	if ( ! empty( $request_paths[1] ) ) {
+		$request_path = '/' . $request_paths[1] . '/';
+	}
+
+	if ( in_array( $page_path, array( '/for-counselors/', '/for-parents/', '/for-advisors/' ) ) && $request_path == $page_path ) {
 		$item_classes[] = 'current';
 	}
 
