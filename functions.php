@@ -44,7 +44,6 @@ function admission_show_main_navigation() {
 		'/for-counselors/',
 		'/for-parents/',
 		'/for-advisors/',
-		'/admitted/',
 	);
 
 	// The shared nav paths can be filtered for local development.
