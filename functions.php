@@ -22,6 +22,7 @@ class WSU_Admission_Theme {
 		add_filter( 'theme_page_templates', array( $this, 'prune_page_templates' ) );
 		add_filter( 'single_template', array( $this, 'single_template' ) );
 		add_filter( 'bu_navigation_filter_item_attrs', array( $this, 'bu_navigation_filter_item_atts' ), 10, 2 );
+		add_filter( 'wp_kses_allowed_html', array( $this, 'allow_download_attribute' ), 10 );
 	}
 
 	/**
@@ -140,6 +141,20 @@ class WSU_Admission_Theme {
 		}
 
 		return $item_classes;
+	}
+
+	/**
+	 * Allow the download attribute to be used inside an anchor. This is supported in modern browsers
+	 * and allows a content publisher to tag a link to be downloaded rather than followed.
+	 *
+	 * @param array $tags List of elements and attributes allowed.
+	 *
+	 * @return mixed Modified list of elements and attributes.
+	 */
+	public function allow_download_attribute( $tags ) {
+		$tags['a']['download'] = true;
+
+		return $tags;
 	}
 }
 new WSU_Admission_Theme();
