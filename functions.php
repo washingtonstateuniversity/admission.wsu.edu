@@ -6,6 +6,11 @@ include_once( 'includes/web-template.php' );
 include_once( 'includes/admission-footer-snippets-widget.php' );
 
 class WSU_Admission_Theme {
+	/**
+	 * @var string The version of the WSU Admission theme for cache breaking.
+	 */
+	var $version = '1.3.4';
+
 	public function __construct() {
 		// This theme supplies a minified stylesheet.
 		add_filter( 'spine_child_min_css', '__return_true' );
@@ -47,8 +52,8 @@ class WSU_Admission_Theme {
 	 * Enqueue child theme Scripts and Styles
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( 'calculators-scripts', get_stylesheet_directory_uri() . '/scripts/calculators.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'admissions-scripts', get_stylesheet_directory_uri() . '/scripts/admissions.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'calculators-scripts', get_stylesheet_directory_uri() . '/scripts/calculators.js', array( 'jquery' ), $this->version, true );
+		wp_enqueue_script( 'admissions-scripts', get_stylesheet_directory_uri() . '/scripts/admissions.js', array( 'jquery' ), $this->version, true );
 	}
 
 	public function add_timing_class( $classes ) {
