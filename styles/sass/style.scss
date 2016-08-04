@@ -262,6 +262,14 @@ ul.list-style-none {
 	padding-bottom: 0;
 }
 
+/* Start of refresh 08/04/1206 */
+
+.mix-blend-mode .has-featured-image .header-group sub:before,
+.mix-blend-mode .multiply .column:before {
+	mix-blend-mode: multiply;
+	z-index: 0;
+}
+
 /* Layout Adjustments */
 
 @media screen and (min-width: 1188px) {
