@@ -9,7 +9,7 @@ class WSU_Admission_Theme {
 	/**
 	 * @var string The version of the WSU Admission theme for cache breaking.
 	 */
-	var $version = '1.3.6';
+	var $version = '1.3.8';
 
 	public function __construct() {
 		// This theme supplies a minified stylesheet.
