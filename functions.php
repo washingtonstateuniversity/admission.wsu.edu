@@ -23,6 +23,8 @@ class WSU_Admission_Theme {
 		add_filter( 'single_template', array( $this, 'single_template' ) );
 		add_filter( 'bu_navigation_filter_item_attrs', array( $this, 'bu_navigation_filter_item_atts' ), 10, 2 );
 		add_filter( 'wp_kses_allowed_html', array( $this, 'allow_download_attribute' ), 10 );
+		add_action( 'wp_head', array( $this, 'custom_tag_manager', 101 ) );
+		add_action( 'wp_footer', array( $this, 'custom_noscript_tag_manager', 11 ) );
 	}
 
 	/**
@@ -155,6 +157,30 @@ class WSU_Admission_Theme {
 		$tags['a']['download'] = true;
 
 		return $tags;
+	}
+
+	/**
+	 * Insert the Google Tag Manager container provided by Carnegie Communications
+	 */
+	public function custom_tag_manager() {
+		?>
+		<!-- Google Tag Manager via Carnegie Communications -->
+		<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9M4JKC');
+		</script>
+		<!-- End Google Tag Manager -->
+		<?php
+	}
+
+	/**
+	 * Insert the noscript version of Google Tag Manager provided by Carnegie Communications
+	 */
+	public function custom_noscript_tag_manager() {
+		?>
+		<!-- Google Tag Manager via Carnegie Communications (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9M4JKC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<?php
 	}
 }
 new WSU_Admission_Theme();
