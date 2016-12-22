@@ -9,7 +9,7 @@ class WSU_Admission_Theme {
 	/**
 	 * @var string The version of the WSU Admission theme for cache breaking.
 	 */
-	var $version = '1.3.9';
+	var $version = '1.3.10';
 
 	public function __construct() {
 		// This theme supplies a minified stylesheet.
@@ -23,7 +23,7 @@ class WSU_Admission_Theme {
 		add_filter( 'single_template', array( $this, 'single_template' ) );
 		add_filter( 'bu_navigation_filter_item_attrs', array( $this, 'bu_navigation_filter_item_atts' ), 10, 2 );
 		add_filter( 'wp_kses_allowed_html', array( $this, 'allow_download_attribute' ), 10 );
-		add_action( 'wp_footer', array( $this, 'carnegie_tracking_tags', 101 ) );
+		add_action( 'wp_footer', array( $this, 'carnegie_tracking_tags' ), 101 );
 	}
 
 	/**
