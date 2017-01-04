@@ -24,6 +24,7 @@ class WSU_Admission_Theme {
 		add_filter( 'bu_navigation_filter_item_attrs', array( $this, 'bu_navigation_filter_item_atts' ), 10, 2 );
 		add_filter( 'wp_kses_allowed_html', array( $this, 'allow_download_attribute' ), 10 );
 		add_action( 'wp_footer', array( $this, 'carnegie_tracking_tags' ), 101 );
+		add_action( 'wp_footer', array( $this, 'chegg_conversion_pixels' ), 102 );
 	}
 
 	/**
@@ -192,11 +193,48 @@ class WSU_Admission_Theme {
 			fbq('track', 'PageView');
 		</script>
 		<noscript><img height="1" width="1" style="display:none"
-		               src="https://www.facebook.com/tr?id=1283395071698859&ev=PageView&noscript=1"
+					   src="https://www.facebook.com/tr?id=1283395071698859&ev=PageView&noscript=1"
 			/></noscript>
 		<!-- DO NOT MODIFY -->
 		<!-- End Facebook Pixel Code -->
 		<?php
+	}
+
+	/**
+	 * Displays various conversion pixels (via Chegg) on the appropriate pages.
+	 *
+	 * @since 1.3.11
+	 */
+	public function chegg_conversion_pixels() {
+		$site = get_site();
+
+		// Conversion pixels only show on the main admission site.
+		if ( 'admission.wsu.edu' !== $site->domain || '/' !== $site->path ) {
+			return;
+		}
+
+		$request_uri = explode( '?', $_SERVER['REQUEST_URI'] );
+
+		if ( '/' === $request_uri[0] ) {
+			?>
+			<!-- Washington State University JavaScript Conversion; Goal ID: 'admissions' -->
+			<script type="text/javascript">var ordnumber = Math.random() * 10000000000000;var sscUrl = ("https:" == document.location.protocol ? "https://" : "http://") + "trkn.us/pixel/c?ppt=719&g=admissions&gid=3689&ord="+ordnumber+"&v=114";var x = document.createElement("IMG");x.setAttribute("src", sscUrl);x.setAttribute("width", "1");x.setAttribute("height", "1");document.body.appendChild(x);</script>
+			<?php
+		}
+
+		if ( '/visits/' === $request_uri[0] ) {
+			?>
+			<!-- Washington State University JavaScript Conversion; Goal ID: 'visit' -->
+			<script type="text/javascript">var ordnumber = Math.random() * 10000000000000;var sscUrl = ("https:" == document.location.protocol ? "https://" : "http://") + "trkn.us/pixel/c?ppt=719&g=visit&gid=3690&ord="+ordnumber+"&v=114";var x = document.createElement("IMG");x.setAttribute("src", sscUrl);x.setAttribute("width", "1");x.setAttribute("height", "1");document.body.appendChild(x);</script>
+			<?php
+		}
+
+		if ( '/apply/as/freshmen/requirements/' === $request_uri[0] ) {
+			?>
+			<!-- Washington State University JavaScript Conversion; Goal ID: 'requirements' -->
+			<script type="text/javascript">var ordnumber = Math.random() * 10000000000000;var sscUrl = ("https:" == document.location.protocol ? "https://" : "http://") + "trkn.us/pixel/c?ppt=719&g=requirements&gid=3691&ord="+ordnumber+"&v=114";var x = document.createElement("IMG");x.setAttribute("src", sscUrl);x.setAttribute("width", "1");x.setAttribute("height", "1");document.body.appendChild(x);</script>
+			<?php
+		}
 	}
 }
 new WSU_Admission_Theme();
